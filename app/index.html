@@ -11,7 +11,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/all.css">
     <!-- endbuild -->
   </head>
   <body ng-app="phenoApp">
@@ -21,27 +21,29 @@
 
     <!-- Add your site or application content here -->
     <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-
-            <a class="navbar-brand" href="#/">pheno</a>
-          </div>
-
-          <div class="collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <a href="#/">PHENO</a>
     </div>
 
+
     <div class="container">
-    <div ng-view=""></div>
+      <div class="calendar">
+        <div class="calendar-months">J F M A M J J A S O N D</div>
+        <ul class="calendar-content">
+          <li>
+            <div class="calendar-plant-name">Tomate</div>
+            <div class="calendar-time-bars">XXX</div>
+          </li>
+          <li>
+            <div class="calendar-plant-name">Spinat</div>
+            <div class="calendar-time-bars">XXX</div>
+          </li>
+          <li>
+            <div class="calendar-plant-name">Rote Beete</div>
+            <div class="calendar-time-bars">XXX</div>
+          </li>
+        </ul>
+      </div>
+      <div ng-view=""></div>
     </div>
 
     <div class="footer">
