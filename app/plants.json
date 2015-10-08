@@ -1,0 +1,24 @@
+{
+    "TOMATO" : {
+      "NAME" : "Tomato",
+      "TIMES" : {
+        "SOWING" : [ 1, 2.5 ],
+        "PLANTING" : [ 4, 5 ],
+        "HARVESTING" : [ 8, 11 ]
+      }
+    },
+    "SPINACH" : {
+      "NAME" : "Spinach",
+      "TIMES" : {
+        "SOWING" : [ 3, 6, 8, 10 ],
+        "HARVESTING" : [ 4, 7.25, 10, 11 ]
+      }
+    },
+    "BEETROOT" : {
+      "NAME" : "Beetroot",
+      "TIMES" : {
+        "SOWING" : [ 5.5, 7 ],
+        "HARVESTING" : [ 10, 12 ]
+      }
+    }
+}
