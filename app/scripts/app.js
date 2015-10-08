@@ -1,13 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name phenoApp
- * @description
- * # phenoApp
- *
- * Main module of the application.
- */
 angular
   .module('phenoApp', [
     'ngAnimate',
