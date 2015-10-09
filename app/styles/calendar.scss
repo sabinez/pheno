@@ -1,7 +1,6 @@
 @import "variables.scss";
 
 .calendar {
-  background-color: #e3e3e3;
   margin: auto;
 }
 
@@ -37,22 +36,16 @@
     background-color: brown;
     height: 3px;
     margin-bottom: 3px;
-    width: 1.5 * $month-width;
-    margin-left: 0;
   }
   .planting {
     background-color: green;
     height: 3px;
     margin-bottom: 3px;
-    width: $month-width;
-    margin-left: 3 * $month-width;
   }
   .harvesting {
     background-color: red;
     height: 3px;
     margin-bottom: 3px;
-    width: 3 * $month-width;
-    margin-left: 7 * $month-width;
   }
 }
 

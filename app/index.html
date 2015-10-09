@@ -27,7 +27,7 @@
 
     <div class="container">
       <div class="calendar">
-        <div class="calendar-months calendar-time-bars">
+        <div id="calendar-month-section" class="calendar-months calendar-time-bars">
           <div class="calendar-month">J</div>
           <div class="calendar-month">F</div>
           <div class="calendar-month">M</div>
@@ -42,21 +42,13 @@
           <div class="calendar-month">D</div>
         </div>
         <ul class="calendar-content">
-          <li>
-            <div class="calendar-plant-name">Tomate</div>
+          <li ng-repeat="plant in plantData.PLANTS">
+            <div class="calendar-plant-name">{{ plant.NAME }}</div>
             <div class="calendar-time-bars">
-              <div class="sowing"></div>
-              <div class="planting"></div>
-              <div class="harvesting"></div>
+              <div class="sowing" ng-if="plant.TIMES.SOWING" style="width:{{plant.sowingWidth}}px;margin-left:{{plant.sowingMargin}}px;"></div>
+              <div class="planting" ng-if="plant.TIMES.PLANTING" style="width:{{plant.plantingWidth}}px;margin-left:{{plant.plantingMargin}}px;"></div>
+              <div class="harvesting" ng-if="plant.TIMES.HARVESTING" style="width:{{plant.harvestingWidth}}px;margin-left:{{plant.harvestingMargin}}px;"></div>
             </div>
-          </li>
-          <li>
-            <div class="calendar-plant-name">Spinat</div>
-            <div class="calendar-time-bars">XXX</div>
-          </li>
-          <li>
-            <div class="calendar-plant-name">Rote Beete</div>
-            <div class="calendar-time-bars">XXX</div>
           </li>
         </ul>
       </div>
@@ -65,7 +57,7 @@
 
     <div class="footer">
       <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        <p>foooooter</p>
       </div>
     </div>
 
