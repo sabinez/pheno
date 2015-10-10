@@ -31,22 +31,23 @@
 
 .calendar-time-bars {
   width: $time-bars-width;
+}
 
-  .sowing {
-    background-color: brown;
-    height: 3px;
-    margin-bottom: 3px;
-  }
-  .planting {
-    background-color: green;
-    height: 3px;
-    margin-bottom: 3px;
-  }
-  .harvesting {
-    background-color: red;
-    height: 3px;
-    margin-bottom: 3px;
-  }
+.calendar-time-bar {
+  height: 3px;
+  margin-bottom: 3px;
+}
+
+.sowing {
+  background-color: brown;
+}
+
+.planting {
+  background-color: green;
+}
+
+.harvesting {
+  background-color: red;
 }
 
 .calendar-plant-name, .calendar-time-bars {
