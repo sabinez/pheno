@@ -4,20 +4,11 @@
   justify-content: space-between;
 }
 
-.grid-gutters{
-  margin: -1em 0 1em -1em;
-}
-
-.grid-gutters>.grid-cell {
-  padding: 1em 0 0 1em;
-}
-
 .grid-cell {
-  height: 15px;
   width: 300px;
 }
 
-.grid-cell-content {
-  width: 100%;
-  background-color: yellow;
+.grid-cell-plant-img {
+  width: 250px;
+  height: 375px;
 }
