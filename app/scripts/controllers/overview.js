@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('phenoApp')
-  .controller('MainCtrl', function () {
+  .controller('OverviewCtrl', function () {
 
   });
