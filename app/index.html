@@ -42,7 +42,7 @@
           <div class="calendar-month">D</div>
         </div>
         <ul class="calendar-content">
-          <li ng-repeat="plant in plantData.PLANTS">
+          <li ng-repeat="plant in PLANTS">
             <div class="calendar-plant-name">{{ plant.NAME }}</div>
             <div class="calendar-time-bars">
               <div style="display:flex;">
@@ -59,15 +59,6 @@
         </ul>
       </div>
       <div ng-view>
-        <!-- <div class="grid">
-          <div class="grid-cell" ng-repeat="plant in plantData.PLANTS">
-            <div class="grid-cell-plant-name">{{ plant.NAME }}</div>
-            <div>
-              <img class="grid-cell-plant-img" src="{{ plant.IMG }}">
-            </div>
-          </div>
-        </div>
-      </div> -->
     </div>
 
     <div class="footer">
@@ -76,17 +67,6 @@
       </div>
     </div>
 
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->

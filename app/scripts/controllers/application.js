@@ -27,8 +27,8 @@
       var setTimeBarStyle = function(){
         var sowingWidth, sowingMargin, sowingWidthSecond, sowingMarginSecond, plantingWidth, plantingMargin, harvestingWidth, harvestingMargin, harvestingWidthSecond, harvestingMarginSecond;
         var monthWidth = getMonthWidth();
-        for(var i = 0; i < $scope.plantData.PLANTS.length; i++){
-          var plant = $scope.plantData.PLANTS[i];
+        for(var i = 0; i < $scope.PLANTS.length; i++){
+          var plant = $scope.PLANTS[i];
           sowingWidth = calculateTimeBarWidth(plant.TIMES.SOWING, 1, monthWidth);
           sowingMargin = calculateTimeBarMargin(plant.TIMES.SOWING, 1, monthWidth);
           if ( plant.TIMES.SOWING.length > 2 ) {
@@ -54,22 +54,22 @@
             harvestingWidthSecond = 0;
             harvestingMarginSecond = 0;
           }
-          $scope.plantData.PLANTS[i].sowingWidth = sowingWidth;
-          $scope.plantData.PLANTS[i].sowingMargin = sowingMargin;
-          $scope.plantData.PLANTS[i].sowingWidthSecond = sowingWidthSecond;
-          $scope.plantData.PLANTS[i].sowingMarginSecond = sowingMarginSecond;
-          $scope.plantData.PLANTS[i].plantingWidth = plantingWidth;
-          $scope.plantData.PLANTS[i].plantingMargin = plantingMargin;
-          $scope.plantData.PLANTS[i].harvestingWidth = harvestingWidth;
-          $scope.plantData.PLANTS[i].harvestingMargin = harvestingMargin;
-          $scope.plantData.PLANTS[i].harvestingWidthSecond = harvestingWidthSecond;
-          $scope.plantData.PLANTS[i].harvestingMarginSecond = harvestingMarginSecond;
+          $scope.PLANTS[i].sowingWidth = sowingWidth;
+          $scope.PLANTS[i].sowingMargin = sowingMargin;
+          $scope.PLANTS[i].sowingWidthSecond = sowingWidthSecond;
+          $scope.PLANTS[i].sowingMarginSecond = sowingMarginSecond;
+          $scope.PLANTS[i].plantingWidth = plantingWidth;
+          $scope.PLANTS[i].plantingMargin = plantingMargin;
+          $scope.PLANTS[i].harvestingWidth = harvestingWidth;
+          $scope.PLANTS[i].harvestingMargin = harvestingMargin;
+          $scope.PLANTS[i].harvestingWidthSecond = harvestingWidthSecond;
+          $scope.PLANTS[i].harvestingMarginSecond = harvestingMarginSecond;
         }
       };
 
 
       plantData.requestPlantData(function(data){
-        $scope.plantData = data;
+        $scope.PLANTS = data.PLANTS;
         setTimeBarStyle();
       });
     });
