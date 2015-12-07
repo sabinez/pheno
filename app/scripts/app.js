@@ -15,6 +15,11 @@ angular
         controller: 'OverviewCtrl',
         controllerAs: 'overview'
       })
+      .when('/:plantName', {
+        templateUrl: 'views/detail.html',
+        controller: 'DetailCtrl',
+        controllerAs: 'detail'
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',

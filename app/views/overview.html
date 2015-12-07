@@ -2,7 +2,7 @@
     <div class="grid-cell" ng-repeat="plant in PLANTS">
       <div class="grid-cell-plant-name">{{ plant.NAME }}</div>
       <div>
-        <img class="grid-cell-plant-img" ng-src="{{ plant.IMG }}">
+        <a href="/#/{{ plant.NAME }}"><img class="grid-cell-plant-img" ng-src="{{ plant.IMG }}"></a>
       </div>
     </div>
   </div>
