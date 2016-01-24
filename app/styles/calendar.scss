@@ -2,6 +2,20 @@
 
 .calendar {
   margin: auto;
+  position: relative;
+}
+
+.month-separators {
+  position: absolute;
+  display: flex;
+  opacity: 0.5;
+  height: 100%;
+  right: 0;
+  left: $plant-name-width;
+  .month-separator-line {
+    width: $month-width;
+    border-left: 1px solid $grey;
+  }
 }
 
 .calendar-content {
@@ -13,12 +27,14 @@
     padding: 10px 0;
     margin: 0;
     display: flex;
+    border-top: 1px solid $grey;
   }
 }
 
 .calendar-months {
   display: flex;
   margin-left: $plant-name-width;
+  padding: 0.6rem 0;
 }
 
 .calendar-month {
@@ -26,7 +42,9 @@
 }
 
 .calendar-plant-name {
-  width: $plant-name-width - 4px;
+  width: calc(#{$plant-name-width} - 1rem);
+  text-align: left;
+  padding-left: 1rem;
 }
 
 .calendar-time-bars {
@@ -34,7 +52,7 @@
 }
 
 .calendar-time-bar {
-  height: 3px;
+  height: 5px;
   margin-bottom: 3px;
 }
 

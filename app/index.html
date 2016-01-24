@@ -20,43 +20,60 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
+    <div class="header screen">
       <a href="#/">PHENO</a>
+      <p>Make your own vegtable garden!</p>
     </div>
 
 
     <div class="container">
-      <div class="calendar">
-        <div id="calendar-month-section" class="calendar-months calendar-time-bars">
-          <div class="calendar-month">J</div>
-          <div class="calendar-month">F</div>
-          <div class="calendar-month">M</div>
-          <div class="calendar-month">A</div>
-          <div class="calendar-month">M</div>
-          <div class="calendar-month">J</div>
-          <div class="calendar-month">J</div>
-          <div class="calendar-month">A</div>
-          <div class="calendar-month">S</div>
-          <div class="calendar-month">O</div>
-          <div class="calendar-month">N</div>
-          <div class="calendar-month">D</div>
+      <div class="screen">
+        <div class="calendar">
+          <div class="month-separators">
+            <div class="month-separator-line"></div>
+            <div class="month-separator-line"></div>
+            <div class="month-separator-line"></div>
+            <div class="month-separator-line"></div>
+            <div class="month-separator-line"></div>
+            <div class="month-separator-line"></div>
+            <div class="month-separator-line"></div>
+            <div class="month-separator-line"></div>
+            <div class="month-separator-line"></div>
+            <div class="month-separator-line"></div>
+            <div class="month-separator-line"></div>
+            <div class="month-separator-line"></div>
+          </div>
+          <div id="calendar-month-section" class="calendar-months calendar-time-bars">
+            <div class="calendar-month">J</div>
+            <div class="calendar-month">F</div>
+            <div class="calendar-month">M</div>
+            <div class="calendar-month">A</div>
+            <div class="calendar-month">M</div>
+            <div class="calendar-month">J</div>
+            <div class="calendar-month">J</div>
+            <div class="calendar-month">A</div>
+            <div class="calendar-month">S</div>
+            <div class="calendar-month">O</div>
+            <div class="calendar-month">N</div>
+            <div class="calendar-month">D</div>
+          </div>
+          <ul class="calendar-content">
+            <li ng-repeat="plant in PLANTS">
+              <div class="calendar-plant-name">{{ plant.NAME }}</div>
+              <div class="calendar-time-bars">
+                <div style="display:flex;">
+                  <div class="calendar-time-bar sowing" ng-if="plant.TIMES.SOWING" style="width:{{plant.sowingWidth}}px;margin-left:{{plant.sowingMargin}}px;"></div>
+                  <div class="calendar-time-bar sowing" ng-if="plant.TIMES.SOWING" style="width:{{plant.sowingWidthSecond}}px;margin-left:{{plant.sowingMarginSecond}}px;"></div>
+                </div>
+                <div class="calendar-time-bar planting" ng-if="plant.TIMES.PLANTING" style="width:{{plant.plantingWidth}}px;margin-left:{{plant.plantingMargin}}px;"></div>
+                <div style="display:flex;">
+                  <div class="calendar-time-bar harvesting" ng-if="plant.TIMES.HARVESTING" style="width:{{plant.harvestingWidth}}px;margin-left:{{plant.harvestingMargin}}px;"></div>
+                  <div class="calendar-time-bar harvesting" ng-if="plant.TIMES.HARVESTING" style="width:{{plant.harvestingWidthSecond}}px;margin-left:{{plant.harvestingMarginSecond}}px;"></div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
-        <ul class="calendar-content">
-          <li ng-repeat="plant in PLANTS">
-            <div class="calendar-plant-name">{{ plant.NAME }}</div>
-            <div class="calendar-time-bars">
-              <div style="display:flex;">
-                <div class="calendar-time-bar sowing" ng-if="plant.TIMES.SOWING" style="width:{{plant.sowingWidth}}px;margin-left:{{plant.sowingMargin}}px;"></div>
-                <div class="calendar-time-bar sowing" ng-if="plant.TIMES.SOWING" style="width:{{plant.sowingWidthSecond}}px;margin-left:{{plant.sowingMarginSecond}}px;"></div>
-              </div>
-              <div class="calendar-time-bar planting" ng-if="plant.TIMES.PLANTING" style="width:{{plant.plantingWidth}}px;margin-left:{{plant.plantingMargin}}px;"></div>
-              <div style="display:flex;">
-                <div class="calendar-time-bar harvesting" ng-if="plant.TIMES.HARVESTING" style="width:{{plant.harvestingWidth}}px;margin-left:{{plant.harvestingMargin}}px;"></div>
-                <div class="calendar-time-bar harvesting" ng-if="plant.TIMES.HARVESTING" style="width:{{plant.harvestingWidthSecond}}px;margin-left:{{plant.harvestingMarginSecond}}px;"></div>
-              </div>
-            </div>
-          </li>
-        </ul>
       </div>
       <div ng-view>
     </div>
