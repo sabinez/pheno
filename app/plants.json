@@ -6,20 +6,20 @@
       "PLANTING" : [ 4, 5 ],
       "HARVESTING" : [ 8, 11 ]
     },
-    "IMG" : "images/tomato.jpg"
+    "IMG" : "images/tomato.png"
   },{
     "NAME" : "Spinach",
     "TIMES" : {
       "SOWING" : [ 3, 6, 8, 10 ],
       "HARVESTING" : [ 4, 7.25, 10, 11 ]
     },
-    "IMG" : "images/spinach.jpg"
+    "IMG" : "images/spinach.png"
   },{
     "NAME" : "Beetroot",
     "TIMES" : {
       "SOWING" : [ 5.5, 7 ],
       "HARVESTING" : [ 10, 12 ]
     },
-    "IMG" : "images/beetroot.jpg"
+    "IMG" : "images/beetroot.png"
   }]
 }
