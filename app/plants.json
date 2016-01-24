@@ -21,5 +21,57 @@
       "HARVESTING" : [ 10, 12 ]
     },
     "IMG" : "images/beetroot.png"
+  },{
+    "NAME" : "Brussel Sprouts",
+    "TIMES" : {
+      "SOWING" : [ 4, 6 ],
+      "PLANTING" : [ 5, 7 ],
+      "HARVESTING" : [ 10, 13 ]
+    },
+    "IMG" : "images/brussel-sprouts.png"
+  },{
+    "NAME" : "Carrot",
+    "TIMES" : {
+      "SOWING" : [ 3, 7 ],
+      "HARVESTING" : [ 6.5, 12 ]
+    },
+    "IMG" : "images/carrot.png"
+  },{
+    "NAME" : "Chard",
+    "TIMES" : {
+      "SOWING" : [ 4, 7.5 ],
+      "HARVESTING" : [ 7, 11 ]
+    },
+    "IMG" : "images/chard.png"
+  },{
+    "NAME" : "Onion",
+    "TIMES" : {
+      "SOWING" : [ 3, 5 ],
+      "HARVESTING" : [ 8, 10 ]
+    },
+    "IMG" : "images/beetroot.png"
+  },{
+    "NAME" : "Peas",
+    "TIMES" : {
+      "SOWING" : [ 3.5, 6 ],
+      "HARVESTING" : [ 6, 9 ]
+    },
+    "IMG" : "images/peas.png"
+  },{
+    "NAME" : "Pepper",
+    "TIMES" : {
+      "SOWING" : [ 3, 4 ],
+      "PLANTING" : [ 5.5, 6 ],
+      "HARVESTING" : [ 8, 11 ]
+    },
+    "IMG" : "images/pepper.png"
+  },{
+    "NAME" : "Sweet Potato",
+    "TIMES" : {
+      "SOWING" : [ 4.5, 5 ],
+      "PLANTING" : [ 5.5, 6 ],
+      "HARVESTING" : [ 9, 11 ]
+    },
+    "IMG" : "images/sweet-potato.png"
   }]
 }
