@@ -2,6 +2,7 @@ $calendar-width: 730px;
 $time-bars-width: $calendar-width * 0.7;
 $plant-name-width: $calendar-width - $time-bars-width;
 $month-width: $time-bars-width / 12;
+$start-point-month-seperators: ($calendar-width / 2) - $plant-name-width;
 $green: #42E08A;
 $yellow: #D4C34B;
 $red: #D3877D;

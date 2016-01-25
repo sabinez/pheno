@@ -28,6 +28,12 @@ body {
   height: 100vh;
 }
 
+.screen-calendar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
 /* Custom page footer */
 .footer {
   padding-top: 19px;

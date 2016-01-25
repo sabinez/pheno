@@ -1,7 +1,6 @@
 @import "variables.scss";
 
 .calendar {
-  height: 100%;
   width: 100%;
   position: relative;
   margin: auto;
@@ -9,25 +8,33 @@
 
 .month-separators {
   position: absolute;
+  top: 0;
+  bottom: 0;
   display: flex;
-  opacity: 0.5;
-  height: 100%;
-  right: 0;
-  left: $plant-name-width;
+  left: calc(50% - #{$start-point-month-seperators});
   .month-separator-line {
-    width: $month-width;
+    width: $month-width - 1px;
     border-left: 1px solid $grey;
   }
 }
 
-.plant-separators {
+.screen-overlay {
   position: absolute;
   left: 0;
   right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
 }
+
+.plant-separators {
+  width: 100%;
+}
+
 .plant-separator-line {
   height: 2rem;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid $grey;
 }
 
 .calendar-content {
@@ -36,11 +43,9 @@
   margin: 0;
 
   li {
-    height: 2rem;
-    margin: 0;
+    height: calc(2rem + 1px);
     display: flex;
     align-items: center;
-    border-top: 1px solid $grey;
   }
 }
 
@@ -80,6 +85,7 @@
 
 .harvesting {
   background-color: $red;
+  margin-bottom: 0;
 }
 
 .calendar-plant-name, .calendar-time-bars {
