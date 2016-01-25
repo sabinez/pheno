@@ -15,11 +15,7 @@
     <!-- endbuild -->
   </head>
   <body ng-controller="ApplicationCtrl">
-    <!--[if lte IE 8]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
 
-    <!-- Add your site or application content here -->
     <div class="header screen">
       <a href="#/">PHENO</a>
       <p>Make your own vegtable garden!</p>
@@ -28,6 +24,9 @@
 
     <div class="container">
       <div class="screen">
+        <div class="plant-separators">
+          <div class="plant-separator-line" ng-repeat="plant in PLANTS"></div>
+        </div>
         <div class="calendar">
           <div class="month-separators">
             <div class="month-separator-line"></div>

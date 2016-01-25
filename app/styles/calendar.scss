@@ -1,8 +1,10 @@
 @import "variables.scss";
 
 .calendar {
-  margin: auto;
+  height: 100%;
+  width: 100%;
   position: relative;
+  margin: auto;
 }
 
 .month-separators {
@@ -18,15 +20,26 @@
   }
 }
 
+.plant-separators {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.plant-separator-line {
+  height: 2rem;
+  border-bottom: 1px solid red;
+}
+
 .calendar-content {
   list-style-type: none;
   padding: 0;
   margin: 0;
 
   li {
-    padding: 10px 0;
+    height: 2rem;
     margin: 0;
     display: flex;
+    align-items: center;
     border-top: 1px solid $grey;
   }
 }
@@ -34,7 +47,8 @@
 .calendar-months {
   display: flex;
   margin-left: $plant-name-width;
-  padding: 0.6rem 0;
+  height: 2rem;
+  align-items: center;
 }
 
 .calendar-month {
