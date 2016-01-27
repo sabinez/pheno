@@ -16,6 +16,9 @@
     width: $month-width - 1px;
     border-left: 1px solid $grey;
   }
+  .month-separator-line:last-child {
+    border-right: 1px solid $grey;
+  }
 }
 
 .screen-overlay {
@@ -33,7 +36,7 @@
 }
 
 .plant-separator-line {
-  height: 2rem;
+  height: 3rem;
   border-bottom: 1px solid $grey;
 }
 
@@ -43,7 +46,7 @@
   margin: 0;
 
   li {
-    height: calc(2rem + 1px);
+    height: calc(3rem + 1px);
     display: flex;
     align-items: center;
   }
@@ -52,7 +55,7 @@
 .calendar-months {
   display: flex;
   margin-left: $plant-name-width;
-  height: 2rem;
+  height: 3rem;
   align-items: center;
 }
 
