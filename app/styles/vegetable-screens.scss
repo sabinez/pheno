@@ -1,0 +1,31 @@
+@import "variables.scss";
+
+.screen-tomato {
+  display: flex;
+  align-items: center;
+}
+
+.tomato-img {
+  position: absolute;
+  left: 30vw;
+  img { height: 100vh; }
+
+}
+
+.tomato-overlay-position {
+  position: absolute;
+  left: 30vw;
+  height: 100vh;
+  width: 67vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .tomato-overlay {
+    top: 5vh;
+    height: 90vh;
+    width: 55vh;
+    border: 2.5vh solid $red;
+  }
+
+}

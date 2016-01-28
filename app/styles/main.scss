@@ -15,6 +15,17 @@ body {
   text-align: center;
 }
 
+.screen {
+  height: 100vh;
+  position:relative;
+}
+
+.screen-calendar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .footer {
@@ -26,16 +37,6 @@ body {
 .header {
   border-bottom: 1px solid $grey;
   margin-bottom: 10px;
-}
-
-.screen {
-  height: 100vh;
-}
-
-.screen-calendar {
-  position: relative;
-  display: flex;
-  align-items: center;
 }
 
 /* Custom page footer */
