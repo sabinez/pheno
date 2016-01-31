@@ -3,13 +3,16 @@
 .screen-tomato {
   display: flex;
   align-items: center;
+  height: 230vh;
 }
 
 .tomato-img {
   position: absolute;
   left: 30vw;
+  top: 120vh;
+  z-index: 10;
+  &.tomato-layer { z-index: 30; }
   img { height: 100vh; }
-
 }
 
 .tomato-overlay-position {
@@ -20,14 +23,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 20;
 
   .tomato-overlay {
     top: 5vh;
     height: 90vh;
     width: 55vh;
-    border: 2.5vh solid $red;
+    border: 2vh solid $red;
   }
 
+}
+
+.screen-sweet-potato {
+  height: 100vh;
 }
 
 .sweet-potato-img img {
@@ -35,5 +43,5 @@
   position: absolute;
   top: -7vh;
   right: 5vw;
-  z-index: -1;
+  z-index: 0;
 }

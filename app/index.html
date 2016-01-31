@@ -79,15 +79,15 @@
       </div>
     </div>
 
-    <div class="screen screen-tomato">
-      <div class="tomato-img">
-        <img ng-src="{{ PLANTS[0].IMG }}">
-      </div>
-      <div class="tomato-overlay-position">
+    <div id="trigger-tomato-frame" class="screen screen-tomato">
+      <div id="target-tomato-frame" class="tomato-overlay-position">
         <div class="tomato-overlay"></div>
       </div>
+      <div id="trigger-tomato-img" class="tomato-img">
+        <img id="target-tomato-img" ng-src="{{ PLANTS[0].IMG }}">
+      </div>
       <div class="tomato-img tomato-layer">
-        <img src="images/tomato-layer.png">
+        <img id="target-tomato-img-layer" src="images/tomato-layer.png">
       </div>
     </div>
 
@@ -118,11 +118,13 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/services/plantdata.js"></script>
-        <script src="scripts/controllers/application.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/services/plantdata.js"></script>
+    <script src="scripts/controllers/application.js"></script>
+    <!-- endbuild -->
+
+    <script src="scripts/scrolling.js"></script>
 </body>
 </html>
