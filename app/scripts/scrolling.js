@@ -19,8 +19,7 @@ $(function () {
   var sideBar = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-frame", duration: $(document).height()})
     .triggerHook(1)
     .setPin("#target-side-bar", {pushFollowers: false})
-    .addTo(scrollingController)
-    .addIndicators();
+    .addTo(scrollingController);
 
   var tomatoFrame = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-frame", duration: 2.2 * $(window).height()
 })

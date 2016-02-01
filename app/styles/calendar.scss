@@ -16,7 +16,7 @@
 .month-separators {
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: calc(50vh - (5.5 * (#{$calendar-row-height} + 1px)));
   display: flex;
   left: calc(50% - #{$start-point-month-seperators});
   .month-separator-line {
