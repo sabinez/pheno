@@ -30,6 +30,7 @@
             <div class="plant-separator-line" ng-repeat="plant in PLANTS"></div>
           </div>
         </div>
+ 
         <div class="month-separators">
           <div class="month-separator-line"></div>
           <div class="month-separator-line"></div>
@@ -44,6 +45,7 @@
           <div class="month-separator-line"></div>
           <div class="month-separator-line"></div>
         </div>
+
         <div class="calendar">
           <div id="calendar-month-section" class="calendar-months calendar-time-bars">
             <div class="calendar-month">J</div>
@@ -59,9 +61,11 @@
             <div class="calendar-month">N</div>
             <div class="calendar-month">D</div>
           </div>
+          <ul class="plant-names">
+            <li ng-repeat="plant in PLANTS" class="calendar-plant-name">{{ plant.NAME }}</li>
+          </ul>
           <ul class="calendar-content">
             <li ng-repeat="plant in PLANTS">
-              <div class="calendar-plant-name">{{ plant.NAME }}</div>
               <div class="calendar-time-bars">
                 <div style="display:flex;">
                   <div class="calendar-time-bar sowing" ng-if="plant.TIMES.SOWING" style="width:{{plant.sowingWidth}}px;margin-left:{{plant.sowingMargin}}px;"></div>

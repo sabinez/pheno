@@ -8,9 +8,9 @@
 }
 
 .calendar {
-  width: 100%;
   position: relative;
-  margin: auto;
+  height: 11 * $calendar-row-height;
+  width: 100%;
 }
 
 .month-separators {
@@ -47,22 +47,37 @@
   border-bottom: 1px solid $grey;
 }
 
-.calendar-content {
+.plant-names, .calendar-content {
+  position: absolute;
   list-style-type: none;
   padding: 0;
   margin: 0;
-
   li {
-    height: calc(3rem + 1px);
+    height: calc(#{$calendar-row-height} + 1px);
     display: flex;
     align-items: center;
   }
 }
 
+.plant-names {
+  width: $plant-name-width;
+  left: calc(50% - #{$calendar-width/2});
+  top: $calendar-row-height;
+}
+
+.calendar-content {
+  width: $time-bars-width;
+  left: calc(50% - #{$calendar-width/2 - $plant-name-width});
+  top: $calendar-row-height;
+}
+
 .calendar-months {
+  position: absolute;
+  width: $time-bars-width;
+  left: calc(50% - #{$calendar-width/2 - $plant-name-width});
+
   display: flex;
-  margin-left: $plant-name-width;
-  height: 3rem;
+  height: $calendar-row-height;
   align-items: center;
 }
 
@@ -101,7 +116,7 @@
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  .calendar {
-    max-width: $calendar-width;
+  .calendar-content {
+    max-width: $time-bars-width;
   }
 }
