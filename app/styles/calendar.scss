@@ -47,7 +47,8 @@
   border-bottom: 1px solid $grey;
 }
 
-.plant-names, .calendar-content {
+
+.calendar-content {
   position: absolute;
   list-style-type: none;
   padding: 0;
@@ -59,10 +60,23 @@
   }
 }
 
-.plant-names {
+.plant-names-wrapper {
+  position: absolute;
   width: $plant-name-width;
+  height: 11 * $calendar-row-height;
   left: calc(50% - #{$calendar-width/2});
   top: $calendar-row-height;
+}
+
+.plant-names {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  li {
+    height: calc(#{$calendar-row-height} + 1px);
+    display: flex;
+    align-items: center;
+  }
 }
 
 .calendar-content {

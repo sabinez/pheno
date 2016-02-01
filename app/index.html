@@ -22,8 +22,8 @@
     </div>
 
 
-    <div class="container">
-      <div id="trigger-side-bar" class="screen screen-calendar">
+    <div id="trigger-calendar" class="container">
+      <div id="target-calendar" class="screen screen-calendar">
         <div class="screen-overlay">
           <div class="plant-separators">
             <div class="plant-separator-line"></div>
@@ -61,9 +61,11 @@
             <div class="calendar-month">N</div>
             <div class="calendar-month">D</div>
           </div>
-          <ul id="target-side-bar" class="plant-names">
-            <li ng-repeat="plant in PLANTS" class="calendar-plant-name">{{ plant.NAME }}</li>
-          </ul>
+          <div id="target-side-bar-tween" class="plant-names-wrapper">
+            <ul id="target-side-bar" class="plant-names">
+              <li ng-repeat="plant in PLANTS" class="calendar-plant-name">{{ plant.NAME }}</li>
+            </ul>
+          </div>
           <ul class="calendar-content">
             <li ng-repeat="plant in PLANTS">
               <div class="calendar-time-bars">
@@ -130,5 +132,7 @@
     <!-- endbuild -->
 
     <script src="scripts/scrolling.js"></script>
+    <script src="bower_components/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+    <script src="bower_components/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
 </body>
 </html>
