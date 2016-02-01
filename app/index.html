@@ -23,14 +23,14 @@
 
 
     <div class="container">
-      <div class="screen screen-calendar">
+      <div id="trigger-side-bar" class="screen screen-calendar">
         <div class="screen-overlay">
           <div class="plant-separators">
             <div class="plant-separator-line"></div>
             <div class="plant-separator-line" ng-repeat="plant in PLANTS"></div>
           </div>
         </div>
- 
+
         <div class="month-separators">
           <div class="month-separator-line"></div>
           <div class="month-separator-line"></div>
@@ -61,7 +61,7 @@
             <div class="calendar-month">N</div>
             <div class="calendar-month">D</div>
           </div>
-          <ul class="plant-names">
+          <ul id="target-side-bar" class="plant-names">
             <li ng-repeat="plant in PLANTS" class="calendar-plant-name">{{ plant.NAME }}</li>
           </ul>
           <ul class="calendar-content">

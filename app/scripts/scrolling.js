@@ -3,6 +3,11 @@
 $(function () {
   var scrollingController = new ScrollMagic.Controller();
 
+  var sideBar = new ScrollMagic.Scene({triggerElement: "#trigger-side-bar", duration: $(document).height()})
+    .triggerHook(0)
+    .setPin("#target-side-bar", {pushFollowers: false})
+    .addTo(scrollingController);
+
   var tomatoFrame = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-frame", duration: 2.2 * $(window).height()
 })
     .triggerHook(0)
