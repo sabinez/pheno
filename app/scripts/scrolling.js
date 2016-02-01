@@ -3,7 +3,7 @@
 $(function () {
   var scrollingController = new ScrollMagic.Controller();
 
-  var tomatoFrame = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-frame", duration: 2.3 * $(window).height()
+  var tomatoFrame = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-frame", duration: 2.2 * $(window).height()
 })
     .triggerHook(0)
     .setPin("#target-tomato-frame", {pushFollowers: false})

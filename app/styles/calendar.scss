@@ -1,5 +1,12 @@
 @import "variables.scss";
 
+.screen-calendar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
 .calendar {
   width: 100%;
   position: relative;
@@ -91,8 +98,6 @@
   margin-bottom: 0;
 }
 
-.calendar-plant-name, .calendar-time-bars {
-}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
