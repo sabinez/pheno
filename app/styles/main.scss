@@ -3,13 +3,24 @@
 // bower:scss
 // endbower
 
+@font-face {
+    font-family: 'voyagerlight';
+    src: url('/fonts/voyager_light-webfont.eot');
+    src: url('/fonts/voyager_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/voyager_light-webfont.woff') format('woff'),
+         url('/fonts/voyager_light-webfont.ttf') format('truetype'),
+         url('/fonts/voyager_light-webfont.svg#voyagerlight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
 html {
   font-size: 14px;
 }
 
 body {
   color: $black;
-  font-family: Heiti SC;
+  font-family: 'voyagerlight', sans-serif;
   padding: 0;
   margin: 0;
   text-align: center;
