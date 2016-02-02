@@ -4,6 +4,7 @@ $(function () {
   var scrollingController = new ScrollMagic.Controller();
 
   var sideBarTween = new TweenMax.to("#target-side-bar-tween", 1, {left: '5px'});
+  var sideBarLinesTween = new TweenMax.to("#target-side-bar-lines-tween", 1, {right: '98vw'});
 
   var calendar = new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 1.5 * $(window).height()})
     .triggerHook(0)
@@ -16,9 +17,20 @@ $(function () {
     .setTween(sideBarTween)
     .addTo(scrollingController);
 
+  var sideBarLinesTween = new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 0.5 * $(window).height()})
+    .triggerHook(0)
+    .offset($(window).height())
+    .setTween(sideBarLinesTween)
+    .addTo(scrollingController);
+
   var sideBar = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-frame", duration: $(document).height()})
     .triggerHook(1)
     .setPin("#target-side-bar", {pushFollowers: false})
+    .addTo(scrollingController);
+
+  var sideBarLines = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-frame", duration: $(document).height()})
+    .triggerHook(1)
+    .setPin("#target-side-bar-lines", {pushFollowers: false})
     .addTo(scrollingController);
 
   var tomatoFrame = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-frame", duration: 2.2 * $(window).height()
