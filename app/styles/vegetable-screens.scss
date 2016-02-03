@@ -29,14 +29,17 @@
     top: 5vh;
     height: 90vh;
     width: 55vh;
-    border: 2vh solid $red;
+    border: 5px solid $red;
   }
 }
 
 .tomato-text {
   text-align: left;
-  line-height: 20px;
-  width: 450px;
+  line-height: 2;
+  width: 38vw;
+  margin-left: 60vw;
+  letter-spacing: 1px;
+  word-spacing: 2px;
 }
 
 .screen-sweet-potato {
