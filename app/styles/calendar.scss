@@ -73,6 +73,7 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+  text-transform: uppercase;
   li {
     height: calc(#{$calendar-row-height} + 1px);
     display: flex;
