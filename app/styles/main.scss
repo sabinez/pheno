@@ -14,8 +14,19 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'voyagerthin';
+    src: url('/fonts/voyager_thin-webfont.eot');
+    src: url('/fonts/voyager_thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/voyager_thin-webfont.woff') format('woff'),
+         url('/fonts/voyager_thin-webfont.ttf') format('truetype'),
+         url('/fonts/voyager_thin-webfont.svg#voyagerthin') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
 html {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 body {
@@ -24,12 +35,50 @@ body {
   padding: 0;
   margin: 0;
   text-align: center;
+  letter-spacing: 1px;
+  line-height: 2;
+  word-spacing: 2px;
+}
+
+h1 {
+  font-family: 'voyagerthin', sans-serif;
+  margin: 0px 0 0 -40px;
+  letter-spacing: 5px;
+  font-size: 22px;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+}
+
+.title {
+  font-family: 'voyagerthin', sans-serif;
+  text-decoration: none;
+  font-size: 20vh;
+  color: $green;
+  letter-spacing: 6vh;
 }
 
 .screen {
   position:relative;
   &.header {
     height: 100vh;
+  }
+}
+
+.side-bar {
+  a {
+    color: white;
+  }
+  a:hover {
+    color: $black;
+  }
+}
+
+.active {
+  a {
+    color: $red;
   }
 }
 

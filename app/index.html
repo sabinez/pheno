@@ -17,8 +17,8 @@
   <body ng-controller="ApplicationCtrl">
 
     <div class="header screen">
-      <a href="#/">PHENO</a>
-      <p>Make your own vegtable garden!</p>
+      <a href="#/" class="title">PHENO</a>
+      <p>Grow your own vegtable garden!</p>
     </div>
 
 
@@ -63,7 +63,7 @@
           </div>
           <div id="target-side-bar-tween" class="plant-names-wrapper">
             <ul id="target-side-bar" class="plant-names">
-              <li ng-repeat="plant in PLANTS" class="calendar-plant-name">{{ plant.NAME }}</li>
+              <li ng-repeat="plant in PLANTS" id="side-bar-{{ plant.URL }}" class="calendar-plant-name"><a href="">{{ plant.NAME }}</a></li>
             </ul>
           </div>
           <ul class="calendar-content">
@@ -87,7 +87,13 @@
 
     <div id="trigger-tomato-frame" class="screen screen-tomato">
       <div id="target-tomato-frame" class="tomato-overlay-position">
-        <div class="tomato-overlay"></div>
+        <div class="tomato-overlay">
+          <!-- <div class="tomato-layer-letters">
+            TO<br>
+            MA<br>
+            TO
+          </div> -->
+        </div>
       </div>
       <div id="trigger-tomato-img" class="tomato-img">
         <img id="target-tomato-img" ng-src="{{ PLANTS[0].IMG }}">
@@ -95,9 +101,11 @@
       <div class="tomato-img tomato-layer">
         <img id="target-tomato-img-layer" src="images/tomato-layer.png">
       </div>
-      <div class="tomato-text">
-        TOMATO<br>
-        Plant the seeds about 2 cm deep in small pots and keep them indoor. Plant out as soon as the seedling growth four leaves. The plants should have a distance of 40 cm between each other. The growing spot should receive a lot of sun. Keep the soil moist but don’t overwater. As a growth support tie the stem to a stake. Pinch off lateral shoots early on. Remove the main shoot around the middle of September. Fertilize from time to time.
+      <div id="trigger-tomato-text" class="tomato-text-position">
+        <div id="target-tomato-text" class="tomato-text">
+          <h1>TOMATO</h1>
+          Plant the seeds about 2 cm deep in small pots and keep them indoor. Plant out as soon as the seedling growth four leaves. The plants should have a distance of 40 cm between each other. The growing spot should receive a lot of sun. Keep the soil moist but don’t overwater. As a growth support tie the stem to a stake. Pinch off lateral shoots early on. Remove the main shoot around the middle of September. Fertilize from time to time.
+        </div>
       </div>
     </div>
 
@@ -135,7 +143,7 @@
     <script src="scripts/controllers/application.js"></script>
     <!-- endbuild -->
 
-    <script src="scripts/scrolling.js"></script>
+    <script src="scripts/services/scrolling.js"></script>
     <script src="bower_components/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
     <script src="bower_components/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
 </body>

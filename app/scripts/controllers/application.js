@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('phenoApp')
-    .controller('ApplicationCtrl', function (plantData, $scope) {
+    .controller('ApplicationCtrl', function (plantData, $scope, initScrolling, $timeout) {
 
       var getMonthWidth = function() {
         return document.getElementById('calendar-month-section').offsetWidth / 12;
@@ -56,6 +56,9 @@
       plantData.requestPlantData(function(data){
         $scope.PLANTS = data.PLANTS;
         setTimeBarStyle();
+        $timeout(function(){
+          initScrolling();
+        });
       });
     });
 })();
