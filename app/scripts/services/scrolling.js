@@ -9,6 +9,7 @@
 
       var sideBarTween = new TweenMax.to("#target-side-bar-tween", 1, {left: '5px'});
       var sideBarLinesTween = new TweenMax.to("#target-side-bar-lines-tween", 1, {right: '98vw'});
+      var sideBarLinksTween = new TweenMax.to(".target-side-bar-links-tween", 1, {opacity: '0'});
 
       var calendar = new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 1.5 * $(window).height()})
         .triggerHook(0)
@@ -19,6 +20,12 @@
         .triggerHook(0)
         .offset($(window).height())
         .setTween(sideBarTween)
+        .addTo(scrollingController);
+
+      var sideBarLinksTween = new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 0.5 * $(window).height()})
+        .triggerHook(0)
+        .offset($(window).height())
+        .setTween(sideBarLinksTween)
         .addTo(scrollingController);
 
       var sideBarLinesTween = new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 0.5 * $(window).height()})

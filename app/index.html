@@ -63,7 +63,9 @@
           </div>
           <div id="target-side-bar-tween" class="plant-names-wrapper">
             <ul id="target-side-bar" class="plant-names">
-              <li ng-repeat="plant in PLANTS" id="side-bar-{{ plant.URL }}" class="calendar-plant-name"><a href="">{{ plant.NAME }}</a></li>
+              <li ng-repeat="plant in PLANTS" id="side-bar-{{ plant.URL }}" class="calendar-plant-name">
+                <a class="target-side-bar-links-tween" href="">{{ plant.NAME }}</a>
+              </li>
             </ul>
           </div>
           <ul class="calendar-content">

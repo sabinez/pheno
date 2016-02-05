@@ -61,7 +61,7 @@ a {
 }
 
 .screen {
-  position:relative;
+  position: relative;
   &.header {
     height: 100vh;
   }
@@ -69,16 +69,18 @@ a {
 
 .side-bar {
   a {
-    color: white;
+    // opacity: 0;
   }
-  a:hover {
-    color: $black;
+  a:hover { 
+    opacity: 1 !important;//overwriting element style of tween
+    transition: opacity 0.5s;
   }
 }
 
 .active {
   a {
     color: $red;
+    opacity: 1 !important;//overwriting element style of tween
   }
 }
 
