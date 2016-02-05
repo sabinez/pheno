@@ -67,6 +67,21 @@
         .setPin("#target-tomato-text", {pushFollowers: false})
         .addTo(scrollingController);
 
+      scrollingController.scrollTo(function (newpos) {
+        TweenMax.to(window, 0.5, {scrollTo: {y: newpos}});
+      });
+
+      $(document).on("click", "a[href^='#']", function (e) {
+        var id = $(this).attr("href");
+        if ($(id).length > 0) {
+          e.preventDefault();
+          scrollingController.scrollTo(id);
+          if (window.history && window.history.pushState) {
+            history.pushState("", document.title, id);
+          }
+        }
+      });
+
     };
 
     return initScrolling;

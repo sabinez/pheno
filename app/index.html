@@ -64,7 +64,7 @@
           <div id="target-side-bar-tween" class="plant-names-wrapper">
             <ul id="target-side-bar" class="plant-names">
               <li ng-repeat="plant in PLANTS" id="side-bar-{{ plant.URL }}" class="calendar-plant-name">
-                <a class="target-side-bar-links-tween" href="">{{ plant.NAME }}</a>
+                <a class="target-side-bar-links-tween" href="#{{plant.URL}}">{{ plant.NAME }}</a>
               </li>
             </ul>
           </div>
@@ -87,6 +87,7 @@
       </div>
     </div>
 
+    <a id="tomato"></a>
     <div id="trigger-tomato-frame" class="screen screen-tomato">
       <div id="target-tomato-frame" class="tomato-overlay-position">
         <div class="tomato-overlay">
@@ -111,6 +112,7 @@
       </div>
     </div>
 
+    <a id="sweet-potato"></a>
     <div class="screen screen-sweet-potato">
       <div class="sweet-potato-img">
         <img src="images/sweet-potato.png">
@@ -148,5 +150,6 @@
     <script src="scripts/services/scrolling.js"></script>
     <script src="bower_components/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
     <script src="bower_components/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+    <script src="bower_components/gsap/src/uncompressed/plugins/ScrollToPlugin.js"></script>
 </body>
 </html>
