@@ -1,0 +1,7 @@
+production:
+  branch: "master"
+  deploy_to: "/home/www/pheno"
+  domain: "xa4191@pheno.garden"
+  repository: "ssh://git@github.com:sabinez/pheno.git"
+#  post_deploy_script: post_deploy.sh
+
