@@ -68,9 +68,6 @@ a {
 }
 
 .side-bar {
-  a {
-    // opacity: 0;
-  }
   a:hover { 
     opacity: 1 !important;//overwriting element style of tween
     transition: opacity 0.5s;

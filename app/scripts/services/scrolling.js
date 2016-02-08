@@ -8,29 +8,29 @@
       var scrollingController = new ScrollMagic.Controller();
 
       var sideBarTween = new TweenMax.to("#target-side-bar-tween", 1, {left: '5px'});
-      var sideBarLinesTween = new TweenMax.to("#target-side-bar-lines-tween", 1, {right: '98vw'});
-      var sideBarLinksTween = new TweenMax.to(".target-side-bar-links-tween", 1, {opacity: '0'});
+      var sideBarLinesTween = new TweenMax.to("#target-side-bar-lines-tween", 1, {right: '97vw'});
+      var sideBarLinksTween = new TweenMax.to(".target-side-bar-links-tween", 1, {opacity: '0.3'});
 
-      var calendar = new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 1.5 * $(window).height()})
+      var calendar = new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 0.5 *  $(window).height()})
         .triggerHook(0)
         .setPin("#target-calendar", {pushFollowers: true})
         .addTo(scrollingController);
 
       var sideBarTween = new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 0.5 * $(window).height()})
         .triggerHook(0)
-        .offset($(window).height())
+        .offset(0.5 * $(window).height())
         .setTween(sideBarTween)
         .addTo(scrollingController);
 
       var sideBarLinksTween = new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 0.5 * $(window).height()})
         .triggerHook(0)
-        .offset($(window).height())
+        .offset(0.5 * $(window).height())
         .setTween(sideBarLinksTween)
         .addTo(scrollingController);
 
       var sideBarLinesTween = new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 0.5 * $(window).height()})
         .triggerHook(0)
-        .offset($(window).height())
+        .offset(0.5 * $(window).height())
         .setTween(sideBarLinesTween)
         .addTo(scrollingController);
 
@@ -40,8 +40,9 @@
         .setClassToggle("#target-side-bar", "side-bar")
         .addTo(scrollingController);
 
-      var sideBarLines = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-frame", duration: $(document).height()})
-        .triggerHook(1)
+      var sideBarLines = new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: $(document).height()})
+        .triggerHook(0)
+        .offset(0.5 *  $(window).height())
         .setPin("#target-side-bar-lines", {pushFollowers: false})
         .addTo(scrollingController);
 

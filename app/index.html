@@ -24,10 +24,12 @@
 
     <div id="trigger-calendar" class="container">
       <div id="target-calendar" class="screen screen-calendar">
-        <div id="target-side-bar-lines-tween" class="screen-overlay">
-          <div id="target-side-bar-lines" class="plant-separators">
-            <div class="plant-separator-line"></div>
-            <div class="plant-separator-line" ng-repeat="plant in PLANTS"></div>
+        <div id="target-side-bar-lines" class="screen-overlay-fix">
+          <div id="target-side-bar-lines-tween" class="screen-overlay">
+            <div class="plant-separators">
+              <div class="plant-separator-line"></div>
+              <div class="plant-separator-line" ng-repeat="plant in PLANTS"></div>
+            </div>
           </div>
         </div>
 

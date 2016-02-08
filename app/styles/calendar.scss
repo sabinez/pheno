@@ -28,6 +28,15 @@
   }
 }
 
+/* Fix pin spacer inserted by ScrollMagic */
+.screen-overlay-fix {
+  position: absolute;
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+}
+
 .screen-overlay {
   position: absolute;
   left: 0;
