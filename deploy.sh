@@ -1,8 +1,8 @@
 git checkout production &&
 git rebase master &&
 grunt build &&
-git add dist &&
+git add -f dist &&
 git commit -m 'update build' &&
-git push origin production &&
+git push -f origin production &&
 wd deploy --to=production &&
 git checkout master
