@@ -77,8 +77,8 @@
   },{
     "NAME" : "Sweet Potato",
     "TIMES" : {
-      "SOWING" : [ 4.5, 5 ],
-      "PLANTING" : [ 5.5, 6 ],
+      "SOWING" : [ 4, 4.5 ],
+      "PLANTING" : [ 5, 6 ],
       "HARVESTING" : [ 9, 11 ]
     },
     "IMG" : "images/sweet-potato.png",
