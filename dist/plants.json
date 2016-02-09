@@ -1,0 +1,87 @@
+{
+  "PLANTS" : [{
+    "NAME" : "Tomato",
+    "TIMES" : {
+      "SOWING" : [ 1, 2.5 ],
+      "PLANTING" : [ 4, 5 ],
+      "HARVESTING" : [ 8, 11 ]
+    },
+    "IMG" : "images/tomato.png",
+    "URL" : "tomato"
+  },{
+    "NAME" : "Spinach",
+    "TIMES" : {
+      "SOWING" : [ 3, 6, 8, 10 ],
+      "HARVESTING" : [ 4, 7.25, 10, 11 ]
+    },
+    "IMG" : "images/spinach.png",
+    "URL" : "spinach"
+  },{
+    "NAME" : "Beetroot",
+    "TIMES" : {
+      "SOWING" : [ 5.5, 7 ],
+      "HARVESTING" : [ 10, 12 ]
+    },
+    "IMG" : "images/beetroot.png",
+    "URL" : "beetroot"
+  },{
+    "NAME" : "Brussel Sprouts",
+    "TIMES" : {
+      "SOWING" : [ 4, 6 ],
+      "PLANTING" : [ 5, 7 ],
+      "HARVESTING" : [ 10, 13 ]
+    },
+    "IMG" : "images/brussel-sprouts.png",
+    "URL" : "brussel-sprouts"
+  },{
+    "NAME" : "Carrot",
+    "TIMES" : {
+      "SOWING" : [ 3, 7 ],
+      "HARVESTING" : [ 6.5, 12 ]
+    },
+    "IMG" : "images/carrot.png",
+    "URL" : "carrot"
+  },{
+    "NAME" : "Chard",
+    "TIMES" : {
+      "SOWING" : [ 4, 7.5 ],
+      "HARVESTING" : [ 7, 11 ]
+    },
+    "IMG" : "images/chard.png",
+    "URL" : "chard"
+  },{
+    "NAME" : "Onion",
+    "TIMES" : {
+      "SOWING" : [ 3, 5 ],
+      "HARVESTING" : [ 8, 10 ]
+    },
+    "IMG" : "images/beetroot.png",
+    "URL" : "onion"
+  },{
+    "NAME" : "Peas",
+    "TIMES" : {
+      "SOWING" : [ 3.5, 6 ],
+      "HARVESTING" : [ 6, 9 ]
+    },
+    "IMG" : "images/peas.png",
+    "URL" : "peas"
+  },{
+    "NAME" : "Pepper",
+    "TIMES" : {
+      "SOWING" : [ 3, 4 ],
+      "PLANTING" : [ 5.5, 6 ],
+      "HARVESTING" : [ 8, 11 ]
+    },
+    "IMG" : "images/pepper.png",
+    "URL" : "pepper"
+  },{
+    "NAME" : "Sweet Potato",
+    "TIMES" : {
+      "SOWING" : [ 4, 4.5 ],
+      "PLANTING" : [ 5, 6 ],
+      "HARVESTING" : [ 9, 11 ]
+    },
+    "IMG" : "images/sweet-potato.png",
+    "URL" : "sweet-potato"
+  }]
+}
