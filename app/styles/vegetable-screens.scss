@@ -7,31 +7,20 @@
   z-index: -10;
 }
 
+.tomato-hg {
+  position: absolute;
+  left: 18vw;
+  top: 0;
+  z-index: 20;
+  img { height: 100vh; }
+}
+
 .tomato-img {
   position: absolute;
   left: 18vw;
   top: 120vh;
   z-index: 10;
-  &.tomato-layer { z-index: 30; }
   img { height: 100vh; }
-}
-
-.tomato-overlay-position {
-  position: absolute;
-  left: 18vw;
-  height: 100vh;
-  width: 67vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 20;
-
-  .tomato-overlay {
-    top: 5vh;
-    height: 90vh;
-    width: 55vh;
-    border: 7px solid $red;
-  }
 }
 
 .tomato-text-position {
@@ -43,13 +32,21 @@
 }
 
 .screen-sweet-potato {
-  height: 100vh;
+  height: 150vh;
 }
 
 .sweet-potato-img img {
-  height: 80vh;
+  height: 70vh;
   position: absolute;
   top: -7vh;
   right: 5vw;
   z-index: 0;
+}
+
+.sweet-potato-text-position {
+  position: absolute;
+  width: 75vw;
+  top: 75vh;
+  right: 5vw;
+  text-align: right;
 }

@@ -34,7 +34,7 @@
         .setTween(sideBarLinesTween)
         .addTo(scrollingController);
 
-      var sideBar = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-frame", duration: $(document).height()})
+      var sideBar = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-hg", duration: $(document).height()})
         .triggerHook(1)
         .setPin("#target-side-bar", {pushFollowers: false})
         .setClassToggle("#target-side-bar", "side-bar")
@@ -46,21 +46,16 @@
         .setPin("#target-side-bar-lines", {pushFollowers: false})
         .addTo(scrollingController);
 
-      var tomatoFrame = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-frame", duration: 2.2 * $(window).height()
+      var tomatoHg = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-hg", duration: 2.2 * $(window).height()
     })
         .triggerHook(0)
-        .setPin("#target-tomato-frame", {pushFollowers: false})
+        .setPin("#target-tomato-hg", {pushFollowers: false})
         .setClassToggle("#side-bar-tomato", "active")
         .addTo(scrollingController);
 
       var tomatoImg = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-img", duration: $(window).height() })
         .triggerHook(0)
         .setPin("#target-tomato-img", {pushFollowers: false})
-        .addTo(scrollingController);
-
-      var tomatoImg = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-img", duration: $(window).height() })
-        .triggerHook(0)
-        .setPin("#target-tomato-img-layer", {pushFollowers: false})
         .addTo(scrollingController);
 
       var tomatoText = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-text", duration: 0.6 * $(window).height()})
