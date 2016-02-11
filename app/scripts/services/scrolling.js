@@ -54,7 +54,7 @@
         .setClassToggle("#side-bar-tomato", "active")
         .addTo(scrollingController);
 
-      var tomatoImg = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-img", duration: 0.7 * $(window).height() })
+      var tomatoImg = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-img", duration: 1.15 * $(window).height() })
         .triggerHook(0)
         .setPin("#target-tomato-img", {pushFollowers: false})
         .addTo(scrollingController);
