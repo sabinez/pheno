@@ -33,7 +33,8 @@
 }
 
 .screen-sweet-potato {
-  height: 150vh;
+  height: 170vh;
+  z-index: -10;
 }
 
 .sweet-potato-img img {
@@ -41,7 +42,6 @@
   position: absolute;
   top: 0;
   left: 40vw;
-  z-index: 0;
 }
 
 .sweet-potato-text-position {
@@ -53,5 +53,66 @@
 }
 
 .sweet-potato-text h1 {
+  margin: 0;
+}
+
+.screen-pepper {
+  height: 180vh;
+  z-index: -10;
+}
+
+.pepper-img {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 30vw;
+  margin-left: 70vw;
+  img {
+    width: 30vw;
+  }
+}
+
+.pepper-text-position {
+  position: absolute;
+  width: 30vw;
+  top: 80vh;
+  left: 30vw;
+  font-size: 12px;
+  text-align: right;
+}
+
+.pepper-text h1 {
+  margin: 0;
+}
+
+.screen-beetroot {
+  height: 250vh;
+  z-index: -10;
+}
+
+.beetroot-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 30vw;
+  margin-left: 70vw;
+  img {
+    width: 26vw;
+  }
+}
+
+.beetroot-text-position {
+  position: absolute;
+  width: 30vw;
+  top: 70vh;
+  left: 70vw;
+  font-size: 12px;
+  text-align: left;
+  opacity: 0;
+  z-index: -10;
+}
+
+.beetroot-text h1 {
   margin: 0;
 }
