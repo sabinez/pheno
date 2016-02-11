@@ -46,19 +46,19 @@
         .setPin("#target-side-bar-lines", {pushFollowers: false})
         .addTo(scrollingController);
 
-      var tomatoHg = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-hg", duration: 2.2 * $(window).height()
+      var tomatoHg = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-hg", duration: 1.3 * $(window).height()
     })
         .triggerHook(0)
         .setPin("#target-tomato-hg", {pushFollowers: false})
         .setClassToggle("#side-bar-tomato", "active")
         .addTo(scrollingController);
 
-      var tomatoImg = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-img", duration: $(window).height() })
+      var tomatoImg = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-img", duration: 0.7 * $(window).height() })
         .triggerHook(0)
         .setPin("#target-tomato-img", {pushFollowers: false})
         .addTo(scrollingController);
 
-      var tomatoText = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-text", duration: 0.6 * $(window).height()})
+      var tomatoText = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-text", duration: 0.5 * $(window).height()})
         .triggerHook(0.4)
         .setPin("#target-tomato-text", {pushFollowers: false})
         .addTo(scrollingController);
