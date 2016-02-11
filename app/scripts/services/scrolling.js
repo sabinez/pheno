@@ -63,6 +63,17 @@
         .setPin("#target-tomato-text", {pushFollowers: false})
         .addTo(scrollingController);
 
+      var sweetPotatoImg = new ScrollMagic.Scene({triggerElement: "#trigger-sweet-potato-img", duration: $(window).height()})
+        .triggerHook(0)
+        .setPin("#target-sweet-potato-img", {pushFollowers: false})
+        .setClassToggle("#side-bar-sweet-potato", "active")
+        .addTo(scrollingController);
+
+      var sweetPotatoText = new ScrollMagic.Scene({triggerElement: "#trigger-sweet-potato-text", duration: 0.4 * $(window).height()})
+        .triggerHook(0.55)
+        .setPin("#target-sweet-potato-text", {pushFollowers: false})
+        .addTo(scrollingController);
+
       scrollingController.scrollTo(function (newpos) {
         TweenMax.to(window, 0.5, {scrollTo: {y: newpos}});
       });
