@@ -132,9 +132,11 @@
 .peas-img-box {
   position: relative;
   .peas-img-hg {
+    display: block;
     width: 30vw;
   }
   .pea-a {
+    transition: left 2s linear, top 2s linear;
     position: absolute;
     width: 3vw;
     top: 0;

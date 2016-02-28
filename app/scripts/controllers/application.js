@@ -58,6 +58,7 @@
         setTimeBarStyle();
         $timeout(function(){
           initScrolling();
+          setInterval(animatePeas, 20);
         });
       });
     });
