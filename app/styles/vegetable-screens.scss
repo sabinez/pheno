@@ -116,3 +116,41 @@
 .beetroot-text h1 {
   margin: 0;
 }
+
+.screen-peas {
+  height: 100vh;
+}
+
+.peas-img {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 30vw;
+  margin-left: 30vw;
+}
+
+.peas-img-box {
+  position: relative;
+  .peas-img-hg {
+    width: 30vw;
+  }
+  .pea-a {
+    position: absolute;
+    width: 3vw;
+    top: 0;
+    left: 0;
+  }
+}
+
+.peas-text-position {
+  position: absolute;
+  width: 30vw;
+  top: 70vh;
+  left: 70vw;
+  font-size: 12px;
+  text-align: left;
+}
+
+.peas-text h1 {
+  margin: 0;
+}

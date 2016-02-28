@@ -75,7 +75,7 @@
         .setPin("#target-sweet-potato-text", {pushFollowers: false})
         .addTo(scrollingController);
 
-      var pepperImg = new ScrollMagic.Scene({triggerElement: "#trigger-pepper-img", duration: 4 * $(window).height()})
+      var pepperImg = new ScrollMagic.Scene({triggerElement: "#trigger-pepper-img", duration: 3.5 * $(window).height()})
         .triggerHook(0)
         .setPin("#target-pepper-img", {pushFollowers: false})
         .setClassToggle("#side-bar-pepper", "active")
