@@ -11,6 +11,7 @@
       var sideBarLinesTween = new TweenMax.to("#target-side-bar-lines-tween", 1, {right: '97vw'});
       var sideBarLinksTween = new TweenMax.to(".target-side-bar-links-tween", 1, {opacity: '0.3'});
       var beetrootTween = new TweenMax.to(['#target-beetroot-img', '#target-pepper-img'], 1, {'margin-left': '-50vw'});
+      var carrotRotation = new TweenMax.to("#target-carrot-rotation", 1, {rotation: 180, ease: Linear.easeNone});
 
       var calendar = new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 0.5 *  $(window).height()})
         .triggerHook(0)
@@ -105,8 +106,9 @@
         .setClassToggle("#side-bar-peas", "active")
         .addTo(scrollingController);
 
-      var carrotImg = new ScrollMagic.Scene({triggerElement: "#trigger-carrot-img", duration: 1 * $(window).height()})
-        .triggerHook(0)
+      var carrotImg = new ScrollMagic.Scene({triggerElement: "#trigger-carrot-img", duration: 0.5 * $(window).height()})
+        .triggerHook(0.3)
+        .setTween(carrotRotation)
         .setPin("#target-carrot-img", {pushFollowers: false})
         .setClassToggle("#side-bar-carrot", "active")
         .addTo(scrollingController);
