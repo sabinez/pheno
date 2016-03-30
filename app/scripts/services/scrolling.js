@@ -75,7 +75,7 @@
         .setPin("#target-sweet-potato-text", {pushFollowers: false})
         .addTo(scrollingController);
 
-      var pepperImg = new ScrollMagic.Scene({triggerElement: "#trigger-pepper-img", duration: 3.5 * $(window).height()})
+      var pepperImg = new ScrollMagic.Scene({triggerElement: "#trigger-pepper-img", duration: 3 * $(window).height()})
         .triggerHook(0)
         .setPin("#target-pepper-img", {pushFollowers: false})
         .setClassToggle("#side-bar-pepper", "active")
@@ -86,17 +86,23 @@
         .setPin("#target-pepper-text", {pushFollowers: false})
         .addTo(scrollingController);
 
-      var beetrootImg = new ScrollMagic.Scene({triggerElement: "#trigger-beetroot-img", duration: 1.7 * $(window).height()})
+      var beetrootImg = new ScrollMagic.Scene({triggerElement: "#trigger-beetroot-img", duration: 1.2 * $(window).height()})
         .triggerHook(0)
         .setPin("#target-beetroot-img", {pushFollowers: false})
         .setClassToggle("#side-bar-beetroot", "active")
         .addTo(scrollingController);
 
-      var beetrootText = new ScrollMagic.Scene({triggerElement: "#trigger-beetroot-text", duration: 0.6 * $(window).height()})
+      var beetrootText = new ScrollMagic.Scene({triggerElement: "#trigger-beetroot-text", duration: 0.3 * $(window).height()})
         .triggerHook(0.3)
         .setPin("#target-beetroot-text", {pushFollowers: false})
         .setTween(beetrootTween)
         .setClassToggle("#trigger-beetroot-text", "visible")
+        .addTo(scrollingController);
+
+      var peasImg = new ScrollMagic.Scene({triggerElement: "#trigger-peas-img", duration: 2 * $(window).height()})
+        .triggerHook(0)
+        .setPin("#target-peas-img", {pushFollowers: false})
+        .setClassToggle("#side-bar-peas", "active")
         .addTo(scrollingController);
 
       scrollingController.scrollTo(function (newpos) {

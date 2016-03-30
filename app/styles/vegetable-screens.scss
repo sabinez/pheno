@@ -122,11 +122,12 @@
 }
 
 .peas-img {
+  position: absolute;
+  left: 30vw;
   display: flex;
   align-items: center;
   height: 100vh;
   width: 30vw;
-  margin-left: 30vw;
 }
 
 .peas-img-box {
