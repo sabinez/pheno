@@ -113,6 +113,12 @@
         .setClassToggle("#side-bar-carrot", "active")
         .addTo(scrollingController);
 
+      var chardImg = new ScrollMagic.Scene({triggerElement: "#trigger-chard-img", duration: 1.4 * $(window).height()})
+        .triggerHook(0)
+        .setPin("#target-chard-img", {pushFollowers: false})
+        .setClassToggle("#side-bar-chard", "active")
+        .addTo(scrollingController);
+
       scrollingController.scrollTo(function (newpos) {
         TweenMax.to(window, 0.5, {scrollTo: {y: newpos}});
       });

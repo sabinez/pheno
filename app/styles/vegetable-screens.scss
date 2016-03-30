@@ -159,7 +159,7 @@
 }
 
 .screen-carrot {
-  height: 200vh;
+  height: 140vh;
   z-index: -10;
 }
 
@@ -182,5 +182,35 @@
 }
 
 .carrot-text h1 {
+  margin: 0;
+}
+
+.screen-chard {
+  height: 200vh;
+  z-index: -10;
+}
+
+.chard-img {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  position: absolute;
+  width: 30vw;
+  left: 50vw;
+  img {
+    width: 30vw;
+  }
+}
+
+.chard-text-position {
+  position: absolute;
+  width: 30vw;
+  top: 100vh;
+  left: 30vw;
+  font-size: 12px;
+  text-align: right;
+}
+
+.chard-text h1 {
   margin: 0;
 }
