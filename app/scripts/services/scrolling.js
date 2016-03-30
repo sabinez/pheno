@@ -99,10 +99,16 @@
         .setClassToggle("#trigger-beetroot-text", "visible")
         .addTo(scrollingController);
 
-      var peasImg = new ScrollMagic.Scene({triggerElement: "#trigger-peas-img", duration: 2 * $(window).height()})
+      var peasImg = new ScrollMagic.Scene({triggerElement: "#trigger-peas-img", duration: 1.25 * $(window).height()})
         .triggerHook(0)
         .setPin("#target-peas-img", {pushFollowers: false})
         .setClassToggle("#side-bar-peas", "active")
+        .addTo(scrollingController);
+
+      var carrotImg = new ScrollMagic.Scene({triggerElement: "#trigger-carrot-img", duration: 1 * $(window).height()})
+        .triggerHook(0)
+        .setPin("#target-carrot-img", {pushFollowers: false})
+        .setClassToggle("#side-bar-carrot", "active")
         .addTo(scrollingController);
 
       scrollingController.scrollTo(function (newpos) {

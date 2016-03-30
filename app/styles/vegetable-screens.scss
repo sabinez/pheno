@@ -86,7 +86,7 @@
 }
 
 .screen-beetroot {
-  height: 250vh;
+  height: 220vh;
   z-index: -10;
 }
 
@@ -118,7 +118,7 @@
 }
 
 .screen-peas {
-  height: 100vh;
+  height: 200vh;
 }
 
 .peas-img {
@@ -148,12 +148,39 @@
 .peas-text-position {
   position: absolute;
   width: 30vw;
-  top: 70vh;
+  top: 100vh;
   left: 70vw;
   font-size: 12px;
   text-align: left;
 }
 
 .peas-text h1 {
+  margin: 0;
+}
+
+.screen-carrot {
+  height: 180vh;
+  z-index: -10;
+}
+
+.carrot-img {
+  position: absolute;
+  width: 20vw;
+  left: 70vw;
+  img {
+    width: 20vw;
+  }
+}
+
+.carrot-text-position {
+  position: absolute;
+  width: 30vw;
+  top: 80vh;
+  left: 30vw;
+  font-size: 12px;
+  text-align: right;
+}
+
+.carrot-text h1 {
   margin: 0;
 }
