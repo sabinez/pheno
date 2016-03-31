@@ -113,7 +113,7 @@
         .setClassToggle("#side-bar-carrot", "active")
         .addTo(scrollingController);
 
-      var chardImg = new ScrollMagic.Scene({triggerElement: "#trigger-chard-img", duration: 1.4 * $(window).height()})
+      var chardImg = new ScrollMagic.Scene({triggerElement: "#trigger-chard-img", duration: 1.3 * $(window).height()})
         .triggerHook(0)
         .setPin("#target-chard-img", {pushFollowers: false})
         .setClassToggle("#side-bar-chard", "active")
