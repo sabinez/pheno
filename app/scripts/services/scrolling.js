@@ -125,7 +125,7 @@
         .triggerHook(0)
         .setTween(brusselSproutsRotation)
         .setPin("#trigger-brussel-sprouts", {pushFollowers: false})
-        .setClassToggle("#side-bar-carrot", "active")
+        .setClassToggle("#side-bar-brussel-sprouts", "active")
         .addTo(scrollingController);
 
       scrollingController.scrollTo(function (newpos) {
