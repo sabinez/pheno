@@ -271,3 +271,30 @@
 .spinach-text h1 {
   margin: 0;
 }
+
+.screen-onion {
+  height: 230vh;
+  z-index: -10;
+}
+
+.onion-img {
+  position: absolute;
+  top: 100vh;
+  width: 20vw;
+  left: 50vw;
+  img {
+    width: 20vw;
+  }
+}
+
+.onion-text-position {
+  position: absolute;
+  width: 40vw;
+  left: 40vw;
+  font-size: 12px;
+  text-align: center;
+}
+
+.onion-text h1 {
+  margin: 0;
+}
