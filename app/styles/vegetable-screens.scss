@@ -218,7 +218,7 @@
 .screen-brussel-sprouts {
   display: flex;
   align-items: center;
-  height: 250vh;
+  height: 130vh;
   z-index: -10;
 }
 
@@ -226,7 +226,6 @@
   position: absolute;
   left: 60vw;
   top: 0;
-  // z-index: 20;
   img { width: 30vw; }
 }
 
@@ -234,7 +233,6 @@
   position: absolute;
   left: 60vw;
   top: 0;
-  // z-index: 10;
   img { width: 30vw; }
 }
 
@@ -245,4 +243,31 @@
   left: 20vw;
   text-align: right;
   font-size: 12px;
+}
+
+.screen-spinach {
+  height: 230vh;
+  z-index: -10;
+}
+
+.spinach-img {
+  position: absolute;
+  width: 40vw;
+  left: 30vw;
+  img {
+    width: 40vw;
+  }
+}
+
+.spinach-text-position {
+  position: absolute;
+  width: 30vw;
+  top: 100vh;
+  left: 60vw;
+  font-size: 12px;
+  text-align: left;
+}
+
+.spinach-text h1 {
+  margin: 0;
 }

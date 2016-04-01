@@ -128,6 +128,17 @@
         .setClassToggle("#side-bar-brussel-sprouts", "active")
         .addTo(scrollingController);
 
+      var spinachImg = new ScrollMagic.Scene({triggerElement: "#trigger-spinach-img", duration: 0.9 * $(window).height()})
+        .triggerHook(0)
+        .setPin("#target-spinach-img", {pushFollowers: false})
+        .setClassToggle("#side-bar-spinach", "active")
+        .addTo(scrollingController);
+
+      var spinachText = new ScrollMagic.Scene({triggerElement: "#trigger-spinach-text", duration: 0.3 * $(window).height()})
+        .triggerHook(0.6)
+        .setPin("#target-spinach-text", {pushFollowers: false})
+        .addTo(scrollingController);
+
       scrollingController.scrollTo(function (newpos) {
         TweenMax.to(window, 0.5, {scrollTo: {y: newpos}});
       });
