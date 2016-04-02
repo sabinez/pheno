@@ -38,13 +38,13 @@
         .setTween(sideBarLinesTween)
         .addTo(scrollingController);
 
-      var sideBar = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-hg", duration: $(document).height()})
+      var sideBar = new ScrollMagic.Scene({triggerElement: "#trigger-tomato-hg", duration: $('#viewport')[0].scrollHeight})
         .triggerHook(1)
         .setPin("#target-side-bar", {pushFollowers: false})
         .setClassToggle("#target-side-bar", "side-bar")
         .addTo(scrollingController);
 
-      var sideBarLines = new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: $(document).height()})
+      var sideBarLines = new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: $('#viewport')[0].scrollHeight})
         .triggerHook(0)
         .offset(0.5 *  $(window).height())
         .setPin("#target-side-bar-lines", {pushFollowers: false})
