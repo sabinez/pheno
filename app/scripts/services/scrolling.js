@@ -5,7 +5,7 @@
 
     var initScrolling = function() {
 
-      var scrollingController = new ScrollMagic.Controller();
+      var scrollingController = new ScrollMagic.Controller({container: "#viewport"});
 
       var sideBarTween = new TweenMax.to("#target-side-bar-tween", 1, {left: '5px'});
       var sideBarLinesTween = new TweenMax.to("#target-side-bar-lines-tween", 1, {right: '97vw'});
