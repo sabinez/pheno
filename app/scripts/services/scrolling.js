@@ -139,9 +139,15 @@
         .setPin("#target-spinach-text", {pushFollowers: false})
         .addTo(scrollingController);
 
-      var onionText = new ScrollMagic.Scene({triggerElement: "#trigger-onion-text", duration: 1 * $(window).height()})
-        .triggerHook(0.1)
+      var onionText = new ScrollMagic.Scene({triggerElement: "#trigger-onion-text", duration: 1.2 * $(window).height()})
+        .triggerHook(0.7)
         .setPin("#target-onion-text", {pushFollowers: false})
+        .setClassToggle("#side-bar-onion", "active")
+        .addTo(scrollingController);
+
+      var onionImg = new ScrollMagic.Scene({triggerElement: "#trigger-onion-img", duration: 0.2 * $(window).height()})
+        .triggerHook(0.1)
+        .setPin("#target-onion-img", {pushFollowers: false})
         .addTo(scrollingController);
 
       scrollingController.scrollTo(function (newpos) {
