@@ -175,7 +175,8 @@
       );
 
       scrollingController.scrollTo(function (newpos) {
-        TweenMax.to(window, 0.5, {scrollTo: {y: newpos}});
+        var viewport = $("#viewport");
+        TweenMax.to(viewport, 0.5, {scrollTo: {y: newpos}});
       });
 
       $(document).on("click", "a[href^='#']", function (e) {
