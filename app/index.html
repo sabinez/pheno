@@ -13,6 +13,7 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/all.css">
     <!-- endbuild -->
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
   </head>
   <body ng-controller="ApplicationCtrl">
 
@@ -20,7 +21,7 @@
 
       <div class="header screen">
         <a href="#/" class="title">PHENO</a>
-        <p>Grow your own vegtable garden!</p>
+        <p>Grow your own vegetables!</p>
       </div>
 
 
@@ -29,6 +30,10 @@
           <div id="target-side-bar-lines" class="screen-overlay-fix">
             <div id="target-side-bar-lines-tween" class="screen-overlay">
               <div class="plant-separators">
+                <div class="plant-separator-line"></div>
+                <div class="plant-separator-line"></div>
+                <div class="plant-separator-line"></div>
+                <div class="plant-separator-line"></div>
                 <div class="plant-separator-line"></div>
                 <div class="plant-separator-line" ng-repeat="plant in PLANTS"></div>
               </div>

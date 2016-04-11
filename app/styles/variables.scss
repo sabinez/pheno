@@ -1,4 +1,4 @@
-$calendar-row-height: 3rem;
+$calendar-row-height: 100vh / 15;
 $calendar-width: 730px;
 $time-bars-width: $calendar-width * 0.75;
 $plant-name-width: $calendar-width - $time-bars-width;
