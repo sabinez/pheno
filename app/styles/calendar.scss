@@ -20,7 +20,7 @@
   display: flex;
   left: calc(50% - #{$start-point-month-seperators});
   .month-separator-line {
-    width: $month-width - 1px;
+    width: calc(#{$month-width} - 1px);
     border-left: 1px solid $black;
   }
   .month-separator-line:last-child {
@@ -120,6 +120,7 @@
 
 .calendar-time-bar {
   height: 12px;
+  margin-bottom: 1px;
   font-size: 11px;
   line-height: 1;
   color: white;
