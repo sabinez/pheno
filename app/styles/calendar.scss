@@ -119,22 +119,25 @@
 }
 
 .calendar-time-bar {
-  height: 5px;
-  margin-bottom: 3px;
-}
-
-.sowing {
+  height: 12px;
+  font-size: 11px;
+  line-height: 1;
+  color: white;
   background-color: $black;
 }
 
-.planting {
-  background-color: $black;
-}
+// .sowing {
+//   background-color: $black;
+// }
 
-.harvesting {
-  background-color: $black;
-  margin-bottom: 0;
-}
+// .planting {
+//   background-color: $black;
+// }
+
+// .harvesting {
+//   background-color: $black;
+//   margin-bottom: 0;
+// }
 
 
 /* Responsive: Portrait tablets and up */
