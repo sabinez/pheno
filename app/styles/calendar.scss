@@ -18,14 +18,11 @@
   justify-content: center;
   margin-top: 2em;
   .heading-calendar-background {
-    padding-top: 1em;
+    padding-top: 0.5em;
     background-color: white;
     height: 5em;
     width: 30vw;
     z-index: 10;
-    h1 {
-      text-transform: uppercase;
-    }
   }
 }
 
@@ -135,8 +132,10 @@
 }
 
 .calendar-time-bar {
+  padding-left: 1px;
   height: 12px;
   margin-bottom: 1px;
+  text-align: left;
   font-size: 11px;
   line-height: 1;
   color: white;
@@ -144,16 +143,15 @@
 }
 
 // .sowing {
-//   background-color: $black;
+//   background-color: #adadad;
 // }
 
 // .planting {
-//   background-color: $black;
+//   background-color: #696969;
 // }
 
 // .harvesting {
 //   background-color: $black;
-//   margin-bottom: 0;
 // }
 
 
