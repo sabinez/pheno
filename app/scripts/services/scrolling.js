@@ -8,38 +8,39 @@
 
       var scrollingController = new ScrollMagic.Controller({container: "#viewport"});
 
-      var sideBarTween = new TweenMax.to("#target-side-bar-tween", 1, {left: '5px'});
-      var sideBarLinesTween = new TweenMax.to("#target-side-bar-lines-tween", 1, {right: '97vw'});
-      var sideBarLinksTween = new TweenMax.to(".target-side-bar-links-tween", 1, {opacity: '0.3'});
+      var sideBarTween = new TweenMax.to("#target-side-bar-tween", 1, {left: '-20vh'});
+      var sideBarLinesTween = new TweenMax.to("#target-side-bar-lines-tween", 1, {right: '100vw'});
+      var calendarMonthLinesTween = new TweenMax.to(".month-separators", 1, {height: '10vh'});
       var beetrootTween = new TweenMax.to(['#target-beetroot-img', '#target-pepper-img'], 1, {'margin-left': '-50vw'});
       var carrotRotation = new TweenMax.to("#target-carrot-rotation", 1, {rotation: 180, ease: Linear.easeNone});
       var brusselSproutsRotation = new TweenMax.to("#target-brussel-sprouts-cutout", 1, {rotation: 360, ease: Linear.easeNone});
 
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 0.5 *  $(window).height()})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 1.5 *  $(window).height()})
         .triggerHook(0)
         .setPin("#target-calendar", {pushFollowers: true})
         .addTo(scrollingController)
       );
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 0.5 * $(window).height()})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 1 * $(window).height()})
         .triggerHook(0)
         .offset(0.5 * $(window).height())
         .setTween(sideBarTween)
         .addTo(scrollingController)
       );
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 0.5 * $(window).height()})
-        .triggerHook(0)
-        .offset(0.5 * $(window).height())
-        .setTween(sideBarLinksTween)
-        .addTo(scrollingController)
-      );
-
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 0.5 * $(window).height()})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 1 * $(window).height()})
         .triggerHook(0)
         .offset(0.5 * $(window).height())
         .setTween(sideBarLinesTween)
+        .addTo(scrollingController)
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 1 * $(window).height()})
+        .triggerHook(0)
+        .offset(0.5 * $(window).height())
+        .setTween(calendarMonthLinesTween)
+        .addIndicators()
         .addTo(scrollingController)
       );
 

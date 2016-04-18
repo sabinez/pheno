@@ -1,12 +1,12 @@
 @import "variables.scss";
 
 .screen-calendar {
-  height: 100vh;
+  height: 150vh;
 }
 
 .calendar {
   position: absolute;
-  bottom: 0;
+  bottom: 50vh;
   display: flex;
   align-items: flex-end;
   height: 11 * $calendar-row-height;
@@ -29,9 +29,10 @@
 .month-separators {
   position: absolute;
   top: calc( 4 * #{$calendar-row-height});
-  bottom: 0;
+  height: calc( 11 * #{$calendar-row-height});
   display: flex;
   left: calc(50% - #{$start-point-month-seperators});
+  overflow: hidden;
   .month-separator-line {
     width: calc(#{$month-width} - 1px);
     border-left: 1px solid $black;
