@@ -9,8 +9,8 @@
       var scrollingController = new ScrollMagic.Controller({container: "#viewport"});
 
       var sideBarTween = new TweenMax.to("#target-side-bar-tween", 1, {left: '-20vh'});
-      var sideBarLinesTween = new TweenMax.to("#target-side-bar-lines-tween", 1, {right: '100vw'});
-      var calendarMonthLinesTween = new TweenMax.to(".month-separators", 1, {height: '10vh'});
+      var sideBarLinesTween = new TweenMax.to(".plant-separator-line", 1, {width: '0'});
+      var calendarMonthLinesTween = new TweenMax.to(".month-separators", 1, {height: '0'});
       var beetrootTween = new TweenMax.to(['#target-beetroot-img', '#target-pepper-img'], 1, {'margin-left': '-50vw'});
       var carrotRotation = new TweenMax.to("#target-carrot-rotation", 1, {rotation: 180, ease: Linear.easeNone});
       var brusselSproutsRotation = new TweenMax.to("#target-brussel-sprouts-cutout", 1, {rotation: 360, ease: Linear.easeNone});
@@ -19,6 +19,7 @@
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 1.5 *  $(window).height()})
         .triggerHook(0)
         .setPin("#target-calendar", {pushFollowers: true})
+        .addIndicators()
         .addTo(scrollingController)
       );
 
@@ -40,21 +41,34 @@
         .triggerHook(0)
         .offset(0.5 * $(window).height())
         .setTween(calendarMonthLinesTween)
-        .addIndicators()
         .addTo(scrollingController)
       );
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-tomato-hg", duration: $('#viewport')[0].scrollHeight})
-        .triggerHook(1)
-        .setPin("#target-side-bar", {pushFollowers: false})
-        .setClassToggle("#target-side-bar", "side-bar")
-        .addTo(scrollingController)
-      );
+      // sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-tomato-hg", duration: $('#viewport')[0].scrollHeight})
+      //   .triggerHook(1)
+      //   .setPin("#target-side-bar", {pushFollowers: false})
+      //   .setClassToggle("#target-side-bar", "side-bar")
+      //   .addTo(scrollingController)
+      // );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: $('#viewport')[0].scrollHeight})
         .triggerHook(0)
         .offset(0.5 *  $(window).height())
         .setPin("#target-side-bar-lines", {pushFollowers: false})
+        .addTo(scrollingController)
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: $('#viewport')[0].scrollHeight})
+        .triggerHook(0)
+        .offset(1.5 *  $(window).height())
+        .setPin(".month-separators", {pushFollowers: false})
+        .addTo(scrollingController)
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: $('#viewport')[0].scrollHeight})
+        .triggerHook(0)
+        .offset(1.5 *  $(window).height())
+        .setPin("#calendar-month-section", {pushFollowers: false})
         .addTo(scrollingController)
       );
 

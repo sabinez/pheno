@@ -16,11 +16,13 @@
 .heading-calendar{
   display: flex;
   justify-content: center;
-  margin-top: 2em;
+  position: absolute;
+  top: 5vh;
+  left: 35vw;
   .heading-calendar-background {
     padding-top: 0.5em;
     background-color: white;
-    height: 5em;
+    height: 9vh;
     width: 30vw;
     z-index: 10;
   }
@@ -30,6 +32,7 @@
   position: absolute;
   top: calc( 4 * #{$calendar-row-height});
   height: calc( 11 * #{$calendar-row-height});
+  min-height: calc( 2 * #{$calendar-row-height});
   display: flex;
   left: calc(50% - #{$start-point-month-seperators});
   overflow: hidden;
@@ -66,7 +69,7 @@
   height: 100%;
 }
 
-.plant-separator-line {
+.plant-separator-line, .plant-separator-line-fixed {
   height: calc(#{$calendar-row-height} - 1px);
   border-bottom: 1px solid $black;
 }
