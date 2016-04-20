@@ -94,19 +94,7 @@
               </ul>
             </div>
             <ul class="calendar-content">
-              <li ng-repeat="plant in PLANTS">
-                <div class="calendar-time-bars">
-                  <div style="display:flex;">
-                    <div class="calendar-time-bar sowing" style="width:{{plant.sowingWidth}}px;margin-left:{{plant.sowingMargin}}px;">sow</div>
-                    <div class="calendar-time-bar sowing" ng-if="plant.TIMES.SOWING[2]" style="width:{{plant.sowingWidthSecond}}px;margin-left:{{plant.sowingMarginSecond}}px;">sow</div>
-                  </div>
-                  <div class="calendar-time-bar planting" ng-if="plant.TIMES.PLANTING" style="width:{{plant.plantingWidth}}px;margin-left:{{plant.plantingMargin}}px;">plant</div>
-                  <div style="display:flex;">
-                    <div class="calendar-time-bar harvesting" style="width:{{plant.harvestingWidth}}px;margin-left:{{plant.harvestingMargin}}px;">harvest</div>
-                    <div class="calendar-time-bar harvesting" ng-if="plant.TIMES.HARVESTING[2]" style="width:{{plant.harvestingWidthSecond}}px;margin-left:{{plant.harvestingMarginSecond}}px;">harvest</div>
-                  </div>
-                </div>
-              </li>
+              <vegetable-time-bars ng-repeat="plantData in PLANTS" plant="plantData"></vegetable-time-bars>
             </ul>
           </div>
         </div>
@@ -120,19 +108,7 @@
         </div>
         
         <ul class="vegetable-time-bars">
-          <li class="target-tween-tomato">
-            <div class="calendar-time-bars">
-              <div style="display:flex;">
-                <div class="calendar-time-bar sowing" style="width:{{PLANTS[0].sowingWidth}}px;margin-left:{{PLANTS[0].sowingMargin}}px;">sow</div>
-                <div class="calendar-time-bar sowing" ng-if="PLANTS[0].TIMES.SOWING[2]" style="width:{{PLANTS[0].sowingWidthSecond}}px;margin-left:{{PLANTS[0].sowingMarginSecond}}px;">sow</div>
-              </div>
-              <div class="calendar-time-bar planting" ng-if="PLANTS[0].TIMES.PLANTING" style="width:{{PLANTS[0].plantingWidth}}px;margin-left:{{PLANTS[0].plantingMargin}}px;">plant</div>
-              <div style="display:flex;">
-                <div class="calendar-time-bar harvesting" style="width:{{PLANTS[0].harvestingWidth}}px;margin-left:{{PLANTS[0].harvestingMargin}}px;">harvest</div>
-                <div class="calendar-time-bar harvesting" ng-if="PLANTS[0].TIMES.HARVESTING[2]" style="width:{{PLANTS[0].harvestingWidthSecond}}px;margin-left:{{PLANTS[0].harvestingMarginSecond}}px;">harvest</div>
-              </div>
-            </div>
-          </li>
+          <vegetable-time-bars plant="PLANTS[0]"></vegetable-time-bars>
         </ul>
 
         <div id="target-tomato-hg" class="tomato-hg">
@@ -304,6 +280,7 @@
     <script src="scripts/services/plantdata.js"></script>
     <script src="scripts/controllers/application.js"></script>
     <script src="scripts/services/scrolling.js"></script>
+    <script src="scripts/directives/vegetable-time-bars.js"></script>
     <!-- endbuild -->
 
   </body>
