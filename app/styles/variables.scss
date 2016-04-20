@@ -1,6 +1,6 @@
 $calendar-row-height: 100vh / 15;
 $time-bars-width: $calendar-row-height * 12;
-$calendar-width: $time-bars-width * 1.25;
+$calendar-width: $time-bars-width * 1.35;
 $plant-name-width: $calendar-width - $time-bars-width;
 $month-width: $calendar-row-height;
 $start-point-month-seperators: ($calendar-width / 2) - $plant-name-width;
