@@ -6,7 +6,7 @@
 
 .calendar {
   position: absolute;
-  bottom: 50vh;
+  bottom: calc( 50vh + #{$calendar-row-height});
   display: flex;
   align-items: flex-end;
   height: 11 * $calendar-row-height;
@@ -30,9 +30,9 @@
 
 .month-separators {
   position: absolute;
-  top: calc( 4 * #{$calendar-row-height});
-  height: calc( 11 * #{$calendar-row-height});
-  min-height: calc( 2 * #{$calendar-row-height});
+  top: 3 * $calendar-row-height;
+  height: 11 * $calendar-row-height;
+  min-height: 2 * $calendar-row-height;
   display: flex;
   left: calc(50% - #{$start-point-month-seperators});
   overflow: hidden;
