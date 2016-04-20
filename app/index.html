@@ -114,18 +114,40 @@
 
       <a id="tomato"></a>
       <div id="trigger-tomato-hg" class="screen screen-tomato">
+
+        <div class="vegetable-heading">
+          <h1>TOMATO</h1>          
+        </div>
+        
+        <ul class="vegetable-time-bars">
+          <li class="target-tween-tomato">
+            <div class="calendar-time-bars">
+              <div style="display:flex;">
+                <div class="calendar-time-bar sowing" style="width:{{PLANTS[0].sowingWidth}}px;margin-left:{{PLANTS[0].sowingMargin}}px;">sow</div>
+                <div class="calendar-time-bar sowing" ng-if="PLANTS[0].TIMES.SOWING[2]" style="width:{{PLANTS[0].sowingWidthSecond}}px;margin-left:{{PLANTS[0].sowingMarginSecond}}px;">sow</div>
+              </div>
+              <div class="calendar-time-bar planting" ng-if="PLANTS[0].TIMES.PLANTING" style="width:{{PLANTS[0].plantingWidth}}px;margin-left:{{PLANTS[0].plantingMargin}}px;">plant</div>
+              <div style="display:flex;">
+                <div class="calendar-time-bar harvesting" style="width:{{PLANTS[0].harvestingWidth}}px;margin-left:{{PLANTS[0].harvestingMargin}}px;">harvest</div>
+                <div class="calendar-time-bar harvesting" ng-if="PLANTS[0].TIMES.HARVESTING[2]" style="width:{{PLANTS[0].harvestingWidthSecond}}px;margin-left:{{PLANTS[0].harvestingMarginSecond}}px;">harvest</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
         <div id="target-tomato-hg" class="tomato-hg">
           <img src="images/tomato-hg.png">
         </div>
         <div id="trigger-tomato-img" class="tomato-img">
           <img id="target-tomato-img" src="images/tomato.png">
         </div>
+
         <div id="trigger-tomato-text" class="tomato-text-position">
           <div id="target-tomato-text" class="tomato-text">
-            <h1>TOMATO</h1>
             Plant the seeds about 2 cm deep in small pots and keep them indoor. Plant out as soon as the seedling growth four leaves. The plants should have a distance of 40 cm between each other. The growing spot should receive a lot of sun. Keep the soil moist but don’t overwater. As a growth support tie the stem to a stake. Pinch off lateral shoots early on. Remove the main shoot around the middle of September. Fertilize from time to time.
           </div>
         </div>
+
       </div>
 
       <a id="sweet-potato"></a>

@@ -1,5 +1,26 @@
 @import "variables.scss";
 
+.vegetable-heading{
+  position: absolute;
+  top: 5vh;
+  width: 100vw;
+}
+
+.vegetable-time-bars {
+  position: absolute;
+  top: 4 * $calendar-row-height;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  li {
+    position: absolute;
+    left: -50vw;
+    height: $calendar-row-height;
+    display: flex;
+    align-items: center;
+  }
+}
+
 .screen-tomato {
   display: flex;
   align-items: center;
@@ -10,17 +31,17 @@
 .tomato-hg {
   position: absolute;
   left: 20vw;
-  top: 0;
+  top: 35vh;
   z-index: 20;
-  img { width: 30vw; }
+  img { width: 20vw; }
 }
 
 .tomato-img {
   position: absolute;
   left: 20vw;
-  top: 15vh;
+  top: 40vh;
   z-index: 10;
-  img { width: 30vw; }
+  img { width: 20vw; }
 }
 
 .tomato-text-position {

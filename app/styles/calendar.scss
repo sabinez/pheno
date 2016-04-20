@@ -81,7 +81,7 @@
   padding: 0;
   margin: 0;
   li {
-    height: calc(#{$calendar-row-height});
+    height: $calendar-row-height;
     display: flex;
     align-items: center;
   }
