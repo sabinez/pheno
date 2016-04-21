@@ -9,13 +9,23 @@
     "IMG" : "images/tomato.png",
     "URL" : "tomato"
   },{
-    "NAME" : "Spinach",
+    "NAME" : "Sweet Potato",
     "TIMES" : {
-      "SOWING" : [ 3, 6, 8, 10 ],
-      "HARVESTING" : [ 4, 7.25, 10, 11 ]
+      "SOWING" : [ 4, 4.5 ],
+      "PLANTING" : [ 5, 6 ],
+      "HARVESTING" : [ 9, 11 ]
     },
-    "IMG" : "images/spinach.png",
-    "URL" : "spinach"
+    "IMG" : "images/sweet-potato.png",
+    "URL" : "sweet-potato"
+  },{
+    "NAME" : "Pepper",
+    "TIMES" : {
+      "SOWING" : [ 3, 4 ],
+      "PLANTING" : [ 5.5, 6 ],
+      "HARVESTING" : [ 8, 11 ]
+    },
+    "IMG" : "images/pepper.png",
+    "URL" : "pepper"
   },{
     "NAME" : "Beetroot",
     "TIMES" : {
@@ -25,14 +35,13 @@
     "IMG" : "images/beetroot.png",
     "URL" : "beetroot"
   },{
-    "NAME" : "Brussel Sprouts",
+    "NAME" : "Peas",
     "TIMES" : {
-      "SOWING" : [ 4, 6 ],
-      "PLANTING" : [ 5, 7 ],
-      "HARVESTING" : [ 10, 13 ]
+      "SOWING" : [ 3.5, 6 ],
+      "HARVESTING" : [ 6, 9 ]
     },
-    "IMG" : "images/brussel-sprouts.png",
-    "URL" : "brussel-sprouts"
+    "IMG" : "images/peas.png",
+    "URL" : "peas"
   },{
     "NAME" : "Carrot",
     "TIMES" : {
@@ -50,6 +59,23 @@
     "IMG" : "images/chard.png",
     "URL" : "chard"
   },{
+    "NAME" : "Brussel Sprouts",
+    "TIMES" : {
+      "SOWING" : [ 4, 6 ],
+      "PLANTING" : [ 5, 7 ],
+      "HARVESTING" : [ 10, 13 ]
+    },
+    "IMG" : "images/brussel-sprouts.png",
+    "URL" : "brussel-sprouts"
+  },{
+    "NAME" : "Spinach",
+    "TIMES" : {
+      "SOWING" : [ 3, 6, 8, 10 ],
+      "HARVESTING" : [ 4, 7.25, 10, 11 ]
+    },
+    "IMG" : "images/spinach.png",
+    "URL" : "spinach"
+  },{
     "NAME" : "Onion",
     "TIMES" : {
       "SOWING" : [ 3, 5 ],
@@ -57,31 +83,5 @@
     },
     "IMG" : "images/beetroot.png",
     "URL" : "onion"
-  },{
-    "NAME" : "Peas",
-    "TIMES" : {
-      "SOWING" : [ 3.5, 6 ],
-      "HARVESTING" : [ 6, 9 ]
-    },
-    "IMG" : "images/peas.png",
-    "URL" : "peas"
-  },{
-    "NAME" : "Pepper",
-    "TIMES" : {
-      "SOWING" : [ 3, 4 ],
-      "PLANTING" : [ 5.5, 6 ],
-      "HARVESTING" : [ 8, 11 ]
-    },
-    "IMG" : "images/pepper.png",
-    "URL" : "pepper"
-  },{
-    "NAME" : "Sweet Potato",
-    "TIMES" : {
-      "SOWING" : [ 4, 4.5 ],
-      "PLANTING" : [ 5, 6 ],
-      "HARVESTING" : [ 9, 11 ]
-    },
-    "IMG" : "images/sweet-potato.png",
-    "URL" : "sweet-potato"
   }]
 }
