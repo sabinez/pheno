@@ -61,5 +61,17 @@
           setInterval(animatePeas, 20);
         });
       });
+
+      $scope.showMenu = false;
+      $scope.menuButton = function(){
+        console.log("1", $scope.showMenu);
+        if ($scope.showMenu == false) {
+          $scope.showMenu = true;
+        } else {
+          $scope.showMenu = false;
+        }
+      }
+
+
     });
 })();

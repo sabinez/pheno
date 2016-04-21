@@ -88,7 +88,7 @@
             </div>
             <div id="target-side-bar-tween" class="plant-names-wrapper">
               <ul id="target-side-bar" class="plant-names">
-                <li ng-repeat="plant in PLANTS" id="side-bar-{{ plant.URL }}" class="calendar-plant-name">
+                <li ng-repeat="plant in PLANTS" class="calendar-plant-name">
                   <a href="#{{plant.URL}}">{{ plant.NAME }}</a>
                 </li>
               </ul>
@@ -99,10 +99,10 @@
           </div>
 
           <div class="menu-wrapper">
-            <a href="#" class="menu-button">
-              >
+            <a href class="menu-button" ng-click="menuButton()">
+              &gt;
             </a>
-            <ul class="menu">
+            <ul class="menu" ng-show="showMenu">
               <li ng-repeat="plant in PLANTS" id="menu-{{ plant.URL }}" >
                 <a href="#{{plant.URL}}">{{ plant.NAME }}</a>
               </li>

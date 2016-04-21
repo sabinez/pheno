@@ -47,13 +47,6 @@
         .setTween(calendarMonthLinesTween)
       );
 
-      // sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-tomato-hg", duration: $('#viewport')[0].scrollHeight})
-      //   .triggerHook(1)
-      //   .setPin("#target-side-bar", {pushFollowers: false})
-      //   .setClassToggle("#target-side-bar", "side-bar")
-
-      // );
-
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: $('#viewport')[0].scrollHeight})
         .triggerHook(0)
         .offset(0.5 *  $(window).height())
@@ -76,6 +69,7 @@
         .triggerHook(0)
         .offset(1.5 *  $(window).height())
         .setPin(".menu-wrapper", {pushFollowers: false})
+        .setClassToggle(".menu-wrapper", "visible")
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 1.15 * $(window).height() })
