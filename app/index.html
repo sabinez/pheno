@@ -42,16 +42,16 @@
                 <div class="plant-separator-line-fixed"></div>
                 <div class="plant-separator-line-fixed"></div>
                 <div class="plant-separator-line-fixed"></div>
-                <div class="plant-separator-line"></div>
-                <div class="plant-separator-line"></div>
-                <div class="plant-separator-line"></div>
-                <div class="plant-separator-line"></div>
-                <div class="plant-separator-line"></div>
-                <div class="plant-separator-line"></div>
-                <div class="plant-separator-line"></div>
-                <div class="plant-separator-line"></div>
-                <div class="plant-separator-line"></div>
-                <div class="plant-separator-line"></div>
+                <div class="plant-separator-line" ng-hide="hideLines"></div>
+                <div class="plant-separator-line" ng-hide="hideLines"></div>
+                <div class="plant-separator-line" ng-hide="hideLines"></div>
+                <div class="plant-separator-line" ng-hide="hideLines"></div>
+                <div class="plant-separator-line" ng-hide="hideLines"></div>
+                <div class="plant-separator-line" ng-hide="hideLines"></div>
+                <div class="plant-separator-line" ng-hide="hideLines"></div>
+                <div class="plant-separator-line" ng-hide="hideLines"></div>
+                <div class="plant-separator-line" ng-hide="hideLines"></div>
+                <div class="plant-separator-line" ng-hide="hideLines"></div>
               </div>
             </div>
           </div>
@@ -99,8 +99,11 @@
           </div>
 
           <div class="menu-wrapper">
-            <a href class="menu-button" ng-click="menuButton()">
+            <a href class="menu-button" ng-click="menuButton()" ng-show="hideMenu">
               &gt;
+            </a>
+            <a href class="menu-button" ng-click="menuButton()" ng-show="showMenu">
+              &lt;
             </a>
             <ul class="menu" ng-show="showMenu">
               <li ng-repeat="plant in PLANTS" id="menu-{{ plant.URL }}" >

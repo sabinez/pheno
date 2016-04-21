@@ -4,7 +4,7 @@
   angular.module('phenoApp').service('initScrolling', function () {
     var sceneCollection = [];
 
-    var initScrolling = function() {
+    var initScrolling = function(removeLines) {
 
       var scrollingController = new ScrollMagic.Controller({container: "#viewport"});
 
@@ -45,6 +45,10 @@
         .triggerHook(0)
         .offset(0.5 * $(window).height())
         .setTween(calendarMonthLinesTween)
+        .on("end", function(){
+          console.log("end of scene");
+          removeLines();
+        })
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: $('#viewport')[0].scrollHeight})

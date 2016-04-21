@@ -52,24 +52,33 @@
         }
       };
 
+      $scope.hideLines = false;
+      var removeLines = function(){
+        $scope.hideLines = true;
+        console.log("call function", $scope.hideLines);
+        $scope.$apply();
+      };
 
       plantData.requestPlantData(function(data){
         $scope.PLANTS = data.PLANTS;
         setTimeBarStyle();
         $timeout(function(){
-          initScrolling();
+          initScrolling(removeLines);
           setInterval(animatePeas, 20);
         });
       });
 
 
       $scope.showMenu = false;
+      $scope.hideMenu = true;
       $scope.menuButton = function(){
         console.log("1", $scope.showMenu);
         if ($scope.showMenu == false) {
           $scope.showMenu = true;
+          $scope.hideMenu = false;
         } else {
           $scope.showMenu = false;
+          $scope.hideMenu = true;
         }
       }
 
