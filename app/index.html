@@ -97,6 +97,18 @@
               <vegetable-time-bars ng-repeat="plantData in PLANTS" plant="plantData"></vegetable-time-bars>
             </ul>
           </div>
+
+          <div class="menu-wrapper">
+            <a href="#" class="menu-button">
+              >
+            </a>
+            <ul class="menu">
+              <li ng-repeat="plant in PLANTS" id="menu-{{ plant.URL }}" >
+                <a href="#{{plant.URL}}">{{ plant.NAME }}</a>
+              </li>
+            </ul>
+          </div>
+
         </div>
       </div>
 

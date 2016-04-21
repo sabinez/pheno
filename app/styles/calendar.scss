@@ -108,6 +108,12 @@
   }
 }
 
+.calendar-plant-name {
+  width: calc(#{$plant-name-width} - 1rem);
+  text-align: left;
+  padding-left: 1rem;
+}
+
 .calendar-months {
   position: absolute;
   width: $time-bars-width;
@@ -119,12 +125,6 @@
 
 .calendar-month {
   width: $month-width;
-}
-
-.calendar-plant-name {
-  width: calc(#{$plant-name-width} - 1rem);
-  text-align: left;
-  padding-left: 1rem;
 }
 
 .calendar-time-bars {

@@ -72,10 +72,16 @@
         .setPin("#calendar-month-section", {pushFollowers: false})
       );
 
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: $('#viewport')[0].scrollHeight})
+        .triggerHook(0)
+        .offset(1.5 *  $(window).height())
+        .setPin(".menu-wrapper", {pushFollowers: false})
+      );
+
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 1.15 * $(window).height() })
         .triggerHook(0)
         .setPin(".vegetable-heading", {pushFollowers: false})
-        .setClassToggle("#side-bar-tomato", "active")
+        .setClassToggle("#menu-tomato", "active")
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 1.3 * $(window).height()
@@ -108,7 +114,7 @@
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-sweet-potato-img", duration: 0.65 * $(window).height()})
         .triggerHook(0)
         .setPin("#target-sweet-potato-img", {pushFollowers: false})
-        .setClassToggle("#side-bar-sweet-potato", "active")
+        .setClassToggle("#menu-sweet-potato", "active")
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-sweet-potato-text", duration: 0.4 * $(window).height()})
@@ -119,7 +125,7 @@
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-pepper-img", duration: 3 * $(window).height()})
         .triggerHook(0)
         .setPin("#target-pepper-img", {pushFollowers: false})
-        .setClassToggle("#side-bar-pepper", "active")
+        .setClassToggle("#menu-pepper", "active")
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-pepper-text", duration: 0.4 * $(window).height()})
@@ -130,7 +136,7 @@
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-beetroot-img", duration: 1.2 * $(window).height()})
         .triggerHook(0)
         .setPin("#target-beetroot-img", {pushFollowers: false})
-        .setClassToggle("#side-bar-beetroot", "active")
+        .setClassToggle("#menu-beetroot", "active")
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-beetroot-text", duration: 0.3 * $(window).height()})
@@ -143,33 +149,33 @@
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-peas-img", duration: 1.25 * $(window).height()})
         .triggerHook(0)
         .setPin("#target-peas-img", {pushFollowers: false})
-        .setClassToggle("#side-bar-peas", "active")
+        .setClassToggle("#menu-peas", "active")
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-carrot-img", duration: 0.5 * $(window).height()})
         .triggerHook(0.3)
         .setTween(carrotRotation)
         .setPin("#target-carrot-img", {pushFollowers: false})
-        .setClassToggle("#side-bar-carrot", "active")
+        .setClassToggle("#menu-carrot", "active")
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-chard-img", duration: 1.3 * $(window).height()})
         .triggerHook(0)
         .setPin("#target-chard-img", {pushFollowers: false})
-        .setClassToggle("#side-bar-chard", "active")
+        .setClassToggle("#menu-chard", "active")
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-brussel-sprouts", duration: 0.5 * $(window).height()})
         .triggerHook(0)
         .setTween(brusselSproutsRotation)
         .setPin("#trigger-brussel-sprouts", {pushFollowers: false})
-        .setClassToggle("#side-bar-brussel-sprouts", "active")
+        .setClassToggle("#menu-brussel-sprouts", "active")
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-spinach-img", duration: 0.9 * $(window).height()})
         .triggerHook(0)
         .setPin("#target-spinach-img", {pushFollowers: false})
-        .setClassToggle("#side-bar-spinach", "active")
+        .setClassToggle("#menu-spinach", "active")
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-spinach-text", duration: 0.3 * $(window).height()})
@@ -180,7 +186,7 @@
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-onion-text", duration: 1.2 * $(window).height()})
         .triggerHook(0.7)
         .setPin("#target-onion-text", {pushFollowers: false})
-        .setClassToggle("#side-bar-onion", "active")
+        .setClassToggle("#menu-onion", "active")
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-onion-img", duration: 0.2 * $(window).height()})

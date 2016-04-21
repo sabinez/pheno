@@ -76,17 +76,39 @@ a {
   }
 }
 
-.side-bar {
-  a:hover { 
-    opacity: 1 !important;//overwriting element style of tween
-    transition: opacity 0.5s;
+.menu-button {
+  position: absolute;
+  left: 0;
+  top: 5 * $calendar-row-height;
+  height: $calendar-row-height;
+  width: $calendar-row-height;
+  border-bottom: 1px solid $black;
+  border-right: 1px solid $black;
+  font-size: 29px;
+  line-height: 1.5;
+}
+
+.menu {
+  position: absolute;
+  left: 2 * $calendar-row-height;
+  top: 5 * $calendar-row-height;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  li {
+    height: calc(#{$calendar-row-height});
+    display: flex;
+    align-items: center;
+    a:hover {
+      text-decoration: underline;
+    }
   }
 }
 
+
 .active {
   a {
-    color: $green;
-    opacity: 1 !important;//overwriting element style of tween
+    text-decoration: underline;
   }
 }
 
