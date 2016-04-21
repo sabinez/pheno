@@ -54,7 +54,12 @@
 
       $scope.hideLines = false;
       var removeLines = function(){
-        $scope.hideLines = true;
+        if ($scope.hideLines == false) {
+          $scope.hideLines = true;
+        } else {
+          $scope.hideLines = false;
+        };
+        
         console.log("call function", $scope.hideLines);
         $scope.$apply();
       };
