@@ -62,6 +62,7 @@
         });
       });
 
+
       $scope.showMenu = false;
       $scope.menuButton = function(){
         console.log("1", $scope.showMenu);
@@ -71,7 +72,6 @@
           $scope.showMenu = false;
         }
       }
-
 
     });
 })();
