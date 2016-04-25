@@ -4,7 +4,7 @@
   angular.module('phenoApp').service('initScrolling', function () {
     var sceneCollection = [];
 
-    var initScrolling = function(removeLines) {
+    var initScrolling = function(removeLinesAndShowMenu) {
 
       var scrollingController = new ScrollMagic.Controller({container: "#viewport"});
 
@@ -46,8 +46,7 @@
         .offset(0.5 * $(window).height())
         .setTween(calendarMonthLinesTween)
         .on("end", function(){
-          console.log("end of scene");
-          removeLines();
+          removeLinesAndShowMenu();
         })
       );
 
@@ -73,7 +72,7 @@
         .triggerHook(0)
         .offset(1.5 *  $(window).height())
         .setPin(".menu-wrapper", {pushFollowers: false})
-        .setClassToggle(".menu-wrapper", "visible")
+        // .setClassToggle(".menu-wrapper", "visible")
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 1.15 * $(window).height() })

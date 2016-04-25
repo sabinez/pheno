@@ -99,13 +99,13 @@
           </div>
 
           <div class="menu-wrapper">
-            <a href class="menu-button" ng-click="menuButton()" ng-show="hideMenu">
+            <a href class="menu-button" ng-click="menuButton()" ng-show="hideMenu && showMenuAll">
               &gt;
             </a>
-            <a href class="menu-button" ng-click="menuButton()" ng-show="showMenu">
+            <a href class="menu-button" ng-click="menuButton()" ng-show="showMenu && showMenuAll">
               &lt;
             </a>
-            <ul class="menu" ng-show="showMenu">
+            <ul class="menu" ng-show="showMenu && showMenuAll">
               <li ng-repeat="plant in PLANTS" id="menu-{{ plant.URL }}" >
                 <a href="#{{plant.URL}}">{{ plant.NAME }}</a>
               </li>

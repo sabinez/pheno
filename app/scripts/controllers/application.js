@@ -53,31 +53,23 @@
       };
 
       $scope.hideLines = false;
-      var removeLines = function(){
-        if ($scope.hideLines == false) {
-          $scope.hideLines = true;
-        } else {
-          $scope.hideLines = false;
-        };
-        
-        console.log("call function", $scope.hideLines);
-        $scope.$apply();
-      };
-
-      plantData.requestPlantData(function(data){
-        $scope.PLANTS = data.PLANTS;
-        setTimeBarStyle();
-        $timeout(function(){
-          initScrolling(removeLines);
-          setInterval(animatePeas, 20);
-        });
-      });
-
-
+      $scope.showMenuAll = false;
       $scope.showMenu = false;
       $scope.hideMenu = true;
+
+      var removeLinesAndShowMenu = function(){
+        $scope.$apply(function(){
+          if ($scope.hideLines == false) {
+            $scope.hideLines = true;
+            $scope.showMenuAll = true;
+          } else {
+            $scope.hideLines = false;
+            $scope.showMenuAll = false;
+          };
+        });
+      };
+
       $scope.menuButton = function(){
-        console.log("1", $scope.showMenu);
         if ($scope.showMenu == false) {
           $scope.showMenu = true;
           $scope.hideMenu = false;
@@ -86,6 +78,18 @@
           $scope.hideMenu = true;
         }
       }
+
+      plantData.requestPlantData(function(data){
+        $scope.PLANTS = data.PLANTS;
+        setTimeBarStyle();
+        $timeout(function(){
+          initScrolling(removeLinesAndShowMenu);
+          setInterval(animatePeas, 20);
+        });
+      });
+
+
+
 
     });
 })();
