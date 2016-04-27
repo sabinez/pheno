@@ -1,24 +1,55 @@
 @import "variables.scss";
 
-.vegetable-heading{
+.vegetable-heading {
   position: absolute;
   top: 5vh;
   width: 100vw;
+  text-transform: uppercase;
 }
 
 .vegetable-time-bars {
   position: absolute;
   top: 4 * $calendar-row-height;
+  width: 100%;
+  height: $calendar-row-height;
   list-style-type: none;
   padding: 0;
   margin: 0;
   li {
     position: absolute;
-    left: -50vw;
+    left: calc(50% - (4 * #{$calendar-row-height}));
     height: $calendar-row-height;
     display: flex;
     align-items: center;
   }
+}
+
+.screen-spinach {
+  height: 230vh;
+  z-index: -10;
+}
+
+.spinach-img {
+  position: absolute;
+  top: 6 * $calendar-row-height;
+  width: 10 * $calendar-row-height;
+  height: 8 * $calendar-row-height;
+  left: calc(50% - (6 * #{$calendar-row-height}));
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  img {
+    height: 8 * $calendar-row-height;
+  }
+}
+
+.spinach-text-position {
+  position: absolute;
+  top: 7 * $calendar-row-height;
+  width: 6 * $calendar-row-height;
+  left: calc(50% + (5 * #{$calendar-row-height}));
+  font-size: 12px;
+  text-align: left;
 }
 
 .screen-tomato {
@@ -263,33 +294,6 @@
   left: 20vw;
   text-align: right;
   font-size: 12px;
-}
-
-.screen-spinach {
-  height: 230vh;
-  z-index: -10;
-}
-
-.spinach-img {
-  position: absolute;
-  width: 40vw;
-  left: 30vw;
-  img {
-    width: 40vw;
-  }
-}
-
-.spinach-text-position {
-  position: absolute;
-  width: 30vw;
-  top: 100vh;
-  left: 60vw;
-  font-size: 12px;
-  text-align: left;
-}
-
-.spinach-text h1 {
-  margin: 0;
 }
 
 .screen-onion {

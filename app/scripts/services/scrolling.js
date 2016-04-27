@@ -74,6 +74,22 @@
         .setPin(".menu-wrapper", {pushFollowers: false})
       );
 
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-spinach", duration: 1 * $(window).height() })
+        .triggerHook(0)
+        .setPin(".vegetable-heading-spinach", {pushFollowers: false})
+        .setClassToggle("#menu-spinach", "active")
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-spinach", duration: 0.9 * $(window).height()})
+        .triggerHook(0)
+        .setPin("#target-spinach-img", {pushFollowers: false})
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-spinach", duration: 0.3 * $(window).height()})
+        .triggerHook(0)
+        .setPin("#target-spinach-text", {pushFollowers: false})
+      );
+
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 1.15 * $(window).height() })
         .triggerHook(0)
         .setPin(".vegetable-heading", {pushFollowers: false})
@@ -168,17 +184,6 @@
         .setTween(brusselSproutsRotation)
         .setPin("#trigger-brussel-sprouts", {pushFollowers: false})
         .setClassToggle("#menu-brussel-sprouts", "active")
-      );
-
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-spinach-img", duration: 0.9 * $(window).height()})
-        .triggerHook(0)
-        .setPin("#target-spinach-img", {pushFollowers: false})
-        .setClassToggle("#menu-spinach", "active")
-      );
-
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-spinach-text", duration: 0.3 * $(window).height()})
-        .triggerHook(0.6)
-        .setPin("#target-spinach-text", {pushFollowers: false})
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-onion-text", duration: 1.2 * $(window).height()})
