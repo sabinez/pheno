@@ -57,7 +57,7 @@
 
 .chard-img {
   position: absolute;
-  top: 6 * $unit;
+  top: 100vh;
   left: calc(50% + (2 * #{$unit}));
   width: 7 * $unit;
   height: 9 * $unit;
@@ -71,7 +71,7 @@
 
 .chard-text-position {
   position: absolute;
-  top: 6 * $unit;
+  top: 200vh;
   left: calc(50% - (7 * #{$unit}));
   width: 8 * $unit;
 }

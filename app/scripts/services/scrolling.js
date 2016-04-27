@@ -26,6 +26,12 @@
           TweenMax.to(".spinach-img", 1, {top: sixTimesUnit.toString()}),
           TweenMax.to(".spinach-text-position", 1, {top: sevenTimesUnit.toString()})
         ]);
+      var chard = new TimelineMax();
+        chard.add([
+          TweenMax.to(".vegetable-heading-chard", 1, {top: '5vh'}),
+          TweenMax.to(".chard-img", 1, {top: sixTimesUnit.toString()}),
+          TweenMax.to(".chard-text-position", 1, {top: sixTimesUnit.toString()})
+        ]);
 
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 1.5 *  $(window).height()})
@@ -88,22 +94,14 @@
         .triggerHook(0)
         .setPin(".screen-spinach", {pushFollowers: false})
         .setTween(spinach)
+        .setClassToggle("#menu-spinach", "active")
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-chard", duration: 1 * $(window).height() })
         .triggerHook(0)
-        .setPin(".vegetable-heading-chard", {pushFollowers: false})
+        .setPin(".screen-chard", {pushFollowers: false})
+        .setTween(chard)
         .setClassToggle("#menu-chard", "active")
-      );
-
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-chard", duration: 1.3 * $(window).height()})
-        .triggerHook(0)
-        .setPin(".chard-img", {pushFollowers: false})
-      );
-
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-chard", duration: 0.3 * $(window).height()})
-        .triggerHook(0)
-        .setPin(".chard-text", {pushFollowers: false})
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 1.3 * $(window).height()
