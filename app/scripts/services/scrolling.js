@@ -82,12 +82,28 @@
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-spinach", duration: 0.9 * $(window).height()})
         .triggerHook(0)
-        .setPin("#target-spinach-img", {pushFollowers: false})
+        .setPin(".spinach-img", {pushFollowers: false})
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-spinach", duration: 0.3 * $(window).height()})
         .triggerHook(0)
-        .setPin("#target-spinach-text", {pushFollowers: false})
+        .setPin(".spinach-text", {pushFollowers: false})
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-chard", duration: 1 * $(window).height() })
+        .triggerHook(0)
+        .setPin(".vegetable-heading-chard", {pushFollowers: false})
+        .setClassToggle("#menu-chard", "active")
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-chard", duration: 1.3 * $(window).height()})
+        .triggerHook(0)
+        .setPin(".chard-img", {pushFollowers: false})
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-chard", duration: 0.3 * $(window).height()})
+        .triggerHook(0)
+        .setPin(".chard-text", {pushFollowers: false})
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 1.15 * $(window).height() })
@@ -171,12 +187,6 @@
         .setTween(carrotRotation)
         .setPin("#target-carrot-img", {pushFollowers: false})
         .setClassToggle("#menu-carrot", "active")
-      );
-
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-chard-img", duration: 1.3 * $(window).height()})
-        .triggerHook(0)
-        .setPin("#target-chard-img", {pushFollowers: false})
-        .setClassToggle("#menu-chard", "active")
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-brussel-sprouts", duration: 0.5 * $(window).height()})

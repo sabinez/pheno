@@ -112,11 +112,12 @@
 
 .calendar-months {
   position: absolute;
-  width: $time-bars-width;
   left: calc(50% - #{$start-point-month-seperators});
-  display: flex;
   height: $calendar-row-height;
+  width: $time-bars-width;
+  display: flex;
   align-items: center;
+  text-align: center;
 }
 
 .calendar-month {

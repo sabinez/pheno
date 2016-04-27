@@ -32,12 +32,12 @@
 .spinach-img {
   position: absolute;
   top: 6 * $calendar-row-height;
+  left: calc(50% - (6 * #{$calendar-row-height}));
   width: 10 * $calendar-row-height;
   height: 8 * $calendar-row-height;
-  left: calc(50% - (6 * #{$calendar-row-height}));
-  overflow: hidden;
   display: flex;
   justify-content: center;
+  overflow: hidden;
   img {
     height: 8 * $calendar-row-height;
   }
@@ -46,10 +46,34 @@
 .spinach-text-position {
   position: absolute;
   top: 7 * $calendar-row-height;
-  width: 6 * $calendar-row-height;
   left: calc(50% + (5 * #{$calendar-row-height}));
-  font-size: 12px;
-  text-align: left;
+  width: 6 * $calendar-row-height;
+}
+
+.screen-chard {
+  height: 230vh;
+  z-index: -10;
+}
+
+.chard-img {
+  position: absolute;
+  top: 6 * $calendar-row-height;
+  left: calc(50% + (2 * #{$calendar-row-height}));
+  width: 7 * $calendar-row-height;
+  height: 9 * $calendar-row-height;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  img {
+    width: 7 * $calendar-row-height;
+  }
+}
+
+.chard-text-position {
+  position: absolute;
+  top: 6 * $calendar-row-height;
+  left: calc(50% - (7 * #{$calendar-row-height}));
+  width: 8 * $calendar-row-height;
 }
 
 .screen-tomato {
@@ -233,36 +257,6 @@
 }
 
 .carrot-text h1 {
-  margin: 0;
-}
-
-.screen-chard {
-  height: 230vh;
-  z-index: -10;
-}
-
-.chard-img {
-  display: flex;
-  align-items: center;
-  height: 100vh;
-  position: absolute;
-  width: 20vw;
-  left: 50vw;
-  img {
-    width: 20vw;
-  }
-}
-
-.chard-text-position {
-  position: absolute;
-  width: 30vw;
-  top: 100vh;
-  left: 30vw;
-  font-size: 12px;
-  text-align: right;
-}
-
-.chard-text h1 {
   margin: 0;
 }
 
