@@ -6,6 +6,10 @@
 
     var initScrolling = function(scrollEvents) {
 
+      var unit = $(window).height() / 15;
+      var sixTimesUnit = 6 * unit;
+      var sevenTimesUnit = 7 * unit;
+
       var scrollingController = new ScrollMagic.Controller({container: "#viewport"});
 
       var sideBarTween = new TweenMax.to("#target-side-bar-tween", 1, {left: '-100vh'});
@@ -16,6 +20,12 @@
       var beetrootTween = new TweenMax.to(['#target-beetroot-img', '#target-pepper-img'], 1, {'margin-left': '-50vw'});
       var carrotRotation = new TweenMax.to("#target-carrot-rotation", 1, {rotation: 180, ease: Linear.easeNone});
       var brusselSproutsRotation = new TweenMax.to("#target-brussel-sprouts-cutout", 1, {rotation: 360, ease: Linear.easeNone});
+      var spinach = new TimelineMax();
+        spinach.add([
+          TweenMax.to(".vegetable-heading-spinach", 1, {top: '5vh'}),
+          TweenMax.to(".spinach-img", 1, {top: sixTimesUnit.toString()}),
+          TweenMax.to(".spinach-text-position", 1, {top: sevenTimesUnit.toString()})
+        ]);
 
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 1.5 *  $(window).height()})
@@ -74,20 +84,10 @@
         .setPin(".menu-wrapper", {pushFollowers: false})
       );
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-spinach", duration: 1 * $(window).height() })
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-spinach", duration: 1 * $(window).height()})
         .triggerHook(0)
-        .setPin(".vegetable-heading-spinach", {pushFollowers: false})
-        .setClassToggle("#menu-spinach", "active")
-      );
-
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-spinach", duration: 0.9 * $(window).height()})
-        .triggerHook(0)
-        .setPin(".spinach-img", {pushFollowers: false})
-      );
-
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-spinach", duration: 0.3 * $(window).height()})
-        .triggerHook(0)
-        .setPin(".spinach-text", {pushFollowers: false})
+        .setPin(".screen-spinach", {pushFollowers: false})
+        .setTween(spinach)
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-chard", duration: 1 * $(window).height() })
@@ -104,12 +104,6 @@
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-chard", duration: 0.3 * $(window).height()})
         .triggerHook(0)
         .setPin(".chard-text", {pushFollowers: false})
-      );
-
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 1.15 * $(window).height() })
-        .triggerHook(0)
-        .setPin(".vegetable-heading", {pushFollowers: false})
-        .setClassToggle("#menu-tomato", "active")
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 1.3 * $(window).height()

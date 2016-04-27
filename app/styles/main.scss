@@ -80,9 +80,9 @@ a {
 .menu-button {
   position: absolute;
   left: 0;
-  top: 5 * $calendar-row-height;
-  height: $calendar-row-height;
-  width: $calendar-row-height;
+  top: 5 * $unit;
+  height: $unit;
+  width: $unit;
   border-bottom: 1px solid $black;
   border-right: 1px solid $black;
   font-size: 29px;
@@ -92,13 +92,13 @@ a {
 
 .menu {
   position: absolute;
-  left: 2 * $calendar-row-height;
-  top: 5 * $calendar-row-height;
+  left: 2 * $unit;
+  top: 5 * $unit;
   list-style-type: none;
   padding: 0;
   margin: 0;
   li {
-    height: calc(#{$calendar-row-height});
+    height: calc(#{$unit});
     display: flex;
     align-items: center;
     a:hover {

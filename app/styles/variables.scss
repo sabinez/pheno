@@ -1,8 +1,8 @@
-$calendar-row-height: 100vh / 15;
-$time-bars-width: $calendar-row-height * 12;
-$calendar-width: $time-bars-width + (4 * $calendar-row-height);
+$unit: 100vh / 15;
+$time-bars-width: 12 * $unit;
+$calendar-width: $time-bars-width + (4 * $unit);
 $plant-name-width: $calendar-width - $time-bars-width;
-$month-width: $calendar-row-height;
+$month-width: $unit;
 $start-point-month-seperators: ($calendar-width / 2) - $plant-name-width;
 $green: #42E08A;
 $yellow: #E0CF50;

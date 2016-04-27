@@ -6,10 +6,10 @@
 
 .calendar {
   position: absolute;
-  bottom: calc( 50vh + #{$calendar-row-height});
+  bottom: calc( 50vh + #{$unit});
   display: flex;
   align-items: flex-end;
-  height: 11 * $calendar-row-height;
+  height: 11 * $unit;
   width: 100%;
 }
 
@@ -30,9 +30,9 @@
 
 .month-separators {
   position: absolute;
-  top: 3 * $calendar-row-height;
-  height: 11 * $calendar-row-height;
-  min-height: 2 * $calendar-row-height;
+  top: 3 * $unit;
+  height: 11 * $unit;
+  min-height: 2 * $unit;
   display: flex;
   left: calc(50% - #{$start-point-month-seperators});
   overflow: hidden;
@@ -67,7 +67,7 @@
 }
 
 .plant-separator-line, .plant-separator-line-fixed {
-  height: calc(#{$calendar-row-height} - 1px);
+  height: calc(#{$unit} - 1px);
   border-bottom: 1px solid $black;
 }
 
@@ -75,12 +75,12 @@
   position: absolute;
   width: $time-bars-width;
   left: calc(50% - #{$start-point-month-seperators});
-  top: $calendar-row-height;
+  top: $unit;
   list-style-type: none;
   padding: 0;
   margin: 0;
   li {
-    height: $calendar-row-height;
+    height: $unit;
     display: flex;
     align-items: center;
   }
@@ -89,9 +89,9 @@
 .plant-names-wrapper {
   position: absolute;
   width: $plant-name-width;
-  height: 11 * $calendar-row-height;
+  height: 11 * $unit;
   left: calc(50% - #{$calendar-width/2});
-  top: $calendar-row-height;
+  top: $unit;
 }
 
 .plant-names {
@@ -99,7 +99,7 @@
   padding: 0;
   margin: 0;
   li {
-    height: calc(#{$calendar-row-height});
+    height: calc(#{$unit});
     display: flex;
     align-items: center;
   }
@@ -113,7 +113,7 @@
 .calendar-months {
   position: absolute;
   left: calc(50% - #{$start-point-month-seperators});
-  height: $calendar-row-height;
+  height: $unit;
   width: $time-bars-width;
   display: flex;
   align-items: center;

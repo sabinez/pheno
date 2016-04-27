@@ -2,23 +2,23 @@
 
 .vegetable-heading {
   position: absolute;
-  top: 5vh;
+  top: 100vh;
   width: 100vw;
   text-transform: uppercase;
 }
 
 .vegetable-time-bars {
   position: absolute;
-  top: 4 * $calendar-row-height;
+  top: 4 * $unit;
   width: 100%;
-  height: $calendar-row-height;
+  height: $unit;
   list-style-type: none;
   padding: 0;
   margin: 0;
   li {
     position: absolute;
-    left: calc(50% - (4 * #{$calendar-row-height}));
-    height: $calendar-row-height;
+    left: calc(50% - (4 * #{$unit}));
+    height: $unit;
     display: flex;
     align-items: center;
   }
@@ -31,23 +31,23 @@
 
 .spinach-img {
   position: absolute;
-  top: 6 * $calendar-row-height;
-  left: calc(50% - (6 * #{$calendar-row-height}));
-  width: 10 * $calendar-row-height;
-  height: 8 * $calendar-row-height;
+  top: 100vh;
+  left: calc(50% - (6 * #{$unit}));
+  width: 10 * $unit;
+  height: 8 * $unit;
   display: flex;
   justify-content: center;
   overflow: hidden;
   img {
-    height: 8 * $calendar-row-height;
+    height: 8 * $unit;
   }
 }
 
 .spinach-text-position {
   position: absolute;
-  top: 7 * $calendar-row-height;
-  left: calc(50% + (5 * #{$calendar-row-height}));
-  width: 6 * $calendar-row-height;
+  top: 200vh;
+  left: calc(50% + (5 * #{$unit}));
+  width: 6 * $unit;
 }
 
 .screen-chard {
@@ -57,23 +57,23 @@
 
 .chard-img {
   position: absolute;
-  top: 6 * $calendar-row-height;
-  left: calc(50% + (2 * #{$calendar-row-height}));
-  width: 7 * $calendar-row-height;
-  height: 9 * $calendar-row-height;
+  top: 6 * $unit;
+  left: calc(50% + (2 * #{$unit}));
+  width: 7 * $unit;
+  height: 9 * $unit;
   display: flex;
   align-items: center;
   overflow: hidden;
   img {
-    width: 7 * $calendar-row-height;
+    width: 7 * $unit;
   }
 }
 
 .chard-text-position {
   position: absolute;
-  top: 6 * $calendar-row-height;
-  left: calc(50% - (7 * #{$calendar-row-height}));
-  width: 8 * $calendar-row-height;
+  top: 6 * $unit;
+  left: calc(50% - (7 * #{$unit}));
+  width: 8 * $unit;
 }
 
 .screen-tomato {
