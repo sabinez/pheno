@@ -7,6 +7,7 @@
     var initScrolling = function(scrollEvents) {
 
       var unit = $(window).height() / 15;
+      var threeTimesUnit = 3 * unit;
       var sixTimesUnit = 6 * unit;
       var sevenTimesUnit = 7 * unit;
 
@@ -19,7 +20,6 @@
       var vegetableTimeBars = new TweenMax.to(".target-tween-tomato", 1, {left: '40vw'});
       var beetrootTween = new TweenMax.to(['#target-beetroot-img', '#target-pepper-img'], 1, {'margin-left': '-50vw'});
       var carrotRotation = new TweenMax.to("#target-carrot-rotation", 1, {rotation: 180, ease: Linear.easeNone});
-      var brusselSproutsRotation = new TweenMax.to("#target-brussel-sprouts-cutout", 1, {rotation: 360, ease: Linear.easeNone});
       var spinach = new TimelineMax();
         spinach.add([
           TweenMax.to(".vegetable-heading-spinach", 1, {top: '5vh'}),
@@ -32,6 +32,13 @@
           TweenMax.to(".chard-img", 1, {top: sixTimesUnit.toString()}),
           TweenMax.to(".chard-text-position", 1, {top: sixTimesUnit.toString()})
         ]);
+      var brusselSprouts = new TimelineMax();
+        brusselSprouts.add([
+          TweenMax.to(".vegetable-heading-brussel-sprouts", 1, {top: '5vh'}),
+          TweenMax.to(".brussel-sprouts-img", 1, {top: threeTimesUnit.toString()}),
+          TweenMax.to(".brussel-sprouts-text-position", 1, {top: sevenTimesUnit.toString()})
+        ]);
+        brusselSprouts.add(TweenMax.to("#target-brussel-sprouts-cutout", 1, {rotation: 360, ease: Linear.easeNone}));
 
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 1.5 *  $(window).height()})
@@ -102,6 +109,13 @@
         .setPin(".screen-chard", {pushFollowers: false})
         .setTween(chard)
         .setClassToggle("#menu-chard", "active")
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-brussel-sprouts", duration: 1.5 * $(window).height()})
+        .triggerHook(0)
+        .setPin(".screen-brussel-sprouts", {pushFollowers: false})
+        .setTween(brusselSprouts)
+        .setClassToggle("#menu-brussel-sprouts", "active")
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 1.3 * $(window).height()
@@ -179,13 +193,6 @@
         .setTween(carrotRotation)
         .setPin("#target-carrot-img", {pushFollowers: false})
         .setClassToggle("#menu-carrot", "active")
-      );
-
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-brussel-sprouts", duration: 0.5 * $(window).height()})
-        .triggerHook(0)
-        .setTween(brusselSproutsRotation)
-        .setPin("#trigger-brussel-sprouts", {pushFollowers: false})
-        .setClassToggle("#menu-brussel-sprouts", "active")
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-onion-text", duration: 1.2 * $(window).height()})
