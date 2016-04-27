@@ -1,22 +1,29 @@
 {
   "PLANTS" : [{
-    "NAME" : "Tomato",
+    "NAME" : "Spinach",
     "TIMES" : {
-      "SOWING" : [ 1, 2.5 ],
-      "PLANTING" : [ 4, 5 ],
-      "HARVESTING" : [ 8, 11 ]
+      "SOWING" : [ 3, 6, 8, 10 ],
+      "HARVESTING" : [ 4, 7.25, 10, 11 ]
     },
-    "IMG" : "images/tomato.png",
-    "URL" : "tomato"
+    "IMG" : "images/spinach.png",
+    "URL" : "spinach"
   },{
-    "NAME" : "Sweet Potato",
+    "NAME" : "Chard",
     "TIMES" : {
-      "SOWING" : [ 4, 4.5 ],
-      "PLANTING" : [ 5, 6 ],
-      "HARVESTING" : [ 9, 11 ]
+      "SOWING" : [ 4, 7.5 ],
+      "HARVESTING" : [ 7, 11 ]
     },
-    "IMG" : "images/sweet-potato.png",
-    "URL" : "sweet-potato"
+    "IMG" : "images/chard.png",
+    "URL" : "chard"
+  },{
+    "NAME" : "Brussel Sprouts",
+    "TIMES" : {
+      "SOWING" : [ 4, 6 ],
+      "PLANTING" : [ 5, 7 ],
+      "HARVESTING" : [ 10, 13 ]
+    },
+    "IMG" : "images/brussel-sprouts.png",
+    "URL" : "brussel-sprouts"
   },{
     "NAME" : "Pepper",
     "TIMES" : {
@@ -43,6 +50,14 @@
     "IMG" : "images/peas.png",
     "URL" : "peas"
   },{
+    "NAME" : "Onion",
+    "TIMES" : {
+      "SOWING" : [ 3, 5 ],
+      "HARVESTING" : [ 8, 10 ]
+    },
+    "IMG" : "images/beetroot.png",
+    "URL" : "onion"
+  },{
     "NAME" : "Carrot",
     "TIMES" : {
       "SOWING" : [ 3, 7 ],
@@ -51,37 +66,22 @@
     "IMG" : "images/carrot.png",
     "URL" : "carrot"
   },{
-    "NAME" : "Chard",
+    "NAME" : "Tomato",
     "TIMES" : {
-      "SOWING" : [ 4, 7.5 ],
-      "HARVESTING" : [ 7, 11 ]
+      "SOWING" : [ 1, 2.5 ],
+      "PLANTING" : [ 4, 5 ],
+      "HARVESTING" : [ 8, 11 ]
     },
-    "IMG" : "images/chard.png",
-    "URL" : "chard"
+    "IMG" : "images/tomato.png",
+    "URL" : "tomato"
   },{
-    "NAME" : "Brussel Sprouts",
+    "NAME" : "Sweet Potato",
     "TIMES" : {
-      "SOWING" : [ 4, 6 ],
-      "PLANTING" : [ 5, 7 ],
-      "HARVESTING" : [ 10, 13 ]
+      "SOWING" : [ 4, 4.5 ],
+      "PLANTING" : [ 5, 6 ],
+      "HARVESTING" : [ 9, 11 ]
     },
-    "IMG" : "images/brussel-sprouts.png",
-    "URL" : "brussel-sprouts"
-  },{
-    "NAME" : "Spinach",
-    "TIMES" : {
-      "SOWING" : [ 3, 6, 8, 10 ],
-      "HARVESTING" : [ 4, 7.25, 10, 11 ]
-    },
-    "IMG" : "images/spinach.png",
-    "URL" : "spinach"
-  },{
-    "NAME" : "Onion",
-    "TIMES" : {
-      "SOWING" : [ 3, 5 ],
-      "HARVESTING" : [ 8, 10 ]
-    },
-    "IMG" : "images/beetroot.png",
-    "URL" : "onion"
+    "IMG" : "images/sweet-potato.png",
+    "URL" : "sweet-potato"
   }]
 }
