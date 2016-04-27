@@ -56,8 +56,10 @@
       $scope.showMenuAll = false;
       $scope.showMenu = false;
       $scope.hideMenu = true;
+      $scope.showBeetrootText = false;
+      var scrollEvents = {};
 
-      var removeLinesAndShowMenu = function(){
+      scrollEvents.removeLinesAndShowMenu = function(){
         $scope.$apply(function(){
           if ($scope.hideLines == false) {
             $scope.hideLines = true;
@@ -76,14 +78,24 @@
         } else {
           $scope.showMenu = false;
           $scope.hideMenu = true;
-        }
-      }
+        };
+      };
+
+      scrollEvents.beetrootText = function(){
+        $scope.$apply(function(){
+          if ($scope.showBeetrootText == false) {
+            $scope.showBeetrootText = true;
+          } else {
+            $scope.showBeetrootText = false;
+          };
+        }); 
+      };
 
       plantData.requestPlantData(function(data){
         $scope.PLANTS = data.PLANTS;
         setTimeBarStyle();
         $timeout(function(){
-          initScrolling(removeLinesAndShowMenu);
+          initScrolling(scrollEvents);
           setInterval(animatePeas, 20);
         });
       });

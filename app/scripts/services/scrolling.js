@@ -4,7 +4,7 @@
   angular.module('phenoApp').service('initScrolling', function () {
     var sceneCollection = [];
 
-    var initScrolling = function(removeLinesAndShowMenu) {
+    var initScrolling = function(scrollEvents) {
 
       var scrollingController = new ScrollMagic.Controller({container: "#viewport"});
 
@@ -46,7 +46,7 @@
         .offset(0.5 * $(window).height())
         .setTween(calendarMonthLinesTween)
         .on("end", function(){
-          removeLinesAndShowMenu();
+          scrollEvents.removeLinesAndShowMenu();
         })
       );
 
@@ -72,7 +72,6 @@
         .triggerHook(0)
         .offset(1.5 *  $(window).height())
         .setPin(".menu-wrapper", {pushFollowers: false})
-        // .setClassToggle(".menu-wrapper", "visible")
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 1.15 * $(window).height() })
@@ -140,7 +139,9 @@
         .triggerHook(0.3)
         .setPin("#target-beetroot-text", {pushFollowers: false})
         .setTween(beetrootTween)
-        .setClassToggle("#trigger-beetroot-text", "visible")
+        .on("start", function(){
+          scrollEvents.beetrootText();
+        })
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-peas-img", duration: 1.25 * $(window).height()})
