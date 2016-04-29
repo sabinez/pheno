@@ -129,34 +129,30 @@
 }
 
 .screen-beetroot {
-  height: 220vh;
+  height: 200vh;
   z-index: -10;
 }
 
 .beetroot-img {
+  position: absolute;
+  top: 40vh;
+  left: calc(50% + (4 * #{$unit}));
+  width: 7 * $unit;
+  height: 9 * $unit; 
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  width: 30vw;
-  margin-left: 70vw;
   img {
-    width: 26vw;
+    width: 6.4 * $unit;
   }
 }
 
 .beetroot-text-position {
   position: absolute;
-  width: 30vw;
-  top: 70vh;
-  left: 70vw;
-  font-size: 12px;
-  text-align: left;
+  top: 200vh;
+  left: calc(50% + (4 * #{$unit}));
+  width: 7 * $unit;
   z-index: -10;
-}
-
-.beetroot-text h1 {
-  margin: 0;
 }
 
 .screen-tomato {

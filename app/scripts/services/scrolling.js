@@ -18,7 +18,7 @@
       var calendarMonthLinesTween = new TweenMax.to(".month-separators", 1, {height: '0'});
       var calendarContentTween = new TweenMax.to(".calendar-content", 1, {left: '-85vh'});
       var vegetableTimeBars = new TweenMax.to(".target-tween-tomato", 1, {left: '40vw'});
-      var beetrootTween = new TweenMax.to(['#target-beetroot-img', '.pepper-img'], 1, {'margin-left': '-50vw'});
+      // var beetrootTween = new TweenMax.to(['#target-beetroot-img', '.pepper-img'], 1, {'margin-left': '-50vw'});
       var carrotRotation = new TweenMax.to("#target-carrot-rotation", 1, {rotation: 180, ease: Linear.easeNone});
       var spinach = new TimelineMax();
         spinach.add([
@@ -45,6 +45,13 @@
           TweenMax.to(".pepper-img", 1, {top: sixTimesUnit.toString()}),
           TweenMax.to(".pepper-text-position", 1, {top: sixTimesUnit.toString()})
         ]);
+      var beetroot = new TimelineMax();
+        beetroot.add([
+          TweenMax.to(".vegetable-heading-beetroot", 1, {top: '5vh'}),
+          TweenMax.to(".beetroot-img", 1, {top: sixTimesUnit.toString()}),
+          TweenMax.to(".beetroot-text-position", 1, {top: sixTimesUnit.toString()})
+        ]);
+        beetroot.add(TweenMax.to(['#target-beetroot-img', '.pepper-img'], 1, {'left': '20vw'}));
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 1.5 *  $(window).height()})
         .triggerHook(0)
@@ -127,23 +134,37 @@
         .triggerHook(0)
         .setPin(".screen-pepper", {pushFollowers: false})
         .setTween(pepper)
+        .addIndicators()
         .setClassToggle("#menu-pepper", "active")
       );
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-beetroot-img", duration: 1.2 * $(window).height()})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-beetroot", duration: 2 * $(window).height()})
+        .triggerHook(1)
+        .addIndicators()
+        .setPin("#pepper-img-pin", {pushFollowers: false})
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-beetroot", duration: 1 * $(window).height()})
         .triggerHook(0)
-        .setPin("#target-beetroot-img", {pushFollowers: false})
+        .setPin(".screen-beetroot", {pushFollowers: false})
+        .setTween(beetroot)
         .setClassToggle("#menu-beetroot", "active")
       );
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-beetroot-text", duration: 0.3 * $(window).height()})
-        .triggerHook(0.3)
-        .setPin("#target-beetroot-text", {pushFollowers: false})
-        .setTween(beetrootTween)
-        .on("start", function(){
-          scrollEvents.beetrootText();
-        })
-      );
+      // sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-beetroot-img", duration: 1.2 * $(window).height()})
+      //   .triggerHook(0)
+      //   .setPin("#target-beetroot-img", {pushFollowers: false})
+      //   .setClassToggle("#menu-beetroot", "active")
+      // );
+
+      // sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-beetroot-text", duration: 0.3 * $(window).height()})
+      //   .triggerHook(0.3)
+      //   .setPin("#target-beetroot-text", {pushFollowers: false})
+      //   .setTween(beetrootTween)
+      //   .on("start", function(){
+      //     scrollEvents.beetrootText();
+      //   })
+      // );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 1.3 * $(window).height()
     })

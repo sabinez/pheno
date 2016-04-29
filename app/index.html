@@ -193,7 +193,7 @@
         </ul>
 
         <div class="pepper-img">
-          <img src="images/pepper.png">
+          <img id="pepper-img-pin" src="images/pepper.png">
         </div>
 
         <div class="pepper-text-position">
@@ -205,13 +205,21 @@
 
       <a id="beetroot"></a>
       <div id="trigger-beetroot-img" class="screen screen-beetroot">
+        <div class="vegetable-heading vegetable-heading-beetroot">
+          <h1>Beetroot</h1>          
+        </div>
+        
+        <ul class="vegetable-time-bars vegetable-time-bars-beetroot">
+          <vegetable-time-bars plant="PLANTS[4]"></vegetable-time-bars>
+        </ul>
+
         <div id="target-beetroot-img" class="beetroot-img">
           <img src="images/beetroot.png">
         </div>
-        <div id="trigger-beetroot-text" class="beetroot-text-position">
-          <div id="target-beetroot-text" class="beetroot-text">
-            <div ng-show="showBeetrootText">
-              <h1>BEETROOT</h1>
+
+        <div class="beetroot-text-position">
+          <div id="trigger-beetroot-text" class="beetroot-text">
+            <div ><!-- ng-show="showBeetrootText" -->
               Plant the seeds about 1 cm deep in small pots an keep them indoor. Separate the seedlings and plant into bigger pots when two true leaves have formed. Prior to transplanting work  fertilizer into the soil. The plants should have a distance of around 45 cm between each other. For support, tie the plants to stakes. The growing spot should receive a lot of sun. Keep the soil moist but don’t overwater.             
             </div>
           </div>
