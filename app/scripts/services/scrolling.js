@@ -42,7 +42,7 @@
       var pepper = new TimelineMax();
         pepper.add([
           TweenMax.to(".vegetable-heading-pepper", 1, {top: '5vh'}),
-          TweenMax.to(".pepper-img", 1, {top: sixTimesUnit.toString()}),
+          TweenMax.to(".pepper-img-tweener", 1, {top: sixTimesUnit.toString()}),
           TweenMax.to(".pepper-text-position", 1, {top: sixTimesUnit.toString()})
         ]);
       var beetroot = new TimelineMax();
@@ -51,7 +51,7 @@
           TweenMax.to(".beetroot-img", 1, {top: sixTimesUnit.toString()}),
           TweenMax.to(".beetroot-text-position", 1, {top: sixTimesUnit.toString()})
         ]);
-        beetroot.add(TweenMax.to(['#target-beetroot-img', '.pepper-img'], 1, {'left': '20vw'}));
+        beetroot.add(TweenMax.to(['.beetroot-img', '.pepper-img-tweener'], 1, {'left': '20vw'}));
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 1.5 *  $(window).height()})
         .triggerHook(0)
