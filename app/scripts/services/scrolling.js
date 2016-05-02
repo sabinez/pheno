@@ -11,6 +11,7 @@
       var sixTimesUnit = 6 * unit;
       var sevenTimesUnit = 7 * unit;
       var eightTimesUnit = 8 * unit;
+      var pepperBeetrootTweenPosition = ($(window).width() / 2) - (5 * unit);
 
       var scrollingController = new ScrollMagic.Controller({container: "#viewport"});
 
@@ -50,9 +51,9 @@
         beetroot.add([
           TweenMax.to(".vegetable-heading-beetroot", 1, {top: '5vh'}),
           TweenMax.to(".beetroot-img", 1, {top: sixTimesUnit.toString()}),
-          TweenMax.to(".beetroot-text-position", 1, {top: sixTimesUnit.toString()})
+          TweenMax.to(".beetroot-text-position", 1, {top: sevenTimesUnit.toString()})
         ]);
-        beetroot.add(TweenMax.to(['.beetroot-img', '.pepper-img-tweener'], 1, {'left': '20vw'}));
+        beetroot.add(TweenMax.to(['.beetroot-img', '.pepper-img-tweener'], 1, {'left': pepperBeetrootTweenPosition.toString()}));
       var peas = new TimelineMax();
         peas.add([
           TweenMax.to(".vegetable-heading-peas", 1, {top: '5vh'}),

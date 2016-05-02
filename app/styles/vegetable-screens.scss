@@ -115,7 +115,7 @@
 .pepper-img-tweener {
   position: absolute;
   top: 100vh;
-  left: calc(50% + (4 * #{$unit}));
+  left: calc(50% + (3 * #{$unit}));
   width: 7 * $unit;
   height: 9 * $unit;
 }
@@ -134,19 +134,18 @@
 .pepper-text-position {
   position: absolute;
   top: 200vh;
-  left: calc(50% - (5 * #{$unit}));
-  width: 8 * $unit;
+  left: calc(50% - (4 * #{$unit}));
+  width: 6 * $unit;
 }
 
 .screen-beetroot {
   height: 200vh;
-  // z-index: -10;
 }
 
 .beetroot-img {
   position: absolute;
   top: 40vh;
-  left: calc(50% + (4 * #{$unit}));
+  left: calc(50% + (3 * #{$unit}));
   width: 7 * $unit;
   height: 9 * $unit; 
   display: flex;
@@ -161,7 +160,7 @@
   position: absolute;
   top: 200vh;
   left: calc(50% + (4 * #{$unit}));
-  width: 7 * $unit;
+  width: 5 * $unit;
   z-index: -10;
 }
 
