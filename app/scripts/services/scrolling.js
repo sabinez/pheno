@@ -8,6 +8,7 @@
 
       var unit = $(window).height() / 15;
       var threeTimesUnit = 3 * unit;
+      var fourTimesUnit = 4 * unit;
       var sixTimesUnit = 6 * unit;
       var sevenTimesUnit = 7 * unit;
       var eightTimesUnit = 8 * unit;
@@ -20,7 +21,6 @@
       var calendarMonthLinesTween = new TweenMax.to(".month-separators", 1, {height: '0'});
       var calendarContentTween = new TweenMax.to(".calendar-content", 1, {left: '-85vh'});
       var vegetableTimeBars = new TweenMax.to(".target-tween-tomato", 1, {left: '40vw'});
-      // var beetrootTween = new TweenMax.to(['#target-beetroot-img', '.pepper-img'], 1, {'margin-left': '-50vw'});
       var carrotRotation = new TweenMax.to("#target-carrot-rotation", 1, {rotation: 180, ease: Linear.easeNone});
       var spinach = new TimelineMax();
         spinach.add([
@@ -59,6 +59,12 @@
           TweenMax.to(".vegetable-heading-peas", 1, {top: '5vh'}),
           TweenMax.to(".peas-img", 1, {top: sixTimesUnit.toString()}),
           TweenMax.to(".peas-text-position", 1, {top: eightTimesUnit.toString()})
+        ]);
+      var onion = new TimelineMax();
+        onion.add([
+          TweenMax.to(".vegetable-heading-onion", 1, {top: '5vh'}),
+          TweenMax.to(".onion-img", 1, {top: fourTimesUnit.toString()}),
+          TweenMax.to(".onion-text-position", 1, {top: sevenTimesUnit.toString()})
         ]);
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 1.5 *  $(window).height()})
@@ -164,6 +170,13 @@
         .setClassToggle("#menu-peas", "active")
       );
 
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-onion", duration: 1 * $(window).height()})
+        .triggerHook(0)
+        .setPin(".screen-onion", {pushFollowers: false})
+        .setTween(onion)
+        .setClassToggle("#menu-onion", "active")
+      );
+
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 1.3 * $(window).height()
     })
         .triggerHook(0)
@@ -207,17 +220,6 @@
         .setTween(carrotRotation)
         .setPin("#target-carrot-img", {pushFollowers: false})
         .setClassToggle("#menu-carrot", "active")
-      );
-
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-onion-text", duration: 1.2 * $(window).height()})
-        .triggerHook(0.7)
-        .setPin("#target-onion-text", {pushFollowers: false})
-        .setClassToggle("#menu-onion", "active")
-      );
-
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-onion-img", duration: 0.2 * $(window).height()})
-        .triggerHook(0.1)
-        .setPin("#target-onion-img", {pushFollowers: false})
       );
 
       sceneCollection.forEach(function(scene){

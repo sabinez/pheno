@@ -201,6 +201,32 @@
   left: calc(50% + (4 * #{$unit}));
 }
 
+.screen-onion {
+  height: 200vh;
+  z-index: -10;
+}
+
+.onion-img {
+  position: absolute;
+  top: 100vh;
+  left: calc(50% + (4 * #{$unit}));
+  width: 7 * $unit;
+  height: 9 * $unit;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  img {
+    width: 7 * $unit;
+  }
+}
+
+.onion-text-position {
+  position: absolute;
+  top: 100vh;
+  left: calc(50% - (6 * #{$unit}));
+  width: 9 * $unit;
+}
+
 .screen-tomato {
   display: flex;
   align-items: center;
@@ -281,32 +307,5 @@
 }
 
 .carrot-text h1 {
-  margin: 0;
-}
-
-.screen-onion {
-  height: 230vh;
-  z-index: -10;
-}
-
-.onion-img {
-  position: absolute;
-  top: 40vh;
-  width: 20vw;
-  left: 50vw;
-  img {
-    width: 20vw;
-  }
-}
-
-.onion-text-position {
-  position: absolute;
-  width: 40vw;
-  left: 40vw;
-  font-size: 12px;
-  text-align: center;
-}
-
-.onion-text h1 {
   margin: 0;
 }
