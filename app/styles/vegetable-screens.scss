@@ -244,25 +244,25 @@
 }
 
 .screen-sweet-potato {
-  height: 170vh;
+  height: 200vh;
   z-index: -10;
 }
 
-.sweet-potato-img img {
-  width: 30vw;
-  position: absolute;
-  top: 0;
-  left: 40vw;
+.vegetable-img.sweet-potato-img {
+  top: 100vh;
+  left: calc(50% - (2 * #{$unit}));
+  width: 10 * $unit;
+  height: 8 * $unit;
+  img {
+    height: 8 * $unit;
+    width: auto;
+  }
 }
 
 .sweet-potato-text-position {
   position: absolute;
-  width: 50vw;
-  top: 80vh;
-  left: 30vw;
-  font-size: 12px;
-}
-
-.sweet-potato-text h1 {
-  margin: 0;
+  top: 200vh;
+  width: 13 * $unit;
+  left: calc(50% - (1 * #{$unit}));
+  line-height: 1.7;
 }

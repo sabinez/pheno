@@ -14,6 +14,7 @@
       var sixAndAHalfTimesUnit = 6.5 * unit;
       var sevenTimesUnit = 7 * unit;
       var eightTimesUnit = 8 * unit;
+      var elevenTimesUnit = 11 * unit;
       var pepperBeetrootTweenPosition = ($(window).width() / 2) - (5 * unit);
 
       var scrollingController = new ScrollMagic.Controller({container: "#viewport"});
@@ -82,6 +83,12 @@
           TweenMax.to(".tomato-text-position", 1, {top: sevenTimesUnit.toString()}),
         ]); 
         tomato.add(TweenMax.to(".tomato-img", 1, {top: sixTimesUnit.toString()}));      
+      var sweetPotato = new TimelineMax();
+        sweetPotato.add([
+          TweenMax.to(".vegetable-heading-sweet-potato", 1, {top: '5vh'}),
+          TweenMax.to(".sweet-potato-img", 1, {top: threeTimesUnit.toString()}),
+          TweenMax.to(".sweet-potato-text-position", 1, {top: elevenTimesUnit.toString()})
+        ]);
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 1.5 *  $(window).height()})
         .triggerHook(0)
@@ -207,15 +214,11 @@
         .setClassToggle("#menu-tomato", "active")
       );
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-sweet-potato-img", duration: 0.65 * $(window).height()})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-sweet-potato", duration: 1 * $(window).height()})
         .triggerHook(0)
-        .setPin("#target-sweet-potato-img", {pushFollowers: false})
+        .setPin(".screen-sweet-potato", {pushFollowers: false})
+        .setTween(sweetPotato)
         .setClassToggle("#menu-sweet-potato", "active")
-      );
-
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-sweet-potato-text", duration: 0.4 * $(window).height()})
-        .triggerHook(0.55)
-        .setPin("#target-sweet-potato-text", {pushFollowers: false})
       );
 
       sceneCollection.forEach(function(scene){
