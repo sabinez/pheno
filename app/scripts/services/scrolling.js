@@ -22,7 +22,6 @@
       var calendarMonthLinesTween = new TweenMax.to(".month-separators", 1, {height: '0'});
       var calendarContentTween = new TweenMax.to(".calendar-content", 1, {left: '-85vh'});
       var vegetableTimeBars = new TweenMax.to(".target-tween-tomato", 1, {left: '40vw'});
-      var carrotRotation = new TweenMax.to("#target-carrot-rotation", 1, {rotation: 180, ease: Linear.easeNone});
       var spinach = new TimelineMax();
         spinach.add([
           TweenMax.to(".vegetable-heading-spinach", 1, {top: '5vh'}),
@@ -66,6 +65,13 @@
           TweenMax.to(".vegetable-heading-onion", 1, {top: '5vh'}),
           TweenMax.to(".onion-img", 1, {top: fourTimesUnit.toString()}),
           TweenMax.to(".onion-text-position", 1, {top: sevenTimesUnit.toString()})
+        ]);
+      var carrot = new TimelineMax();
+        carrot.add([
+          TweenMax.to(".vegetable-heading-carrot", 1, {top: '5vh'}),
+          TweenMax.to(".carrot-img", 1, {top: fiveTimesUnit.toString()}),
+          TweenMax.to(".carrot-text-position", 1, {top: sixTimesUnit.toString()}),
+          TweenMax.to(".carrot-img", 1, {rotation: 180, ease: Linear.easeNone})
         ]);
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 1.5 *  $(window).height()})
@@ -178,6 +184,13 @@
         .setClassToggle("#menu-onion", "active")
       );
 
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-carrot", duration: 1 * $(window).height()})
+        .triggerHook(0)
+        .setPin(".screen-carrot", {pushFollowers: false})
+        .setTween(carrot)
+        .setClassToggle("#menu-carrot", "active")
+      );
+
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 1.3 * $(window).height()
     })
         .triggerHook(0)
@@ -214,13 +227,6 @@
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-sweet-potato-text", duration: 0.4 * $(window).height()})
         .triggerHook(0.55)
         .setPin("#target-sweet-potato-text", {pushFollowers: false})
-      );
-
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-carrot-img", duration: 0.5 * $(window).height()})
-        .triggerHook(0.3)
-        .setTween(carrotRotation)
-        .setPin("#target-carrot-img", {pushFollowers: false})
-        .setClassToggle("#menu-carrot", "active")
       );
 
       sceneCollection.forEach(function(scene){

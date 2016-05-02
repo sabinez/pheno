@@ -222,9 +222,35 @@
 
 .onion-text-position {
   position: absolute;
-  top: 100vh;
+  top: 200vh;
   left: calc(50% - (6 * #{$unit}));
   width: 9 * $unit;
+}
+
+.screen-carrot {
+  height: 200vh;
+  z-index: -10;
+}
+
+.carrot-img {
+  position: absolute;
+  top: 100vh;
+  left: calc(50% + (2 * #{$unit}));
+  width: 7 * $unit;
+  height: 9 * $unit;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  img {
+    width: 7 * $unit;
+  }
+}
+
+.carrot-text-position {
+  position: absolute;
+  top: 200vh;
+  left: calc(50% - (4 * #{$unit}));
+  width: 5 * $unit;
 }
 
 .screen-tomato {
@@ -280,32 +306,5 @@
 }
 
 .sweet-potato-text h1 {
-  margin: 0;
-}
-
-.screen-carrot {
-  height: 140vh;
-  z-index: -10;
-}
-
-.carrot-img {
-  position: absolute;
-  width: 20vw;
-  left: 70vw;
-  img {
-    width: 20vw;
-  }
-}
-
-.carrot-text-position {
-  position: absolute;
-  width: 30vw;
-  top: 60vh;
-  left: 30vw;
-  font-size: 12px;
-  text-align: right;
-}
-
-.carrot-text h1 {
   margin: 0;
 }
