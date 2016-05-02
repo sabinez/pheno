@@ -24,22 +24,31 @@
   }
 }
 
+.vegetable-img {
+  position: absolute;
+  width: 7 * $unit;
+  height: 9 * $unit;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  img {
+    width: 7 * $unit;
+  }
+}
+
 .screen-spinach {
   height: 230vh;
   z-index: -10;
 }
 
-.spinach-img {
-  position: absolute;
+.vegetable-img.spinach-img {
   top: 100vh;
   left: calc(50% - (6 * #{$unit}));
   width: 10 * $unit;
   height: 8 * $unit;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
   img {
     height: 8 * $unit;
+    width: auto;
   }
 }
 
@@ -55,18 +64,9 @@
   z-index: -10;
 }
 
-.chard-img {
-  position: absolute;
+.vegetable-img.chard-img {
   top: 100vh;
   left: calc(50% + (2 * #{$unit}));
-  width: 7 * $unit;
-  height: 9 * $unit;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  img {
-    width: 7 * $unit;
-  }
 }
 
 .chard-text-position {
@@ -81,18 +81,9 @@
   z-index: -10;
 }
 
-.brussel-sprouts-img {
-  position: absolute;
+.vegetable-img.brussel-sprouts-img {
   top: 100vh;
   left: calc(50% - (3 * #{$unit}));
-  width: 7 * $unit;
-  height: 9 * $unit;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  img { 
-    width: 7 * $unit;
-  }
 }
 
 .brussel-sprouts-text-position {
@@ -142,14 +133,9 @@
   height: 200vh;
 }
 
-.beetroot-img {
-  position: absolute;
+.vegetable-img.beetroot-img {
   top: 40vh;
   left: calc(50% + (3 * #{$unit}));
-  width: 7 * $unit;
-  height: 9 * $unit; 
-  display: flex;
-  align-items: center;
   justify-content: center;
   img {
     width: 6 * $unit;
@@ -168,15 +154,9 @@
   height: 200vh;
 }
 
-.peas-img {
-  position: absolute;
+.vegetable-img.peas-img {
   top: 100vh;
   left: calc(50% - (4 * #{$unit}));
-  width: 7 * $unit;
-  height: 9 * $unit;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
 }
 
 .peas-img-box {
@@ -206,18 +186,9 @@
   z-index: -10;
 }
 
-.onion-img {
-  position: absolute;
+.vegetable-img.onion-img {
   top: 100vh;
   left: calc(50% + (4 * #{$unit}));
-  width: 7 * $unit;
-  height: 9 * $unit;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  img {
-    width: 7 * $unit;
-  }
 }
 
 .onion-text-position {
@@ -232,18 +203,9 @@
   z-index: -10;
 }
 
-.carrot-img {
-  position: absolute;
+.vegetable-img.carrot-img {
   top: 100vh;
   left: calc(50% + (2 * #{$unit}));
-  width: 7 * $unit;
-  height: 9 * $unit;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  img {
-    width: 7 * $unit;
-  }
 }
 
 .carrot-text-position {
