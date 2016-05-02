@@ -19,11 +19,12 @@
 
       var scrollingController = new ScrollMagic.Controller({container: "#viewport"});
 
-      var sideBarTween = new TweenMax.to("#target-side-bar-tween", 1, {left: '-100vh'});
-      var sideBarLinesTween = new TweenMax.to(".plant-separator-line", 1, {width: '0'});
-      var calendarMonthLinesTween = new TweenMax.to(".month-separators", 1, {height: '0'});
-      var calendarContentTween = new TweenMax.to(".calendar-content", 1, {left: '-85vh'});
-      var vegetableTimeBars = new TweenMax.to(".target-tween-tomato", 1, {left: '40vw'});
+      var calendar = new TimelineMax();
+        calendar.add([
+          TweenMax.to(".plant-names-wrapper", 1, {left: '-100vh'}),
+          TweenMax.to(".plant-separator-line", 1, {width: '0'}),
+          TweenMax.to(".month-separators", 1, {height: '0'})
+        ]);
       var spinach = new TimelineMax();
         spinach.add([
           TweenMax.to(".vegetable-heading-spinach", 1, {top: '5vh'}),
@@ -90,59 +91,36 @@
           TweenMax.to(".sweet-potato-text-position", 1, {top: elevenTimesUnit.toString()})
         ]);
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 1.5 *  $(window).height()})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-calendar", duration: 1 *  $(window).height()})
         .triggerHook(0)
-        .setPin("#target-calendar", {pushFollowers: true})
-      );
-
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 1 * $(window).height()})
-        .triggerHook(0)
-        .offset(0.5 * $(window).height())
-        .setTween(sideBarTween)
-      );
-
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 1 * $(window).height()})
-        .triggerHook(0)
-        .offset(0.5 * $(window).height())
-        .setTween(calendarContentTween)
-      );
-
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 1 * $(window).height()})
-        .triggerHook(0)
-        .offset(0.5 * $(window).height())
-        .setTween(sideBarLinesTween)
-      );
-
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 1 * $(window).height()})
-        .triggerHook(0)
-        .offset(0.5 * $(window).height())
-        .setTween(calendarMonthLinesTween)
+        .setPin(".screen-calendar", {pushFollowers: true})
+        .setTween(calendar)
         .on("end", function(){
           scrollEvents.removeLinesAndShowMenu();
         })
       );
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: $('#viewport')[0].scrollHeight})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-calendar", duration: $('#viewport')[0].scrollHeight})
         .triggerHook(0)
-        .offset(0.5 *  $(window).height())
+        .offset(1 *  $(window).height())
         .setPin("#target-side-bar-lines", {pushFollowers: false})
       );
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: $('#viewport')[0].scrollHeight})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-calendar", duration: $('#viewport')[0].scrollHeight})
         .triggerHook(0)
-        .offset(1.5 *  $(window).height())
+        .offset(1 *  $(window).height())
         .setPin(".month-separators", {pushFollowers: false})
       );
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: $('#viewport')[0].scrollHeight})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-calendar", duration: $('#viewport')[0].scrollHeight})
         .triggerHook(0)
-        .offset(1.5 *  $(window).height())
-        .setPin("#calendar-month-section", {pushFollowers: false})
+        .offset(1 *  $(window).height())
+        .setPin(".calendar-months", {pushFollowers: false})
       );
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: $('#viewport')[0].scrollHeight})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-calendar", duration: $('#viewport')[0].scrollHeight})
         .triggerHook(0)
-        .offset(1.5 *  $(window).height())
+        .offset(1 *  $(window).height())
         .setPin(".menu-wrapper", {pushFollowers: false})
       );
 

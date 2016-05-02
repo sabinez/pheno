@@ -25,8 +25,8 @@
       </div>
 
 
-      <div id="trigger-calendar" class="container">
-        <div id="target-calendar" class="screen screen-calendar">
+      <div class="container">
+        <div class="screen screen-calendar">
 
           <div class="heading-calendar">
             <div class="heading-calendar-background">
@@ -35,7 +35,7 @@
           </div>
 
           <div id="target-side-bar-lines" class="screen-overlay-fix">
-            <div id="target-side-bar-lines-tween" class="screen-overlay">
+            <div class="screen-overlay">
               <div class="plant-separators">
                 <div class="plant-separator-line"></div>
                 <div class="plant-separator-line"></div>
@@ -86,16 +86,19 @@
               <div class="calendar-month">N</div>
               <div class="calendar-month">D</div>
             </div>
-            <div id="target-side-bar-tween" class="plant-names-wrapper">
-              <ul id="target-side-bar" class="plant-names">
+
+            <div class="plant-names-wrapper">
+              <ul class="plant-names">
                 <li ng-repeat="plant in PLANTS" class="calendar-plant-name">
                   <a href="#{{plant.URL}}">{{ plant.NAME }}</a>
                 </li>
               </ul>
             </div>
+            
             <ul class="calendar-content">
               <vegetable-time-bars ng-repeat="plantData in PLANTS" plant="plantData"></vegetable-time-bars>
             </ul>
+
           </div>
 
           <div class="menu-wrapper">
