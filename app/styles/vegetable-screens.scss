@@ -57,6 +57,7 @@
   top: 200vh;
   left: calc(50% + (5 * #{$unit}));
   width: 6 * $unit;
+  line-height: 1.7;
 }
 
 .screen-chard {
@@ -74,6 +75,7 @@
   top: 200vh;
   left: calc(50% - (7 * #{$unit}));
   width: 8 * $unit;
+  line-height: 1.7;
 }
 
 .screen-brussel-sprouts {
@@ -91,11 +93,7 @@
   top: 200vh;
   left: calc(50% + (5 * #{$unit}));
   width: 6 * $unit;
-}
-
-.screen-pepper {
-  height: 400vh;
-  z-index: -10;
+  line-height: 1.7;
 }
 
 .screen-pepper {
@@ -127,6 +125,7 @@
   top: 200vh;
   left: calc(50% - (4 * #{$unit}));
   width: 6 * $unit;
+  line-height: 1.7;
 }
 
 .screen-beetroot {
@@ -148,6 +147,7 @@
   left: calc(50% + (4 * #{$unit}));
   width: 5 * $unit;
   z-index: -10;
+  line-height: 1.7;
 }
 
 .screen-peas {
@@ -179,6 +179,7 @@
   top: 100vh;
   width: 5 * $unit;
   left: calc(50% + (4 * #{$unit}));
+  line-height: 1.7;
 }
 
 .screen-onion {
@@ -196,6 +197,7 @@
   top: 200vh;
   left: calc(50% - (6 * #{$unit}));
   width: 9 * $unit;
+  line-height: 1.7;
 }
 
 .screen-carrot {
@@ -212,39 +214,33 @@
   position: absolute;
   top: 200vh;
   left: calc(50% - (4 * #{$unit}));
-  width: 5 * $unit;
+  width: 4 * $unit;
+  line-height: 1.7;
 }
 
 .screen-tomato {
-  display: flex;
-  align-items: center;
-  height: 250vh;
+  height: 200vh;
   z-index: -10;
 }
 
-.tomato-hg {
-  position: absolute;
-  left: 20vw;
-  top: 35vh;
+.vegetable-img.tomato-hg {
+  top: 100vh;
+  left: calc(50% - (4 * #{$unit}));
   z-index: 20;
-  img { width: 20vw; }
 }
 
-.tomato-img {
-  position: absolute;
-  left: 20vw;
-  top: 40vh;
+.vegetable-img.tomato-img {
+  top: calc(100vh + (0.5 * #{$unit}));
+  left: calc(50% - (4 * #{$unit}));
   z-index: 10;
-  img { width: 20vw; }
 }
 
 .tomato-text-position {
   position: absolute;
-  width: 30vw;
-  top: 120vh;
-  left: 60vw;
-  text-align: left;
-  font-size: 12px;
+  top: 200vh;
+  width: 5 * $unit;
+  left: calc(50% + (4 * #{$unit}));
+  line-height: 1.7;
 }
 
 .screen-sweet-potato {
