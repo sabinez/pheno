@@ -9,6 +9,7 @@
       var unit = $(window).height() / 15;
       var threeTimesUnit = 3 * unit;
       var fourTimesUnit = 4 * unit;
+      var fiveTimesUnit = 5 * unit;
       var sixTimesUnit = 6 * unit;
       var sevenTimesUnit = 7 * unit;
       var eightTimesUnit = 8 * unit;
@@ -57,8 +58,8 @@
       var peas = new TimelineMax();
         peas.add([
           TweenMax.to(".vegetable-heading-peas", 1, {top: '5vh'}),
-          TweenMax.to(".peas-img", 1, {top: sixTimesUnit.toString()}),
-          TweenMax.to(".peas-text-position", 1, {top: eightTimesUnit.toString()})
+          TweenMax.to(".peas-img", 1, {top: fiveTimesUnit.toString()}),
+          TweenMax.to(".peas-text-position", 1, {top: sevenTimesUnit.toString()})
         ]);
       var onion = new TimelineMax();
         onion.add([
