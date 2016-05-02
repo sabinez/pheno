@@ -134,13 +134,11 @@
         .triggerHook(0)
         .setPin(".screen-pepper", {pushFollowers: false})
         .setTween(pepper)
-        .addIndicators()
         .setClassToggle("#menu-pepper", "active")
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-beetroot", duration: 2 * $(window).height()})
         .triggerHook(1)
-        .addIndicators()
         .setPin("#pepper-img-pin", {pushFollowers: false})
       );
 
@@ -150,21 +148,6 @@
         .setTween(beetroot)
         .setClassToggle("#menu-beetroot", "active")
       );
-
-      // sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-beetroot-img", duration: 1.2 * $(window).height()})
-      //   .triggerHook(0)
-      //   .setPin("#target-beetroot-img", {pushFollowers: false})
-      //   .setClassToggle("#menu-beetroot", "active")
-      // );
-
-      // sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-beetroot-text", duration: 0.3 * $(window).height()})
-      //   .triggerHook(0.3)
-      //   .setPin("#target-beetroot-text", {pushFollowers: false})
-      //   .setTween(beetrootTween)
-      //   .on("start", function(){
-      //     scrollEvents.beetrootText();
-      //   })
-      // );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 1.3 * $(window).height()
     })
