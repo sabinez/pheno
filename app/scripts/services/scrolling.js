@@ -10,6 +10,7 @@
       var threeTimesUnit = 3 * unit;
       var sixTimesUnit = 6 * unit;
       var sevenTimesUnit = 7 * unit;
+      var eightTimesUnit = 8 * unit;
 
       var scrollingController = new ScrollMagic.Controller({container: "#viewport"});
 
@@ -52,6 +53,12 @@
           TweenMax.to(".beetroot-text-position", 1, {top: sixTimesUnit.toString()})
         ]);
         beetroot.add(TweenMax.to(['.beetroot-img', '.pepper-img-tweener'], 1, {'left': '20vw'}));
+      var peas = new TimelineMax();
+        peas.add([
+          TweenMax.to(".vegetable-heading-peas", 1, {top: '5vh'}),
+          TweenMax.to(".peas-img", 1, {top: sixTimesUnit.toString()}),
+          TweenMax.to(".peas-text-position", 1, {top: eightTimesUnit.toString()})
+        ]);
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-calendar", duration: 1.5 *  $(window).height()})
         .triggerHook(0)
@@ -149,6 +156,13 @@
         .setClassToggle("#menu-beetroot", "active")
       );
 
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-peas", duration: 1 * $(window).height()})
+        .triggerHook(0)
+        .setPin(".screen-peas", {pushFollowers: false})
+        .setTween(peas)
+        .setClassToggle("#menu-peas", "active")
+      );
+
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 1.3 * $(window).height()
     })
         .triggerHook(0)
@@ -161,15 +175,15 @@
         .setPin("#target-tomato-img", {pushFollowers: false})
       );
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 1.3 * $(window).height() })
-        .triggerHook(0)
-        .setPin(".vegetable-time-bars", {pushFollowers: false})
-      );
+      // sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 1.3 * $(window).height() })
+      //   .triggerHook(0)
+      //   .setPin(".vegetable-time-bars", {pushFollowers: false})
+      // );
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 0.5 * $(window).height()})
-        .triggerHook(0)
-        .setTween(vegetableTimeBars)
-      );
+      // sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 0.5 * $(window).height()})
+      //   .triggerHook(0)
+      //   .setTween(vegetableTimeBars)
+      // );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-tomato-text", duration: 0.5 * $(window).height()})
         .triggerHook(0.4)
@@ -185,12 +199,6 @@
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-sweet-potato-text", duration: 0.4 * $(window).height()})
         .triggerHook(0.55)
         .setPin("#target-sweet-potato-text", {pushFollowers: false})
-      );
-
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-peas-img", duration: 1.25 * $(window).height()})
-        .triggerHook(0)
-        .setPin("#target-peas-img", {pushFollowers: false})
-        .setClassToggle("#menu-peas", "active")
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: "#trigger-carrot-img", duration: 0.5 * $(window).height()})
