@@ -25,97 +25,95 @@
       </div>
 
 
-      <div class="container">
-        <div class="screen screen-calendar">
+      <div class="screen screen-calendar">
 
-          <div class="heading-calendar">
-            <div class="heading-calendar-background">
-              <h1>Calendar</h1>
+        <div class="heading-calendar">
+          <div class="heading-calendar-background">
+            <h1>Calendar</h1>
+          </div>
+        </div>
+
+        <div id="target-side-bar-lines" class="screen-overlay-fix">
+          <div class="screen-overlay">
+            <div class="plant-separators">
+              <div class="plant-separator-line"></div>
+              <div class="plant-separator-line"></div>
+              <div class="plant-separator-line-fixed"></div>
+              <div class="plant-separator-line-fixed"></div>
+              <div class="plant-separator-line-fixed"></div>
+              <div class="plant-separator-line" ng-hide="hideLines"></div>
+              <div class="plant-separator-line" ng-hide="hideLines"></div>
+              <div class="plant-separator-line" ng-hide="hideLines"></div>
+              <div class="plant-separator-line" ng-hide="hideLines"></div>
+              <div class="plant-separator-line" ng-hide="hideLines"></div>
+              <div class="plant-separator-line" ng-hide="hideLines"></div>
+              <div class="plant-separator-line" ng-hide="hideLines"></div>
+              <div class="plant-separator-line" ng-hide="hideLines"></div>
+              <div class="plant-separator-line" ng-hide="hideLines"></div>
+              <div class="plant-separator-line" ng-hide="hideLines"></div>
             </div>
           </div>
+        </div>
 
-          <div id="target-side-bar-lines" class="screen-overlay-fix">
-            <div class="screen-overlay">
-              <div class="plant-separators">
-                <div class="plant-separator-line"></div>
-                <div class="plant-separator-line"></div>
-                <div class="plant-separator-line-fixed"></div>
-                <div class="plant-separator-line-fixed"></div>
-                <div class="plant-separator-line-fixed"></div>
-                <div class="plant-separator-line" ng-hide="hideLines"></div>
-                <div class="plant-separator-line" ng-hide="hideLines"></div>
-                <div class="plant-separator-line" ng-hide="hideLines"></div>
-                <div class="plant-separator-line" ng-hide="hideLines"></div>
-                <div class="plant-separator-line" ng-hide="hideLines"></div>
-                <div class="plant-separator-line" ng-hide="hideLines"></div>
-                <div class="plant-separator-line" ng-hide="hideLines"></div>
-                <div class="plant-separator-line" ng-hide="hideLines"></div>
-                <div class="plant-separator-line" ng-hide="hideLines"></div>
-                <div class="plant-separator-line" ng-hide="hideLines"></div>
-              </div>
-            </div>
+        <div class="month-separators">
+          <div class="month-separator-line"></div>
+          <div class="month-separator-line"></div>
+          <div class="month-separator-line"></div>
+          <div class="month-separator-line"></div>
+          <div class="month-separator-line"></div>
+          <div class="month-separator-line"></div>
+          <div class="month-separator-line"></div>
+          <div class="month-separator-line"></div>
+          <div class="month-separator-line"></div>
+          <div class="month-separator-line"></div>
+          <div class="month-separator-line"></div>
+          <div class="month-separator-line"></div>
+        </div>
+
+        <div class="calendar">
+          <div id="calendar-month-section" class="calendar-months calendar-time-bars">
+            <div class="calendar-month">J</div>
+            <div class="calendar-month">F</div>
+            <div class="calendar-month">M</div>
+            <div class="calendar-month">A</div>
+            <div class="calendar-month">M</div>
+            <div class="calendar-month">J</div>
+            <div class="calendar-month">J</div>
+            <div class="calendar-month">A</div>
+            <div class="calendar-month">S</div>
+            <div class="calendar-month">O</div>
+            <div class="calendar-month">N</div>
+            <div class="calendar-month">D</div>
           </div>
 
-          <div class="month-separators">
-            <div class="month-separator-line"></div>
-            <div class="month-separator-line"></div>
-            <div class="month-separator-line"></div>
-            <div class="month-separator-line"></div>
-            <div class="month-separator-line"></div>
-            <div class="month-separator-line"></div>
-            <div class="month-separator-line"></div>
-            <div class="month-separator-line"></div>
-            <div class="month-separator-line"></div>
-            <div class="month-separator-line"></div>
-            <div class="month-separator-line"></div>
-            <div class="month-separator-line"></div>
-          </div>
-
-          <div class="calendar">
-            <div id="calendar-month-section" class="calendar-months calendar-time-bars">
-              <div class="calendar-month">J</div>
-              <div class="calendar-month">F</div>
-              <div class="calendar-month">M</div>
-              <div class="calendar-month">A</div>
-              <div class="calendar-month">M</div>
-              <div class="calendar-month">J</div>
-              <div class="calendar-month">J</div>
-              <div class="calendar-month">A</div>
-              <div class="calendar-month">S</div>
-              <div class="calendar-month">O</div>
-              <div class="calendar-month">N</div>
-              <div class="calendar-month">D</div>
-            </div>
-
-            <div class="plant-names-wrapper">
-              <ul class="plant-names">
-                <li ng-repeat="plant in PLANTS" class="calendar-plant-name">
-                  <a href="#{{plant.URL}}">{{ plant.NAME }}</a>
-                </li>
-              </ul>
-            </div>
-            
-            <ul class="calendar-content">
-              <vegetable-time-bars ng-repeat="plantData in PLANTS" plant="plantData"></vegetable-time-bars>
-            </ul>
-
-          </div>
-
-          <div class="menu-wrapper">
-            <a href class="menu-button" ng-click="menuButton()" ng-show="hideMenu && showMenuAll">
-              &gt;
-            </a>
-            <a href class="menu-button" ng-click="menuButton()" ng-show="showMenu && showMenuAll">
-              &lt;
-            </a>
-            <ul class="menu" ng-show="showMenu && showMenuAll">
-              <li ng-repeat="plant in PLANTS" id="menu-{{ plant.URL }}" >
+          <div class="plant-names-wrapper">
+            <ul class="plant-names">
+              <li ng-repeat="plant in PLANTS" class="calendar-plant-name">
                 <a href="#{{plant.URL}}">{{ plant.NAME }}</a>
               </li>
             </ul>
           </div>
+          
+          <ul class="calendar-content">
+            <vegetable-time-bars ng-repeat="plantData in PLANTS" plant="plantData"></vegetable-time-bars>
+          </ul>
 
         </div>
+
+        <div class="menu-wrapper">
+          <a href class="menu-button" ng-click="menuButton()" ng-show="hideMenu && showMenuAll">
+            &gt;
+          </a>
+          <a href class="menu-button" ng-click="menuButton()" ng-show="showMenu && showMenuAll">
+            &lt;
+          </a>
+          <ul class="menu" ng-show="showMenu && showMenuAll">
+            <li ng-repeat="plant in PLANTS" id="menu-{{ plant.URL }}" >
+              <a href="#{{plant.URL}}">{{ plant.NAME }}</a>
+            </li>
+          </ul>
+        </div>
+
       </div>
 
       <a id="spinach"></a>

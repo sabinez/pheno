@@ -2,6 +2,7 @@
 
 .screen-calendar {
   height: 150vh;
+  z-index: 100;
 }
 
 .calendar {
@@ -24,7 +25,6 @@
     background-color: white;
     height: 9vh;
     width: 30vw;
-    z-index: 10;
   }
 }
 

@@ -15,6 +15,7 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+  z-index: 100;
   li {
     position: absolute;
     left: calc(50% - (4 * #{$unit}));
@@ -38,7 +39,6 @@
 
 .screen-spinach {
   height: 230vh;
-  z-index: -10;
 }
 
 .vegetable-img.spinach-img {
@@ -62,7 +62,6 @@
 
 .screen-chard {
   height: 230vh;
-  z-index: -10;
 }
 
 .vegetable-img.chard-img {
@@ -80,7 +79,6 @@
 
 .screen-brussel-sprouts {
   height: 250vh;
-  z-index: -10;
 }
 
 .vegetable-img.brussel-sprouts-img {
@@ -98,7 +96,6 @@
 
 .screen-pepper {
   height: 200vh;
-  z-index: -10;
 }
 
 .pepper-img-tweener {
@@ -130,12 +127,14 @@
 
 .screen-beetroot {
   height: 200vh;
+  z-index: 10;
 }
 
 .vegetable-img.beetroot-img {
   top: 40vh;
   left: calc(50% + (3 * #{$unit}));
   justify-content: center;
+  z-index: 10;
   img {
     width: 6 * $unit;
   }
@@ -146,7 +145,6 @@
   top: 200vh;
   left: calc(50% + (4 * #{$unit}));
   width: 5 * $unit;
-  z-index: -10;
   line-height: 1.7;
 }
 
@@ -168,7 +166,7 @@
   .pea-a {
     transition: left 2s linear, top 2s linear;
     position: absolute;
-    width: 3vw;
+    width: 0.7 * $unit;
     top: 0;
     left: 0;
   }
@@ -184,7 +182,6 @@
 
 .screen-onion {
   height: 200vh;
-  z-index: -10;
 }
 
 .vegetable-img.onion-img {
@@ -202,7 +199,6 @@
 
 .screen-carrot {
   height: 200vh;
-  z-index: -10;
 }
 
 .vegetable-img.carrot-img {
@@ -220,19 +216,17 @@
 
 .screen-tomato {
   height: 200vh;
-  z-index: -10;
 }
 
 .vegetable-img.tomato-hg {
   top: 100vh;
   left: calc(50% - (4 * #{$unit}));
-  z-index: 20;
+  z-index: 10;
 }
 
 .vegetable-img.tomato-img {
   top: calc(100vh + (0.5 * #{$unit}));
   left: calc(50% - (4 * #{$unit}));
-  z-index: 10;
 }
 
 .tomato-text-position {
@@ -245,7 +239,6 @@
 
 .screen-sweet-potato {
   height: 200vh;
-  z-index: -10;
 }
 
 .vegetable-img.sweet-potato-img {
