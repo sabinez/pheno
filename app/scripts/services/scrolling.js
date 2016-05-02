@@ -4,8 +4,7 @@
   angular.module('phenoApp').service('initScrolling', function () {
     var sceneCollection = [];
 
-    var initScrolling = function(scrollEvents) {
-
+    var initScrolling = function(scrollEvents, PLANTS) {
       var unit = $(window).height() / 15;
       var threeTimesUnit = 3 * unit;
       var fourTimesUnit = 4 * unit;
@@ -19,11 +18,32 @@
 
       var scrollingController = new ScrollMagic.Controller({container: "#viewport"});
 
+      var generateTimeBarTweens = function() {
+        var tweenArray = [];
+        for (var i = 0; i < PLANTS.length; i++) {
+          tweenArray.push(
+            TweenMax.to(".time-bar-sowing-" + PLANTS[i].URL, 1, {width: PLANTS[i].sowingWidth.toString() + 'px'}),
+            TweenMax.to(".time-bar-harvesting-" + PLANTS[i].URL, 1, {width: PLANTS[i].harvestingWidth.toString() + 'px'})
+          );
+          if (PLANTS[i].sowingWidthSecond !== undefined) {
+            tweenArray.push(TweenMax.to(".time-bar-sowing-2nd-" + PLANTS[i].URL, 1, {width: PLANTS[i].sowingWidthSecond.toString() + 'px'}))
+          };
+          if (PLANTS[i].plantingWidth !== undefined) {
+            tweenArray.push(TweenMax.to(".time-bar-planting-" + PLANTS[i].URL, 1, {width: PLANTS[i].plantingWidth.toString() + 'px'}))
+          };
+          if (PLANTS[i].harvestingWidthSecond !== undefined) {
+            tweenArray.push(TweenMax.to(".time-bar-harvesting-2nd-" + PLANTS[i].URL, 1, {width: PLANTS[i].sowingWidthSecond.toString() + 'px'}))
+          };
+        }
+        return tweenArray;
+      };
+
       var calendar = new TimelineMax();
+        calendar.add(generateTimeBarTweens());       
         calendar.add([
           TweenMax.to(".plant-names-wrapper", 1, {left: '-100vh'}),
           TweenMax.to(".plant-separator-line", 1, {width: '0'}),
-          TweenMax.to(".month-separators", 1, {height: '0'})
+          TweenMax.to(".month-separators", 1, {height: '0'}),
         ]);
       var spinach = new TimelineMax();
         spinach.add([

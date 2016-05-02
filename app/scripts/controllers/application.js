@@ -24,8 +24,7 @@
         }
       };
 
-      var setTimeBarStyle = function(){
-        var monthWidth = getMonthWidth();
+      var setTimeBarStyle = function(monthWidth){
         for(var i = 0; i < $scope.PLANTS.length; i++){
           var plant = $scope.PLANTS[i];
 
@@ -93,9 +92,9 @@
 
       plantData.requestPlantData(function(data){
         $scope.PLANTS = data.PLANTS;
-        setTimeBarStyle();
+        setTimeBarStyle(getMonthWidth());
         $timeout(function(){
-          initScrolling(scrollEvents);
+          initScrolling(scrollEvents, $scope.PLANTS);
           setInterval(animatePeas, 20);
         });
       });
