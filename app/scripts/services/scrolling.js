@@ -57,12 +57,6 @@
           TweenMax.to(".month-separators", 0.4, {height: '0'})
         ].concat(generateTimeBarTweens("all", true)), 0.6);
       
-      var onion = new TimelineMax();
-        onion.add([
-          TweenMax.to(".vegetable-heading-onion", 1, {top: '5vh'}),
-          TweenMax.to(".onion-img", 1, {top: fourTimesUnit.toString()}),
-          TweenMax.to(".onion-text-position", 1, {top: sevenTimesUnit.toString()})
-        ].concat(generateTimeBarTweens(6)));
       var carrot = new TimelineMax();
         carrot.add([
           TweenMax.to(".vegetable-heading-carrot", 1, {top: '5vh'}),
@@ -259,7 +253,22 @@
         .setClassToggle("#menu-peas", "active")
       );
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-onion", duration: 1 * $(window).height()})
+
+      var onion = new TimelineMax();
+      
+      onion.add([
+        TweenMax.to(".vegetable-heading-onion", 0.4, {top: '5vh'}),
+        TweenMax.to(".onion-img", 0.4, {top: fourTimesUnit.toString()}),
+        TweenMax.to(".onion-text-position", 0.4, {top: sevenTimesUnit.toString()})
+      ].concat(generateTimeBarTweens(6)), 0);
+      
+      onion.add([
+        TweenMax.to(".vegetable-heading-onion", 0.4, {top: '-50vh'}),
+        TweenMax.to(".onion-img", 0.4, {top: '-50vh'}),
+        TweenMax.to(".onion-text-position", 0.4, {top: '-100vh'})
+      ].concat(generateTimeBarTweens(6)), 0.6);
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-onion", duration: 1.5 * $(window).height()})
         .triggerHook(0)
         .setPin(".screen-onion", {pushFollowers: false})
         .setTween(onion)
