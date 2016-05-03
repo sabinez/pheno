@@ -57,19 +57,6 @@
           TweenMax.to(".month-separators", 0.4, {height: '0'})
         ].concat(generateTimeBarTweens("all", true)), 0.6);
       
-      var pepper = new TimelineMax();
-        pepper.add([
-          TweenMax.to(".vegetable-heading-pepper", 1, {top: '5vh'}),
-          TweenMax.to(".pepper-img-tweener", 1, {top: sixTimesUnit.toString()}),
-          TweenMax.to(".pepper-text-position", 1, {top: sixTimesUnit.toString()})
-        ].concat(generateTimeBarTweens(3)));
-      var beetroot = new TimelineMax();
-        beetroot.add([
-          TweenMax.to(".vegetable-heading-beetroot", 1, {top: '5vh'}),
-          TweenMax.to(".beetroot-img", 1, {top: sixTimesUnit.toString()}),
-          TweenMax.to(".beetroot-text-position", 1, {top: sevenTimesUnit.toString()})
-        ].concat(generateTimeBarTweens(4)));
-        beetroot.add(TweenMax.to(['.beetroot-img', '.pepper-img-tweener'], 1, {'left': pepperBeetrootTweenPosition.toString()}));
       var peas = new TimelineMax();
         peas.add([
           TweenMax.to(".vegetable-heading-peas", 1, {top: '5vh'}),
@@ -204,26 +191,59 @@
         .setClassToggle("#menu-brussel-sprouts", "active")
       );
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-pepper", duration: 1 * $(window).height()})
+
+      var pepper = new TimelineMax();
+      
+      pepper.add([
+        TweenMax.to(".vegetable-heading-pepper", 0.4, {top: '5vh'}),
+        TweenMax.to(".pepper-img-tweener", 0.4, {top: sixTimesUnit.toString()}),
+        TweenMax.to(".pepper-text-position", 0.4, {top: sixTimesUnit.toString()})
+      ].concat(generateTimeBarTweens(3)), 0);
+      
+      pepper.add([
+        TweenMax.to(".vegetable-heading-pepper", 0.4, {top: '-50vh'}),
+        TweenMax.to(".pepper-text-position", 0.4, {top: '-100vh'})
+      ].concat(generateTimeBarTweens(3, true)), 0.6);
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-pepper", duration: 1.5 * $(window).height()})
         .triggerHook(0)
         .setPin(".screen-pepper", {pushFollowers: false})
         .setTween(pepper)
         .setClassToggle("#menu-pepper", "active")
       );
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-beetroot", duration: 2 * $(window).height()})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-beetroot", duration: 1.5 * $(window).height()})
         .triggerHook(1)
+        .offset(1 *  $(window).height())
         .setPin("#pepper-img-pin", {pushFollowers: false})
       );
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-beetroot", duration: 1 * $(window).height()})
+
+      var beetroot = new TimelineMax();
+      
+      beetroot.add([
+        TweenMax.to(".vegetable-heading-beetroot", 0.4, {top: '5vh'}),
+        TweenMax.to(".beetroot-img", 0.4, {top: sixTimesUnit.toString()}),
+        TweenMax.to(".beetroot-text-position", 0.4, {top: sevenTimesUnit.toString()})
+      ].concat(generateTimeBarTweens(4)), 0);
+      
+      beetroot.add(TweenMax.to(['.beetroot-img', '.pepper-img-tweener'], 0.4, {'left': pepperBeetrootTweenPosition.toString()}), 0.4);
+      
+      beetroot.add([
+        TweenMax.to(".vegetable-heading-beetroot", 0.4, {top: '-50vh'}),
+        TweenMax.to(".beetroot-img", 0.4, {top: '-50vh'}),
+        TweenMax.to(".pepper-img-tweener", 0.4, {top: '-50vh'}),
+        TweenMax.to(".beetroot-text-position", 0.4, {top: '-100vh'})
+      ].concat(generateTimeBarTweens(4, true)), 1);
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-beetroot", duration: 1.5 * $(window).height()})
         .triggerHook(0)
         .setPin(".screen-beetroot", {pushFollowers: false})
         .setTween(beetroot)
         .setClassToggle("#menu-beetroot", "active")
       );
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-peas", duration: 1 * $(window).height()})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-peas", duration: 1.5 * $(window).height()})
         .triggerHook(0)
         .setPin(".screen-peas", {pushFollowers: false})
         .setTween(peas)

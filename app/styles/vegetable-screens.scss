@@ -61,7 +61,7 @@
 }
 
 .screen-chard {
-  height: 230vh;
+  height: 150vh;
 }
 
 .vegetable-img.chard-img {
@@ -78,7 +78,7 @@
 }
 
 .screen-brussel-sprouts {
-  height: 250vh;
+  height: 150vh;
 }
 
 .vegetable-img.brussel-sprouts-img {
@@ -95,7 +95,7 @@
 }
 
 .screen-pepper {
-  height: 200vh;
+  height: 150vh;
 }
 
 .pepper-img-tweener {
@@ -126,12 +126,12 @@
 }
 
 .screen-beetroot {
-  height: 200vh;
+  height: 170vh;
   z-index: 10;
 }
 
 .vegetable-img.beetroot-img {
-  top: 40vh;
+  top: 100vh;
   left: calc(50% + (3 * #{$unit}));
   justify-content: center;
   z-index: 10;
