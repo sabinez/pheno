@@ -33,17 +33,17 @@
 
         for (var i = start; i < end; i++) {
           tweenArray.push(
-            TweenMax.to(".time-bar-sowing-" + PLANTS[i].URL, 1, {width: reverse ? 0 : PLANTS[i].sowingWidth.toString() + 'px'}),
-            TweenMax.to(".time-bar-harvesting-" + PLANTS[i].URL, 1, {width: reverse ? 0 : PLANTS[i].harvestingWidth.toString() + 'px'})
+            TweenMax.to(".time-bar-sowing-" + PLANTS[i].URL, 0.4, {width: reverse ? 0 : PLANTS[i].sowingWidth.toString() + 'px'}),
+            TweenMax.to(".time-bar-harvesting-" + PLANTS[i].URL, 0.4, {width: reverse ? 0 : PLANTS[i].harvestingWidth.toString() + 'px'})
           );
           if (PLANTS[i].sowingWidthSecond !== undefined) {
-            tweenArray.push(TweenMax.to(".time-bar-sowing-2nd-" + PLANTS[i].URL, 1, {width: reverse ? 0 : PLANTS[i].sowingWidthSecond.toString() + 'px', 'margin-left': reverse ? (PLANTS[i].sowingMarginSecond + PLANTS[i].sowingWidth + 'px') : PLANTS[i].sowingMarginSecond.toString() + 'px'}))
+            tweenArray.push(TweenMax.to(".time-bar-sowing-2nd-" + PLANTS[i].URL, 0.4, {width: reverse ? 0 : PLANTS[i].sowingWidthSecond.toString() + 'px', 'margin-left': reverse ? (PLANTS[i].sowingMarginSecond + PLANTS[i].sowingWidth + 'px') : PLANTS[i].sowingMarginSecond.toString() + 'px'}))
           };
           if (PLANTS[i].plantingWidth !== undefined) {
-            tweenArray.push(TweenMax.to(".time-bar-planting-" + PLANTS[i].URL, 1, {width: reverse ? 0 : PLANTS[i].plantingWidth.toString() + 'px'}))
+            tweenArray.push(TweenMax.to(".time-bar-planting-" + PLANTS[i].URL, 0.4, {width: reverse ? 0 : PLANTS[i].plantingWidth.toString() + 'px'}))
           };
           if (PLANTS[i].harvestingWidthSecond !== undefined) {
-            tweenArray.push(TweenMax.to(".time-bar-harvesting-2nd-" + PLANTS[i].URL, 1, {width: reverse ? 0 : PLANTS[i].sowingWidthSecond.toString() + 'px', 'margin-left': reverse ? (PLANTS[i].harvestingMarginSecond + PLANTS[i].harvestingWidth + 'px') : PLANTS[i].harvestingMarginSecond.toString() + 'px'}))
+            tweenArray.push(TweenMax.to(".time-bar-harvesting-2nd-" + PLANTS[i].URL, 0.4, {width: reverse ? 0 : PLANTS[i].sowingWidthSecond.toString() + 'px', 'margin-left': reverse ? (PLANTS[i].harvestingMarginSecond + PLANTS[i].harvestingWidth + 'px') : PLANTS[i].harvestingMarginSecond.toString() + 'px'}))
           };
         }
         return tweenArray;
@@ -54,15 +54,19 @@
         calendar.add([
           TweenMax.to(".plant-names-wrapper", 1, {left: '-100vh'}),
           TweenMax.to(".plant-separator-line", 1, {width: '0'}),
-          TweenMax.to(".month-separators", 1, {height: '0'}),
-          generateTimeBarTweens("all", true)
-        ])
+          TweenMax.to(".month-separators", 1, {height: '0'})
+        ].concat(generateTimeBarTweens("all", true)));
       var spinach = new TimelineMax();
         spinach.add([
-          TweenMax.to(".vegetable-heading-spinach", 1, {top: '5vh'}),
-          TweenMax.to(".spinach-img", 1, {top: sixTimesUnit.toString()}),
-          TweenMax.to(".spinach-text-position", 1, {top: sevenTimesUnit.toString()})
-        ].concat(generateTimeBarTweens(0)));
+          TweenMax.to(".vegetable-heading-spinach", 0.4, {top: '5vh'}),
+          TweenMax.to(".spinach-img", 0.4, {top: sixTimesUnit.toString()}),
+          TweenMax.to(".spinach-text-position", 0.4, {top: sevenTimesUnit.toString()})
+        ].concat(generateTimeBarTweens(0)), 0);
+        spinach.add([
+          TweenMax.to(".vegetable-heading-spinach", 0.4, {top: '-50vh'}),
+          TweenMax.to(".spinach-img", 0.4, {top: '-50vh'}),
+          TweenMax.to(".spinach-text-position", 0.4, {top: '-100vh'})
+        ].concat(generateTimeBarTweens(0, true)), 0.6);
       var chard = new TimelineMax();
         chard.add([
           TweenMax.to(".vegetable-heading-chard", 1, {top: '5vh'}),
@@ -156,7 +160,7 @@
         .setPin(".menu-wrapper", {pushFollowers: false})
       );
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-spinach", duration: 1 * $(window).height()})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-spinach", duration: 1.5 * $(window).height()})
         .triggerHook(0)
         .setPin(".screen-spinach", {pushFollowers: false})
         .setTween(spinach)
