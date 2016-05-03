@@ -57,12 +57,6 @@
           TweenMax.to(".month-separators", 0.4, {height: '0'})
         ].concat(generateTimeBarTweens("all", true)), 0.6);
       
-      var peas = new TimelineMax();
-        peas.add([
-          TweenMax.to(".vegetable-heading-peas", 1, {top: '5vh'}),
-          TweenMax.to(".peas-img", 1, {top: fiveTimesUnit.toString()}),
-          TweenMax.to(".peas-text-position", 1, {top: sevenTimesUnit.toString()})
-        ].concat(generateTimeBarTweens(5)));
       var onion = new TimelineMax();
         onion.add([
           TweenMax.to(".vegetable-heading-onion", 1, {top: '5vh'}),
@@ -242,6 +236,21 @@
         .setTween(beetroot)
         .setClassToggle("#menu-beetroot", "active")
       );
+
+
+      var peas = new TimelineMax();
+      
+      peas.add([
+        TweenMax.to(".vegetable-heading-peas", 0.4, {top: '5vh'}),
+        TweenMax.to(".peas-img", 0.4, {top: fiveTimesUnit.toString()}),
+        TweenMax.to(".peas-text-position", 0.4, {top: sevenTimesUnit.toString()})
+      ].concat(generateTimeBarTweens(5)), 0);
+      
+      peas.add([
+        TweenMax.to(".vegetable-heading-peas", 0.4, {top: '-50vh'}),
+        TweenMax.to(".peas-img", 0.4, {top: '-50vh'}),
+        TweenMax.to(".peas-text-position", 0.4, {top: '-100vh'})
+      ].concat(generateTimeBarTweens(5, true)), 0.6);
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-peas", duration: 1.5 * $(window).height()})
         .triggerHook(0)
