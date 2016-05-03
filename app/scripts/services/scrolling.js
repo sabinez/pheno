@@ -57,13 +57,6 @@
           TweenMax.to(".month-separators", 0.4, {height: '0'})
         ].concat(generateTimeBarTweens("all", true)), 0.6);
       
-      var carrot = new TimelineMax();
-        carrot.add([
-          TweenMax.to(".vegetable-heading-carrot", 1, {top: '5vh'}),
-          TweenMax.to(".carrot-img", 1, {top: fiveTimesUnit.toString()}),
-          TweenMax.to(".carrot-text-position", 1, {top: sixTimesUnit.toString()}),
-          TweenMax.to(".carrot-img", 1, {rotation: 180, ease: Linear.easeNone})
-        ].concat(generateTimeBarTweens(7)));
       var tomato = new TimelineMax();
         tomato.add([
           TweenMax.to(".vegetable-heading-tomato", 0.9, {top: '5vh'}),
@@ -266,7 +259,7 @@
         TweenMax.to(".vegetable-heading-onion", 0.4, {top: '-50vh'}),
         TweenMax.to(".onion-img", 0.4, {top: '-50vh'}),
         TweenMax.to(".onion-text-position", 0.4, {top: '-100vh'})
-      ].concat(generateTimeBarTweens(6)), 0.6);
+      ].concat(generateTimeBarTweens(6, true)), 0.6);
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-onion", duration: 1.5 * $(window).height()})
         .triggerHook(0)
@@ -275,7 +268,23 @@
         .setClassToggle("#menu-onion", "active")
       );
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-carrot", duration: 1 * $(window).height()})
+
+      var carrot = new TimelineMax();
+      
+      carrot.add([
+        TweenMax.to(".vegetable-heading-carrot", 0.4, {top: '5vh'}),
+        TweenMax.to(".carrot-img", 0.4, {top: fiveTimesUnit.toString()}),
+        TweenMax.to(".carrot-text-position", 0.4, {top: sixTimesUnit.toString()}),
+        TweenMax.to(".carrot-img", 0.4, {rotation: 180, ease: Linear.easeNone})
+      ].concat(generateTimeBarTweens(7)), 0);
+      
+      carrot.add([
+        TweenMax.to(".vegetable-heading-carrot", 0.4, {top: '-50vh'}),
+        TweenMax.to(".carrot-img", 0.4, {top: '-50vh'}),
+        TweenMax.to(".carrot-text-position", 0.4, {top: '-100vh'})
+      ].concat(generateTimeBarTweens(7, true)), 0.6);
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-carrot", duration: 1.5 * $(window).height()})
         .triggerHook(0)
         .setPin(".screen-carrot", {pushFollowers: false})
         .setTween(carrot)
