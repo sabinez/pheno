@@ -56,13 +56,7 @@
           TweenMax.to(".plant-separator-line", 0.4, {width: '0'}),
           TweenMax.to(".month-separators", 0.4, {height: '0'})
         ].concat(generateTimeBarTweens("all", true)), 0.6);
-      var brusselSprouts = new TimelineMax();
-        brusselSprouts.add([
-          TweenMax.to(".vegetable-heading-brussel-sprouts", 1, {top: '5vh'}),
-          TweenMax.to(".brussel-sprouts-img", 1, {top: threeTimesUnit.toString()}),
-          TweenMax.to(".brussel-sprouts-text-position", 1, {top: sevenTimesUnit.toString()})
-        ].concat(generateTimeBarTweens(2)));
-        brusselSprouts.add(TweenMax.to("#target-brussel-sprouts-cutout", 1, {rotation: 360, ease: Linear.easeNone}));
+      
       var pepper = new TimelineMax();
         pepper.add([
           TweenMax.to(".vegetable-heading-pepper", 1, {top: '5vh'}),
@@ -179,13 +173,29 @@
         TweenMax.to(".chard-img", 0.4, {top: '-50vh'}),
         TweenMax.to(".chard-text-position", 0.4, {top: '-100vh'})
       ].concat(generateTimeBarTweens(1, true)), 0.6);
-      
+
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-chard", duration: 1.5 * $(window).height() })
         .triggerHook(0)
         .setPin(".screen-chard", {pushFollowers: false})
         .setTween(chard)
         .setClassToggle("#menu-chard", "active")
       );
+
+
+      var brusselSprouts = new TimelineMax();
+      brusselSprouts.add([
+        TweenMax.to(".vegetable-heading-brussel-sprouts", 0.4, {top: '5vh'}),
+        TweenMax.to(".brussel-sprouts-img", 0.4, {top: threeTimesUnit.toString()}),
+        TweenMax.to(".brussel-sprouts-text-position", 0.4, {top: sevenTimesUnit.toString()})
+      ].concat(generateTimeBarTweens(2)), 0);
+
+      brusselSprouts.add(TweenMax.to("#target-brussel-sprouts-cutout", 0.4, {rotation: 360, ease: Linear.easeNone}), 0.4);
+      
+      brusselSprouts.add([
+        TweenMax.to(".vegetable-heading-brussel-sprouts", 0.4, {top: '-50vh'}),
+        TweenMax.to(".brussel-sprouts-img", 0.4, {top: '-50vh'}),
+        TweenMax.to(".brussel-sprouts-text-position", 0.4, {top: '-50vh'})
+      ].concat(generateTimeBarTweens(2, true)), 0.8);
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-brussel-sprouts", duration: 1.5 * $(window).height()})
         .triggerHook(0)
