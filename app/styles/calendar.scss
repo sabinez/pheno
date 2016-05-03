@@ -25,6 +25,7 @@
     background-color: white;
     height: 9vh;
     width: 30vw;
+    z-index: 10;
   }
 }
 
@@ -129,7 +130,6 @@
 }
 
 .calendar-time-bar {
-  // padding-left: 1px;
   height: 12px;
   margin-bottom: 1px;
   text-align: left;

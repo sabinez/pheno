@@ -61,77 +61,67 @@
         spinach.add([
           TweenMax.to(".vegetable-heading-spinach", 1, {top: '5vh'}),
           TweenMax.to(".spinach-img", 1, {top: sixTimesUnit.toString()}),
-          TweenMax.to(".spinach-text-position", 1, {top: sevenTimesUnit.toString()}),
-          generateTimeBarTweens(0)
-        ]);
+          TweenMax.to(".spinach-text-position", 1, {top: sevenTimesUnit.toString()})
+        ].concat(generateTimeBarTweens(0)));
       var chard = new TimelineMax();
         chard.add([
           TweenMax.to(".vegetable-heading-chard", 1, {top: '5vh'}),
           TweenMax.to(".chard-img", 1, {top: sixTimesUnit.toString()}),
-          TweenMax.to(".chard-text-position", 1, {top: sixTimesUnit.toString()}),
-          generateTimeBarTweens(1)
-        ]);
+          TweenMax.to(".chard-text-position", 1, {top: sixTimesUnit.toString()})
+        ].concat(generateTimeBarTweens(1)));
       var brusselSprouts = new TimelineMax();
         brusselSprouts.add([
           TweenMax.to(".vegetable-heading-brussel-sprouts", 1, {top: '5vh'}),
           TweenMax.to(".brussel-sprouts-img", 1, {top: threeTimesUnit.toString()}),
-          TweenMax.to(".brussel-sprouts-text-position", 1, {top: sevenTimesUnit.toString()}),
-          generateTimeBarTweens(2)
-        ]);
+          TweenMax.to(".brussel-sprouts-text-position", 1, {top: sevenTimesUnit.toString()})
+        ].concat(generateTimeBarTweens(2)));
         brusselSprouts.add(TweenMax.to("#target-brussel-sprouts-cutout", 1, {rotation: 360, ease: Linear.easeNone}));
       var pepper = new TimelineMax();
         pepper.add([
           TweenMax.to(".vegetable-heading-pepper", 1, {top: '5vh'}),
           TweenMax.to(".pepper-img-tweener", 1, {top: sixTimesUnit.toString()}),
-          TweenMax.to(".pepper-text-position", 1, {top: sixTimesUnit.toString()}),
-          generateTimeBarTweens(3)
-        ]);
+          TweenMax.to(".pepper-text-position", 1, {top: sixTimesUnit.toString()})
+        ].concat(generateTimeBarTweens(3)));
       var beetroot = new TimelineMax();
         beetroot.add([
           TweenMax.to(".vegetable-heading-beetroot", 1, {top: '5vh'}),
           TweenMax.to(".beetroot-img", 1, {top: sixTimesUnit.toString()}),
-          TweenMax.to(".beetroot-text-position", 1, {top: sevenTimesUnit.toString()}),
-          generateTimeBarTweens(4)
-        ]);
+          TweenMax.to(".beetroot-text-position", 1, {top: sevenTimesUnit.toString()})
+        ].concat(generateTimeBarTweens(4)));
         beetroot.add(TweenMax.to(['.beetroot-img', '.pepper-img-tweener'], 1, {'left': pepperBeetrootTweenPosition.toString()}));
       var peas = new TimelineMax();
         peas.add([
           TweenMax.to(".vegetable-heading-peas", 1, {top: '5vh'}),
           TweenMax.to(".peas-img", 1, {top: fiveTimesUnit.toString()}),
-          TweenMax.to(".peas-text-position", 1, {top: sevenTimesUnit.toString()}),
-          generateTimeBarTweens(5)
-        ]);
+          TweenMax.to(".peas-text-position", 1, {top: sevenTimesUnit.toString()})
+        ].concat(generateTimeBarTweens(5)));
       var onion = new TimelineMax();
         onion.add([
           TweenMax.to(".vegetable-heading-onion", 1, {top: '5vh'}),
           TweenMax.to(".onion-img", 1, {top: fourTimesUnit.toString()}),
-          TweenMax.to(".onion-text-position", 1, {top: sevenTimesUnit.toString()}),
-          generateTimeBarTweens(6)
-        ]);
+          TweenMax.to(".onion-text-position", 1, {top: sevenTimesUnit.toString()})
+        ].concat(generateTimeBarTweens(6)));
       var carrot = new TimelineMax();
         carrot.add([
           TweenMax.to(".vegetable-heading-carrot", 1, {top: '5vh'}),
           TweenMax.to(".carrot-img", 1, {top: fiveTimesUnit.toString()}),
           TweenMax.to(".carrot-text-position", 1, {top: sixTimesUnit.toString()}),
-          TweenMax.to(".carrot-img", 1, {rotation: 180, ease: Linear.easeNone}),
-          generateTimeBarTweens(7)
-        ]);
+          TweenMax.to(".carrot-img", 1, {rotation: 180, ease: Linear.easeNone})
+        ].concat(generateTimeBarTweens(7)));
       var tomato = new TimelineMax();
         tomato.add([
-          TweenMax.to(".vegetable-heading-tomato", 1, {top: '5vh'}),
-          TweenMax.to(".tomato-hg", 1, {top: sixTimesUnit.toString()}),
-          TweenMax.to(".tomato-img", 1, {top: sixAndAHalfTimesUnit.toString()}),
-          TweenMax.to(".tomato-text-position", 1, {top: sevenTimesUnit.toString()}),
-          generateTimeBarTweens(8)
-        ]); 
-        tomato.add(TweenMax.to(".tomato-img", 1, {top: sixTimesUnit.toString()}));      
+          TweenMax.to(".vegetable-heading-tomato", 0.9, {top: '5vh'}),
+          TweenMax.to(".tomato-hg", 0.9, {top: sixTimesUnit.toString()}),
+          TweenMax.to(".tomato-img", 0.9, {top: sixAndAHalfTimesUnit.toString()}),
+          TweenMax.to(".tomato-text-position", 0.9, {top: sevenTimesUnit.toString()})
+        ].concat(generateTimeBarTweens(8)), 0);
+        tomato.add( TweenMax.to(".tomato-img", 0.1, {top: sixTimesUnit.toString()}), 0.9 )
       var sweetPotato = new TimelineMax();
         sweetPotato.add([
           TweenMax.to(".vegetable-heading-sweet-potato", 1, {top: '5vh'}),
           TweenMax.to(".sweet-potato-img", 1, {top: threeTimesUnit.toString()}),
-          TweenMax.to(".sweet-potato-text-position", 1, {top: elevenTimesUnit.toString()}),
-          generateTimeBarTweens(9)
-        ]);
+          TweenMax.to(".sweet-potato-text-position", 1, {top: elevenTimesUnit.toString()})
+        ].concat(generateTimeBarTweens(9)));
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-calendar", duration: 1 *  $(window).height()})
         .triggerHook(0)
