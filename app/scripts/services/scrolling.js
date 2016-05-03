@@ -37,13 +37,13 @@
             TweenMax.to(".time-bar-harvesting-" + PLANTS[i].URL, 1, {width: reverse ? 0 : PLANTS[i].harvestingWidth.toString() + 'px'})
           );
           if (PLANTS[i].sowingWidthSecond !== undefined) {
-            tweenArray.push(TweenMax.to(".time-bar-sowing-2nd-" + PLANTS[i].URL, 1, {width: reverse ? 0 : PLANTS[i].sowingWidthSecond.toString() + 'px'}))
+            tweenArray.push(TweenMax.to(".time-bar-sowing-2nd-" + PLANTS[i].URL, 1, {width: reverse ? 0 : PLANTS[i].sowingWidthSecond.toString() + 'px', 'margin-left': reverse ? (PLANTS[i].sowingMarginSecond + PLANTS[i].sowingWidth + 'px') : PLANTS[i].sowingMarginSecond.toString() + 'px'}))
           };
           if (PLANTS[i].plantingWidth !== undefined) {
             tweenArray.push(TweenMax.to(".time-bar-planting-" + PLANTS[i].URL, 1, {width: reverse ? 0 : PLANTS[i].plantingWidth.toString() + 'px'}))
           };
           if (PLANTS[i].harvestingWidthSecond !== undefined) {
-            tweenArray.push(TweenMax.to(".time-bar-harvesting-2nd-" + PLANTS[i].URL, 1, {width: reverse ? 0 : PLANTS[i].sowingWidthSecond.toString() + 'px'}))
+            tweenArray.push(TweenMax.to(".time-bar-harvesting-2nd-" + PLANTS[i].URL, 1, {width: reverse ? 0 : PLANTS[i].sowingWidthSecond.toString() + 'px', 'margin-left': reverse ? (PLANTS[i].harvestingMarginSecond + PLANTS[i].harvestingWidth + 'px') : PLANTS[i].harvestingMarginSecond.toString() + 'px'}))
           };
         }
         return tweenArray;
