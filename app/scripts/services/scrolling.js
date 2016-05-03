@@ -57,14 +57,6 @@
           TweenMax.to(".month-separators", 0.4, {height: '0'})
         ].concat(generateTimeBarTweens("all", true)), 0.6);
       
-      var tomato = new TimelineMax();
-        tomato.add([
-          TweenMax.to(".vegetable-heading-tomato", 0.9, {top: '5vh'}),
-          TweenMax.to(".tomato-hg", 0.9, {top: sixTimesUnit.toString()}),
-          TweenMax.to(".tomato-img", 0.9, {top: sixAndAHalfTimesUnit.toString()}),
-          TweenMax.to(".tomato-text-position", 0.9, {top: sevenTimesUnit.toString()})
-        ].concat(generateTimeBarTweens(8)), 0);
-        tomato.add( TweenMax.to(".tomato-img", 0.1, {top: sixTimesUnit.toString()}), 0.9 )
       var sweetPotato = new TimelineMax();
         sweetPotato.add([
           TweenMax.to(".vegetable-heading-sweet-potato", 1, {top: '5vh'}),
@@ -291,7 +283,26 @@
         .setClassToggle("#menu-carrot", "active")
       );
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 1 * $(window).height()})
+
+      var tomato = new TimelineMax();
+      
+      tomato.add([
+        TweenMax.to(".vegetable-heading-tomato", 0.35, {top: '5vh'}),
+        TweenMax.to(".tomato-hg", 0.35, {top: sixTimesUnit.toString()}),
+        TweenMax.to(".tomato-img", 0.35, {top: sixAndAHalfTimesUnit.toString()}),
+        TweenMax.to(".tomato-text-position", 0.35, {top: sevenTimesUnit.toString()})
+      ].concat(generateTimeBarTweens(8)), 0);
+      
+      tomato.add( TweenMax.to(".tomato-img", 0.05, {top: sixTimesUnit.toString()}), 0.35 )
+      
+      tomato.add([
+        TweenMax.to(".vegetable-heading-tomato", 0.4, {top: '-50vh'}),
+        TweenMax.to(".tomato-hg", 0.4, {top: '-50vh'}),
+        TweenMax.to(".tomato-img", 0.4, {top: '-50vh'}),
+        TweenMax.to(".tomato-text-position", 0.4, {top: '-100vh'})
+      ].concat(generateTimeBarTweens(8, true)), 0.6);
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 1.5 * $(window).height()})
         .triggerHook(0)
         .setPin(".screen-tomato", {pushFollowers: false})
         .setTween(tomato)
