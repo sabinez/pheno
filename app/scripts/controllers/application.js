@@ -80,16 +80,6 @@
         };
       };
 
-      // scrollEvents.beetrootText = function(){
-      //   $scope.$apply(function(){
-      //     if ($scope.showBeetrootText == false) {
-      //       $scope.showBeetrootText = true;
-      //     } else {
-      //       $scope.showBeetrootText = false;
-      //     };
-      //   }); 
-      // };
-
       plantData.requestPlantData(function(data){
         $scope.PLANTS = data.PLANTS;
         setTimeBarStyle(getMonthWidth());
