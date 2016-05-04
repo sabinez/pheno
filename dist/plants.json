@@ -28,7 +28,7 @@
     "NAME" : "Pepper",
     "TIMES" : {
       "SOWING" : [ 3, 4 ],
-      "PLANTING" : [ 5.5, 6 ],
+      "PLANTING" : [ 5.5, 6.5 ],
       "HARVESTING" : [ 8, 11 ]
     },
     "IMG" : "images/pepper.png",
