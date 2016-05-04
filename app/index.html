@@ -95,7 +95,7 @@
           </div>
           
           <ul class="calendar-content">
-            <vegetable-time-bars ng-repeat="plantData in PLANTS" plant="plantData"></vegetable-time-bars>
+            <vegetable-time-bars ng-repeat="plantData in PLANTS" plant="plantData" ng-show="showTimeBarsCalendar"></vegetable-time-bars>
           </ul>
 
         </div>
@@ -119,11 +119,11 @@
       <a id="spinach"></a>
       <div class="screen screen-spinach">
         <div class="vegetable-heading vegetable-heading-spinach">
-          <h1>Spinach</h1>          
+          <h1>{{ PLANTS[0].NAME }}</h1>          
         </div>
         
         <ul class="vegetable-time-bars vegetable-time-bars-spinach">
-          <vegetable-time-bars plant="PLANTS[0]"></vegetable-time-bars>
+          <vegetable-time-bars plant="PLANTS[0]" ></vegetable-time-bars>
         </ul>
 
         <div class="vegetable-img spinach-img">
@@ -140,7 +140,7 @@
       <a id="chard"></a>
       <div class="screen screen-chard">
         <div class="vegetable-heading vegetable-heading-chard">
-          <h1>Chard</h1>          
+          <h1>{{ PLANTS[1].NAME }}</h1>          
         </div>
         
         <ul class="vegetable-time-bars vegetable-time-bars-chard">
@@ -161,7 +161,7 @@
       <a id="brussel-sprouts"></a>
       <div id="trigger-brussel-sprouts" class="screen screen-brussel-sprouts">
         <div class="vegetable-heading vegetable-heading-brussel-sprouts">
-          <h1>Brussel Sprouts</h1>          
+          <h1>{{ PLANTS[2].NAME }}</h1>          
         </div>
         
         <ul class="vegetable-time-bars vegetable-time-bars-brussel-sprouts">
@@ -186,7 +186,7 @@
       <a id="pepper"></a>
       <div class="screen screen-pepper">
         <div class="vegetable-heading vegetable-heading-pepper">
-          <h1>Pepper</h1>          
+          <h1>{{ PLANTS[3].NAME }}</h1>          
         </div>
         
         <ul class="vegetable-time-bars vegetable-time-bars-pepper">
@@ -210,7 +210,7 @@
       <a id="beetroot"></a>
       <div class="screen screen-beetroot">
         <div class="vegetable-heading vegetable-heading-beetroot">
-          <h1>Beetroot</h1>          
+          <h1>{{ PLANTS[4].NAME }}</h1>          
         </div>
         
         <ul class="vegetable-time-bars vegetable-time-bars-beetroot">
@@ -233,7 +233,7 @@
       <a id="peas"></a>
       <div class="screen screen-peas">
         <div class="vegetable-heading vegetable-heading-peas">
-          <h1>Peas</h1>          
+          <h1>{{ PLANTS[5].NAME }}</h1>          
         </div>
         
         <ul class="vegetable-time-bars vegetable-time-bars-peas">
@@ -262,7 +262,7 @@
       <a id="onion"></a>
       <div class="screen screen-onion">
         <div class="vegetable-heading vegetable-heading-onion">
-          <h1>Onion</h1>          
+          <h1>{{ PLANTS[6].NAME }}</h1>          
         </div>
         
         <ul class="vegetable-time-bars vegetable-time-bars-onion">
@@ -283,7 +283,7 @@
       <a id="carrot"></a>
       <div class="screen screen-carrot">
         <div class="vegetable-heading vegetable-heading-carrot">
-          <h1>Carrot</h1>          
+          <h1>{{ PLANTS[7].NAME }}</h1>          
         </div>
         
         <ul class="vegetable-time-bars vegetable-time-bars-carrot">
@@ -304,7 +304,7 @@
       <a id="tomato"></a>
       <div class="screen screen-tomato">
         <div class="vegetable-heading vegetable-heading-tomato">
-          <h1>Tomato</h1>          
+          <h1>{{ PLANTS[8].NAME }}</h1>          
         </div>
         
         <ul class="vegetable-time-bars vegetable-time-bars-tomato">
@@ -328,11 +328,11 @@
       <a id="sweet-potato"></a>
       <div class="screen screen-sweet-potato">
         <div class="vegetable-heading vegetable-heading-sweet-potato">
-          <h1>Sweet Potato</h1>          
+          <h1>{{ PLANTS[9].NAME }}</h1>          
         </div>
         
         <ul class="vegetable-time-bars vegetable-time-bars-sweet-potato">
-          <vegetable-time-bars plant="PLANTS[9]"></vegetable-time-bars>
+          <vegetable-time-bars plant="PLANTS[9]" ng-show="showTimeBars{{ PLANTS[9].CAMEL-NAME }}"></vegetable-time-bars>
         </ul>
 
         <div class="vegetable-img sweet-potato-img">
