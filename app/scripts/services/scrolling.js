@@ -33,17 +33,17 @@
 
         for (var i = start; i < end; i++) {
           tweenArray.push(
-            TweenMax.to(".time-bar-sowing-" + PLANTS[i].URL, 0.4, {width: reverse ? 0 : PLANTS[i].sowingWidth.toString() + 'px', overwrite: false}),
-            TweenMax.to(".time-bar-harvesting-" + PLANTS[i].URL, 0.4, {width: reverse ? 0 : PLANTS[i].harvestingWidth.toString() + 'px', overwrite: false})
+            TweenMax.to(".time-bar-sowing-" + PLANTS[i].URL, 0.3, {width: reverse ? 0 : PLANTS[i].sowingWidth.toString() + 'px', overwrite: false}),
+            TweenMax.to(".time-bar-harvesting-" + PLANTS[i].URL, 0.3, {width: reverse ? 0 : PLANTS[i].harvestingWidth.toString() + 'px', overwrite: false})
           );
           if (PLANTS[i].sowingWidthSecond !== undefined) {
-            tweenArray.push(TweenMax.to(".time-bar-sowing-2nd-" + PLANTS[i].URL, 0.4, {width: reverse ? 0 : PLANTS[i].sowingWidthSecond.toString() + 'px', 'margin-left': reverse ? (PLANTS[i].sowingMarginSecond + PLANTS[i].sowingWidth + 'px') : PLANTS[i].sowingMarginSecond.toString() + 'px', overwrite: false}))
+            tweenArray.push(TweenMax.to(".time-bar-sowing-2nd-" + PLANTS[i].URL, 0.3, {width: reverse ? 0 : PLANTS[i].sowingWidthSecond.toString() + 'px', 'margin-left': reverse ? (PLANTS[i].sowingMarginSecond + PLANTS[i].sowingWidth + 'px') : PLANTS[i].sowingMarginSecond.toString() + 'px', overwrite: false}))
           };
           if (PLANTS[i].plantingWidth !== undefined) {
-            tweenArray.push(TweenMax.to(".time-bar-planting-" + PLANTS[i].URL, 0.4, {width: reverse ? 0 : PLANTS[i].plantingWidth.toString() + 'px', overwrite: false}))
+            tweenArray.push(TweenMax.to(".time-bar-planting-" + PLANTS[i].URL, 0.3, {width: reverse ? 0 : PLANTS[i].plantingWidth.toString() + 'px', overwrite: false}))
           };
           if (PLANTS[i].harvestingWidthSecond !== undefined) {
-            tweenArray.push(TweenMax.to(".time-bar-harvesting-2nd-" + PLANTS[i].URL, 0.4, {width: reverse ? 0 : PLANTS[i].sowingWidthSecond.toString() + 'px', 'margin-left': reverse ? (PLANTS[i].harvestingMarginSecond + PLANTS[i].harvestingWidth + 'px') : PLANTS[i].harvestingMarginSecond.toString() + 'px', overwrite: false}))
+            tweenArray.push(TweenMax.to(".time-bar-harvesting-2nd-" + PLANTS[i].URL, 0.3, {width: reverse ? 0 : PLANTS[i].sowingWidthSecond.toString() + 'px', 'margin-left': reverse ? (PLANTS[i].harvestingMarginSecond + PLANTS[i].harvestingWidth + 'px') : PLANTS[i].harvestingMarginSecond.toString() + 'px', overwrite: false}))
           };
         }
         return tweenArray;
@@ -52,44 +52,58 @@
 
       var calendar = new TimelineMax();
       
-      calendar.add(generateTimeBarTweens("all"), 0);       
-      
       calendar.add([
-        TweenMax.to(".plant-names-wrapper", 0.4, {left: '-100vh'}),
-        TweenMax.to(".plant-separator-line", 0.4, {width: '0'}),
-        TweenMax.to(".month-separators", 0.4, {height: '0'})
-      ].concat(generateTimeBarTweens("all", true)), 0.6);
+        TweenMax.to(".plant-names-wrapper", 1, {left: '-100vh'}),
+        TweenMax.to(".plant-separator-line", 1, {width: '0'}),
+        TweenMax.to(".month-separators", 1, {height: '0'})
+      ], 0.3);
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-calendar", duration: 1.5 *  $(window).height()})
         .triggerHook(0)
-        .setPin(".screen-calendar", {pushFollowers: true})
+        // .setPin(".screen-calendar", {pushFollowers: true})
         .setTween(calendar)
         .on("end", function(){
           scrollEvents.removeLinesAndShowMenu();
         })
       );
 
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-calendar", duration: 0.55 *  $(window).height()})
+        .triggerHook(0)
+        .setPin(".screen-calendar", {pushFollowers: true})
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-calendar"})
+        .triggerHook(0)
+        .setTween(generateTimeBarTweens("all"))
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-calendar"})
+        .triggerHook(0)
+        .offset(0.5 *  $(window).height())
+        .setTween(generateTimeBarTweens("all", true))
+      );
+
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-calendar", duration: $('#viewport')[0].scrollHeight})
         .triggerHook(0)
-        .offset(1.5 *  $(window).height())
+        .offset(0.55 *  $(window).height())
         .setPin("#target-side-bar-lines", {pushFollowers: false})
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-calendar", duration: $('#viewport')[0].scrollHeight})
         .triggerHook(0)
-        .offset(1.5 *  $(window).height())
+        .offset(0.55 *  $(window).height())
         .setPin(".month-separators", {pushFollowers: false})
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-calendar", duration: $('#viewport')[0].scrollHeight})
         .triggerHook(0)
-        .offset(1.5 *  $(window).height())
+        .offset(0.55 *  $(window).height())
         .setPin(".calendar-months", {pushFollowers: false})
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-calendar", duration: $('#viewport')[0].scrollHeight})
         .triggerHook(0)
-        .offset(1.5 *  $(window).height())
+        .offset(0.55 *  $(window).height())
         .setPin(".menu-wrapper", {pushFollowers: false})
       );
 
@@ -112,16 +126,17 @@
         .triggerHook(0)
         .setPin(".screen-spinach", {pushFollowers: false})
         .setTween(spinach)
+        .addIndicators()
         .setClassToggle("#menu-spinach", "active")
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-spinach"})
-        .offset(0.8 * $(window).height())
+        .offset(0.9 * $(window).height())
         .setTween(generateTimeBarTweens(0))
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-spinach"})
-        .offset(1.5 * $(window).height())
+        .offset(1.4 * $(window).height())
         .setTween(generateTimeBarTweens(0, true))
       );
 
