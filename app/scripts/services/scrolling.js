@@ -102,8 +102,6 @@
         TweenMax.to(".spinach-text-position", 0.4, {top: sevenTimesUnit.toString()})
       ], 0);
 
-      // spinach.add(generateTimeBarTweens(0), 0.4);
-
       spinach.add([
         TweenMax.to(".vegetable-heading-spinach", 0.4, {top: '-50vh'}),
         TweenMax.to(".spinach-img", 0.4, {top: '-50vh'}),

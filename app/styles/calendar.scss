@@ -1,13 +1,13 @@
 @import "variables.scss";
 
 .screen-calendar {
-  height: 150vh;
+  height: 100vh;
   z-index: 100;
 }
 
 .calendar {
   position: absolute;
-  bottom: calc( 50vh + #{$unit});
+  bottom: $unit;
   display: flex;
   align-items: flex-end;
   height: 11 * $unit;
