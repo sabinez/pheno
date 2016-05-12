@@ -145,13 +145,13 @@
         TweenMax.to(".vegetable-heading-chard", 0.4, {top: '5vh'}),
         TweenMax.to(".chard-img", 0.4, {top: sixTimesUnit.toString()}),
         TweenMax.to(".chard-text-position", 0.4, {top: sixTimesUnit.toString()})
-      ].concat(generateTimeBarTweens(1)), 0);
+      ], 0);
 
       chard.add([
         TweenMax.to(".vegetable-heading-chard", 0.4, {top: '-50vh'}),
         TweenMax.to(".chard-img", 0.4, {top: '-50vh'}),
         TweenMax.to(".chard-text-position", 0.4, {top: '-100vh'})
-      ].concat(generateTimeBarTweens(1, true)), 0.6);
+      ], 0.6);
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-chard", duration: 1.5 * $(window).height() })
         .triggerHook(0)
@@ -160,13 +160,23 @@
         .setClassToggle("#menu-chard", "active")
       );
 
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-chard"})
+        .offset(0.9 * $(window).height())
+        .setTween(generateTimeBarTweens(1))
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-chard"})
+        .offset(1.4 * $(window).height())
+        .setTween(generateTimeBarTweens(1, true))
+      );
+
 
       var brusselSprouts = new TimelineMax();
       brusselSprouts.add([
         TweenMax.to(".vegetable-heading-brussel-sprouts", 0.4, {top: '5vh'}),
         TweenMax.to(".brussel-sprouts-img", 0.4, {top: threeTimesUnit.toString()}),
         TweenMax.to(".brussel-sprouts-text-position", 0.4, {top: sevenTimesUnit.toString()})
-      ].concat(generateTimeBarTweens(2)), 0);
+      ], 0);
 
       brusselSprouts.add(TweenMax.to("#target-brussel-sprouts-cutout", 0.4, {rotation: 360, ease: Linear.easeNone}), 0.4);
       
@@ -174,13 +184,23 @@
         TweenMax.to(".vegetable-heading-brussel-sprouts", 0.4, {top: '-50vh'}),
         TweenMax.to(".brussel-sprouts-img", 0.4, {top: '-50vh'}),
         TweenMax.to(".brussel-sprouts-text-position", 0.4, {top: '-50vh'})
-      ].concat(generateTimeBarTweens(2, true)), 0.8);
+      ], 0.8);
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-brussel-sprouts", duration: 1.5 * $(window).height()})
         .triggerHook(0)
         .setPin(".screen-brussel-sprouts", {pushFollowers: false})
         .setTween(brusselSprouts)
         .setClassToggle("#menu-brussel-sprouts", "active")
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-brussel-sprouts"})
+        .offset(0.9 * $(window).height())
+        .setTween(generateTimeBarTweens(2))
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-brussel-sprouts"})
+        .offset(1.5 * $(window).height())
+        .setTween(generateTimeBarTweens(2, true))
       );
 
 
