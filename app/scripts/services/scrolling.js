@@ -100,19 +100,31 @@
         TweenMax.to(".vegetable-heading-spinach", 0.4, {top: '5vh'}),
         TweenMax.to(".spinach-img", 0.4, {top: sixTimesUnit.toString()}),
         TweenMax.to(".spinach-text-position", 0.4, {top: sevenTimesUnit.toString()})
-      ].concat(generateTimeBarTweens(0)), 0);
+      ], 0);
+
+      // spinach.add(generateTimeBarTweens(0), 0.4);
 
       spinach.add([
         TweenMax.to(".vegetable-heading-spinach", 0.4, {top: '-50vh'}),
         TweenMax.to(".spinach-img", 0.4, {top: '-50vh'}),
         TweenMax.to(".spinach-text-position", 0.4, {top: '-100vh'})
-      ].concat(generateTimeBarTweens(0, true)), 0.6);
+      ], 0.6);
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-spinach", duration: 1.5 * $(window).height()})
         .triggerHook(0)
         .setPin(".screen-spinach", {pushFollowers: false})
         .setTween(spinach)
         .setClassToggle("#menu-spinach", "active")
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-spinach"})
+        .offset(0.8 * $(window).height())
+        .setTween(generateTimeBarTweens(0))
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-spinach"})
+        .offset(1.5 * $(window).height())
+        .setTween(generateTimeBarTweens(0, true))
       );
 
 
