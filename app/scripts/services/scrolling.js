@@ -60,7 +60,6 @@
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-calendar", duration: 1.5 *  $(window).height()})
         .triggerHook(0)
-        // .setPin(".screen-calendar", {pushFollowers: true})
         .setTween(calendar)
         .on("end", function(){
           scrollEvents.removeLinesAndShowMenu();
@@ -126,7 +125,6 @@
         .triggerHook(0)
         .setPin(".screen-spinach", {pushFollowers: false})
         .setTween(spinach)
-        .addIndicators()
         .setClassToggle("#menu-spinach", "active")
       );
 
