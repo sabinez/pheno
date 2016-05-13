@@ -224,7 +224,7 @@
         .setClassToggle("#menu-pepper", "active")
       );
 
-       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-pepper"})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-pepper"})
         .offset(0.9 * $(window).height())
         .setTween(generateTimeBarTweens(3))
       );
@@ -247,7 +247,7 @@
         TweenMax.to(".vegetable-heading-beetroot", 0.4, {top: '5vh'}),
         TweenMax.to(".beetroot-img", 0.4, {top: sixTimesUnit.toString()}),
         TweenMax.to(".beetroot-text-position", 0.4, {top: sevenTimesUnit.toString()})
-      ].concat(generateTimeBarTweens(4)), 0);
+      ], 0);
       
       beetroot.add(TweenMax.to(['.beetroot-img', '.pepper-img-tweener'], 0.4, {'left': pepperBeetrootTweenPosition.toString()}), 0.4);
       
@@ -256,13 +256,23 @@
         TweenMax.to(".beetroot-img", 0.4, {top: '-50vh'}),
         TweenMax.to(".pepper-img-tweener", 0.4, {top: '-50vh'}),
         TweenMax.to(".beetroot-text-position", 0.4, {top: '-100vh'})
-      ].concat(generateTimeBarTweens(4, true)), 1);
+      ], 1);
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-beetroot", duration: 1.5 * $(window).height()})
         .triggerHook(0)
         .setPin(".screen-beetroot", {pushFollowers: false})
         .setTween(beetroot)
         .setClassToggle("#menu-beetroot", "active")
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-beetroot"})
+        .offset(0.9 * $(window).height())
+        .setTween(generateTimeBarTweens(4))
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-beetroot"})
+        .offset(1.6 * $(window).height())
+        .setTween(generateTimeBarTweens(4, true))
       );
 
 
