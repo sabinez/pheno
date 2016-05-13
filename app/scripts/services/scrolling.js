@@ -380,7 +380,7 @@
         TweenMax.to(".tomato-hg", 0.35, {top: sixTimesUnit.toString()}),
         TweenMax.to(".tomato-img", 0.35, {top: sixAndAHalfTimesUnit.toString()}),
         TweenMax.to(".tomato-text-position", 0.35, {top: sevenTimesUnit.toString()})
-      ].concat(generateTimeBarTweens(8)), 0);
+      ], 0);
       
       tomato.add( TweenMax.to(".tomato-img", 0.05, {top: sixTimesUnit.toString()}), 0.35 )
       
@@ -389,13 +389,23 @@
         TweenMax.to(".tomato-hg", 0.4, {top: '-50vh'}),
         TweenMax.to(".tomato-img", 0.4, {top: '-50vh'}),
         TweenMax.to(".tomato-text-position", 0.4, {top: '-100vh'})
-      ].concat(generateTimeBarTweens(8, true)), 0.6);
+      ], 0.6);
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 1.5 * $(window).height()})
         .triggerHook(0)
         .setPin(".screen-tomato", {pushFollowers: false})
         .setTween(tomato)
         .setClassToggle("#menu-tomato", "active")
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato"})
+        .offset(0.9 * $(window).height())
+        .setTween(generateTimeBarTweens(8))
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato"})
+        .offset(1.5 * $(window).height())
+        .setTween(generateTimeBarTweens(8, true))
       );
 
 
@@ -405,19 +415,29 @@
         TweenMax.to(".vegetable-heading-sweet-potato", 0.4, {top: '5vh'}),
         TweenMax.to(".sweet-potato-img", 0.4, {top: threeTimesUnit.toString()}),
         TweenMax.to(".sweet-potato-text-position", 0.4, {top: elevenTimesUnit.toString()})
-      ].concat(generateTimeBarTweens(9)));
+      ], 0);
       
       sweetPotato.add([
         TweenMax.to(".vegetable-heading-sweet-potato", 0.4, {top: '-50vh'}),
         TweenMax.to(".sweet-potato-img", 0.4, {top: '-50vh'}),
         TweenMax.to(".sweet-potato-text-position", 0.4, {top: '-100vh'})
-      ].concat(generateTimeBarTweens(9, true)), 0.6);
+      ], 0.6);
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-sweet-potato", duration: 1.5 * $(window).height()})
         .triggerHook(0)
         .setPin(".screen-sweet-potato", {pushFollowers: false})
         .setTween(sweetPotato)
         .setClassToggle("#menu-sweet-potato", "active")
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-sweet-potato"})
+        .offset(0.9 * $(window).height())
+        .setTween(generateTimeBarTweens(9))
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-sweet-potato"})
+        .offset(1.5 * $(window).height())
+        .setTween(generateTimeBarTweens(9, true))
       );
 
 
