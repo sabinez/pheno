@@ -282,19 +282,29 @@
         TweenMax.to(".vegetable-heading-peas", 0.4, {top: '5vh'}),
         TweenMax.to(".peas-img", 0.4, {top: fiveTimesUnit.toString()}),
         TweenMax.to(".peas-text-position", 0.4, {top: sevenTimesUnit.toString()})
-      ].concat(generateTimeBarTweens(5)), 0);
+      ], 0);
       
       peas.add([
         TweenMax.to(".vegetable-heading-peas", 0.4, {top: '-50vh'}),
         TweenMax.to(".peas-img", 0.4, {top: '-50vh'}),
         TweenMax.to(".peas-text-position", 0.4, {top: '-100vh'})
-      ].concat(generateTimeBarTweens(5, true)), 0.6);
+      ], 0.6);
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-peas", duration: 1.5 * $(window).height()})
         .triggerHook(0)
         .setPin(".screen-peas", {pushFollowers: false})
         .setTween(peas)
         .setClassToggle("#menu-peas", "active")
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-peas"})
+        .offset(0.9 * $(window).height())
+        .setTween(generateTimeBarTweens(5))
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-peas"})
+        .offset(1.5 * $(window).height())
+        .setTween(generateTimeBarTweens(5, true))
       );
 
 
@@ -304,19 +314,29 @@
         TweenMax.to(".vegetable-heading-onion", 0.4, {top: '5vh'}),
         TweenMax.to(".onion-img", 0.4, {top: fourTimesUnit.toString()}),
         TweenMax.to(".onion-text-position", 0.4, {top: sevenTimesUnit.toString()})
-      ].concat(generateTimeBarTweens(6)), 0);
+      ], 0);
       
       onion.add([
         TweenMax.to(".vegetable-heading-onion", 0.4, {top: '-50vh'}),
         TweenMax.to(".onion-img", 0.4, {top: '-50vh'}),
         TweenMax.to(".onion-text-position", 0.4, {top: '-100vh'})
-      ].concat(generateTimeBarTweens(6, true)), 0.6);
+      ], 0.6);
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-onion", duration: 1.5 * $(window).height()})
         .triggerHook(0)
         .setPin(".screen-onion", {pushFollowers: false})
         .setTween(onion)
         .setClassToggle("#menu-onion", "active")
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-onion"})
+        .offset(0.9 * $(window).height())
+        .setTween(generateTimeBarTweens(6))
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-onion"})
+        .offset(1.5 * $(window).height())
+        .setTween(generateTimeBarTweens(6, true))
       );
 
 
@@ -327,19 +347,29 @@
         TweenMax.to(".carrot-img", 0.4, {top: fiveTimesUnit.toString()}),
         TweenMax.to(".carrot-text-position", 0.4, {top: sixTimesUnit.toString()}),
         TweenMax.to(".carrot-img", 0.4, {rotation: 180, ease: Linear.easeNone})
-      ].concat(generateTimeBarTweens(7)), 0);
+      ], 0);
       
       carrot.add([
         TweenMax.to(".vegetable-heading-carrot", 0.4, {top: '-50vh'}),
         TweenMax.to(".carrot-img", 0.4, {top: '-50vh'}),
         TweenMax.to(".carrot-text-position", 0.4, {top: '-100vh'})
-      ].concat(generateTimeBarTweens(7, true)), 0.6);
+      ], 0.6);
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-carrot", duration: 1.5 * $(window).height()})
         .triggerHook(0)
         .setPin(".screen-carrot", {pushFollowers: false})
         .setTween(carrot)
         .setClassToggle("#menu-carrot", "active")
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-carrot"})
+        .offset(0.9 * $(window).height())
+        .setTween(generateTimeBarTweens(7))
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-carrot"})
+        .offset(1.5 * $(window).height())
+        .setTween(generateTimeBarTweens(7, true))
       );
 
 
