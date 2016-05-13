@@ -210,18 +210,28 @@
         TweenMax.to(".vegetable-heading-pepper", 0.4, {top: '5vh'}),
         TweenMax.to(".pepper-img-tweener", 0.4, {top: sixTimesUnit.toString()}),
         TweenMax.to(".pepper-text-position", 0.4, {top: sixTimesUnit.toString()})
-      ].concat(generateTimeBarTweens(3)), 0);
+      ], 0);
       
       pepper.add([
         TweenMax.to(".vegetable-heading-pepper", 0.4, {top: '-50vh'}),
         TweenMax.to(".pepper-text-position", 0.4, {top: '-100vh'})
-      ].concat(generateTimeBarTweens(3, true)), 0.6);
+      ], 0.6);
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-pepper", duration: 1.5 * $(window).height()})
         .triggerHook(0)
         .setPin(".screen-pepper", {pushFollowers: false})
         .setTween(pepper)
         .setClassToggle("#menu-pepper", "active")
+      );
+
+       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-pepper"})
+        .offset(0.9 * $(window).height())
+        .setTween(generateTimeBarTweens(3))
+      );
+
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-pepper"})
+        .offset(1.5 * $(window).height())
+        .setTween(generateTimeBarTweens(3, true))
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-beetroot", duration: 1.5 * $(window).height()})
