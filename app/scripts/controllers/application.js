@@ -56,6 +56,7 @@
       $scope.showMenu = false;
       $scope.hideMenu = true;
       $scope.showBeetrootText = false;
+      $scope.anchorStatuses = {};
       var scrollEvents = {};
 
       scrollEvents.removeLinesAndShowMenu = function(){
@@ -66,6 +67,16 @@
           } else {
             $scope.hideLines = false;
             $scope.showMenuAll = false;
+          };
+        });
+      };
+
+      scrollEvents.updateAnchorStatus = function(plantName) {
+        $scope.$apply(function(){
+          if ($scope.anchorStatuses[plantName]) {
+            $scope.anchorStatuses[plantName] = false;
+          } else {
+            $scope.anchorStatuses[plantName] = true;
           };
         });
       };

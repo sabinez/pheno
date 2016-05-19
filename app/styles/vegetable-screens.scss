@@ -1,5 +1,17 @@
 @import "variables.scss";
 
+.anchor-link-default {
+  position: absolute;
+  top: 80vh;
+  &.anchor-link-reverse { top: -80vh; }
+}
+
+.anchor-link-brussel-sprouts {
+  position: absolute;
+  top: 50vh;
+  &.anchor-link-reverse { top: -50vh; }
+}
+
 .vegetable-heading {
   position: absolute;
   top: 100vh;

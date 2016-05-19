@@ -126,6 +126,9 @@
         .setPin(".screen-spinach", {pushFollowers: false})
         .setTween(spinach)
         .setClassToggle("#menu-spinach", "active")
+        .on("end", function(){
+          scrollEvents.updateAnchorStatus("spinach");
+        })
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-spinach"})
@@ -158,6 +161,9 @@
         .setPin(".screen-chard", {pushFollowers: false})
         .setTween(chard)
         .setClassToggle("#menu-chard", "active")
+        .on("end", function(){
+          scrollEvents.updateAnchorStatus("chard");
+        })
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-chard"})
@@ -191,6 +197,9 @@
         .setPin(".screen-brussel-sprouts", {pushFollowers: false})
         .setTween(brusselSprouts)
         .setClassToggle("#menu-brussel-sprouts", "active")
+        .on("end", function(){
+          scrollEvents.updateAnchorStatus("brussel-sprouts");
+        })
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-brussel-sprouts"})
@@ -222,6 +231,9 @@
         .setPin(".screen-pepper", {pushFollowers: false})
         .setTween(pepper)
         .setClassToggle("#menu-pepper", "active")
+        .on("end", function(){
+          scrollEvents.updateAnchorStatus("pepper");
+        })
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-pepper"})
@@ -263,6 +275,9 @@
         .setPin(".screen-beetroot", {pushFollowers: false})
         .setTween(beetroot)
         .setClassToggle("#menu-beetroot", "active")
+        .on("end", function(){
+          scrollEvents.updateAnchorStatus("beetroot");
+        })
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-beetroot"})
@@ -295,6 +310,9 @@
         .setPin(".screen-peas", {pushFollowers: false})
         .setTween(peas)
         .setClassToggle("#menu-peas", "active")
+        .on("end", function(){
+          scrollEvents.updateAnchorStatus("peas");
+        })
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-peas"})
@@ -327,6 +345,9 @@
         .setPin(".screen-onion", {pushFollowers: false})
         .setTween(onion)
         .setClassToggle("#menu-onion", "active")
+        .on("end", function(){
+          scrollEvents.updateAnchorStatus("onion");
+        })
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-onion"})
@@ -360,6 +381,9 @@
         .setPin(".screen-carrot", {pushFollowers: false})
         .setTween(carrot)
         .setClassToggle("#menu-carrot", "active")
+        .on("end", function(){
+          scrollEvents.updateAnchorStatus("carrot");
+        })
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-carrot"})
@@ -396,6 +420,9 @@
         .setPin(".screen-tomato", {pushFollowers: false})
         .setTween(tomato)
         .setClassToggle("#menu-tomato", "active")
+        .on("end", function(){
+          scrollEvents.updateAnchorStatus("tomato");
+        })
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato"})
@@ -428,6 +455,9 @@
         .setPin(".screen-sweet-potato", {pushFollowers: false})
         .setTween(sweetPotato)
         .setClassToggle("#menu-sweet-potato", "active")
+        .on("end", function(){
+          scrollEvents.updateAnchorStatus("sweet-potato");
+        })
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-sweet-potato"})
