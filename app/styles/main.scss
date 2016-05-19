@@ -111,5 +111,7 @@ a {
 .active {
   a {
     text-decoration: underline;
+    cursor: default;
+    pointer-events: none;
   }
 }
