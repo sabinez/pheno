@@ -3,7 +3,7 @@
     "NAME" : "Spinach",
     "TIMES" : {
       "SOWING" : [ 3, 6, 8, 10 ],
-      "HARVESTING" : [ 4, 7.25, 10, 11 ]
+      "HARVESTING" : [ 4, 7.5, 10, 11 ]
     },
     "IMG" : "images/spinach.png",
     "URL" : "spinach"

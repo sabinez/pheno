@@ -21,11 +21,11 @@
 
       <div class="header screen" style="text-align: center;">
         <a href="#/" class="title">PHENO</a>
-        <p ng-if="media.isMobile()">Growing your own vegetables is very easy! PHENO.GARDEN provides you with as few information as necessary to plant 10 different sorts of vegetables. It helps you to keep track of your garden with a calendar overview which will guide you through the seasons.</p>
+        <p>Growing your own vegetables is very easy! PHENO.GARDEN provides you with as few information as necessary to plant 10 different sorts of vegetables. It helps you to keep track of your garden with a calendar overview which will guide you through the seasons.</p>
       </div>
 
 
-      <div class="screen screen-calendar">
+      <div class="screen screen-calendar" ng-hide="media.isMobile()">
 
         <div class="heading-calendar">
           <div class="heading-calendar-background">
@@ -124,9 +124,13 @@
           <h1>{{ PLANTS[0].NAME }}</h1>          
         </div>
         
-        <ul class="vegetable-time-bars vegetable-time-bars-spinach">
-          <vegetable-time-bars plant="PLANTS[0]" ></vegetable-time-bars>
+        <ul class="vegetable-time-bars vegetable-time-bars-spinach" ng-hide="media.isMobile()">
+          <vegetable-time-bars plant="PLANTS[0]"></vegetable-time-bars>
         </ul>
+
+        <div ng-show="media.isMobile()">
+          <vegetable-time-table plant="PLANTS[0]"></vegetable-time-table>
+        </div>
 
         <div class="vegetable-img spinach-img">
           <img src="images/spinach.gif">
@@ -393,6 +397,7 @@
     <script src="scripts/services/initScrolling.js"></script>
     <script src="scripts/directives/vegetable-time-bars.js"></script>
     <script src="scripts/services/media.js"></script>
+    <script src="scripts/directives/vegetable-time-table.js"></script>
     <!-- endbuild -->
 
   </body>
