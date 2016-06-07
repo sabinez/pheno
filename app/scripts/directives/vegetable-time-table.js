@@ -23,7 +23,8 @@ angular.module('phenoApp')
         ]
         scope.monthNameFromNumber = function(number, isEnd){
           number = number - 1;
-          if(!number){ return; };
+          console.log(number);
+          if(number === undefined){ return; };
           if( number % 1 !== 0 ){ //check if number is an float
             var monthName = "Mid " + months[Math.floor(number)];
           } else if(isEnd) {
