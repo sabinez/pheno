@@ -44,7 +44,7 @@
             tweenArray.push(TweenMax.to(".time-bar-planting-" + PLANTS[i].URL, 0.3, {width: reverse ? 0 : PLANTS[i].plantingWidth.toString() + 'px', overwrite: false}))
           };
           if (PLANTS[i].harvestingWidthSecond !== undefined) {
-            tweenArray.push(TweenMax.to(".time-bar-harvesting-2nd-" + PLANTS[i].URL, 0.3, {width: reverse ? 0 : PLANTS[i].sowingWidthSecond.toString() + 'px', 'margin-left': reverse ? (PLANTS[i].harvestingMarginSecond + PLANTS[i].harvestingWidth + 'px') : PLANTS[i].harvestingMarginSecond.toString() + 'px', overwrite: false}))
+            tweenArray.push(TweenMax.to(".time-bar-harvesting-2nd-" + PLANTS[i].URL, 0.3, {width: reverse ? 0 : PLANTS[i].harvestingWidthSecond.toString() + 'px', 'margin-left': reverse ? (PLANTS[i].harvestingMarginSecond + PLANTS[i].harvestingWidth + 'px') : PLANTS[i].harvestingMarginSecond.toString() + 'px', overwrite: false}))
           };
         }
         return tweenArray;
