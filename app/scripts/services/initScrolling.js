@@ -5,7 +5,8 @@
     var sceneCollection = [];
 
     var initScrolling = function(scrollEvents, PLANTS) {
-      var unit = $(window).height() / 15;
+      var windowHeight = $(window).height();
+      var unit = windowHeight / 15;
       var threeTimesUnit = 3 * unit;
       var fourTimesUnit = 4 * unit;
       var fiveTimesUnit = 5 * unit;
@@ -58,7 +59,7 @@
         TweenMax.to(".month-separators", 1, {height: '0'})
       ], 0.3);
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-calendar", duration: 1.5 *  $(window).height()})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-calendar", duration: 1.5 *  windowHeight})
         .triggerHook(0)
         .setTween(calendar)
         .on("end", function(){
@@ -66,7 +67,7 @@
         })
       );
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-calendar", duration: 0.55 *  $(window).height()})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-calendar", duration: 0.55 *  windowHeight})
         .triggerHook(0)
         .setPin(".screen-calendar", {pushFollowers: true})
       );
@@ -78,31 +79,31 @@
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-calendar"})
         .triggerHook(0)
-        .offset(0.5 *  $(window).height())
+        .offset(0.5 *  windowHeight)
         .setTween(generateTimeBarTweens("all", true))
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-calendar", duration: $('#viewport')[0].scrollHeight})
         .triggerHook(0)
-        .offset(0.55 *  $(window).height())
+        .offset(0.55 *  windowHeight)
         .setPin("#target-side-bar-lines", {pushFollowers: false})
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-calendar", duration: $('#viewport')[0].scrollHeight})
         .triggerHook(0)
-        .offset(0.55 *  $(window).height())
+        .offset(0.55 *  windowHeight)
         .setPin(".month-separators", {pushFollowers: false})
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-calendar", duration: $('#viewport')[0].scrollHeight})
         .triggerHook(0)
-        .offset(0.55 *  $(window).height())
+        .offset(0.55 *  windowHeight)
         .setPin(".calendar-months", {pushFollowers: false})
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-calendar", duration: $('#viewport')[0].scrollHeight})
         .triggerHook(0)
-        .offset(0.55 *  $(window).height())
+        .offset(0.55 *  windowHeight)
         .setPin(".menu-wrapper", {pushFollowers: false})
       );
 
@@ -121,7 +122,7 @@
         TweenMax.to(".spinach-text-position", 0.4, {top: '-100vh'})
       ], 0.6);
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-spinach", duration: 1.5 * $(window).height()})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-spinach", duration: 1.5 * windowHeight})
         .triggerHook(0)
         .setPin(".screen-spinach", {pushFollowers: false})
         .setTween(spinach)
@@ -132,12 +133,12 @@
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-spinach"})
-        .offset(0.9 * $(window).height())
+        .offset(0.9 * windowHeight)
         .setTween(generateTimeBarTweens(0))
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-spinach"})
-        .offset(1.4 * $(window).height())
+        .offset(1.4 * windowHeight)
         .setTween(generateTimeBarTweens(0, true))
       );
 
@@ -156,7 +157,7 @@
         TweenMax.to(".chard-text-position", 0.4, {top: '-100vh'})
       ], 0.6);
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-chard", duration: 1.5 * $(window).height() })
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-chard", duration: 1.5 * windowHeight })
         .triggerHook(0)
         .setPin(".screen-chard", {pushFollowers: false})
         .setTween(chard)
@@ -167,12 +168,12 @@
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-chard"})
-        .offset(0.9 * $(window).height())
+        .offset(0.9 * windowHeight)
         .setTween(generateTimeBarTweens(1))
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-chard"})
-        .offset(1.4 * $(window).height())
+        .offset(1.4 * windowHeight)
         .setTween(generateTimeBarTweens(1, true))
       );
 
@@ -192,7 +193,7 @@
         TweenMax.to(".brussel-sprouts-text-position", 0.4, {top: '-50vh'})
       ], 0.8);
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-brussel-sprouts", duration: 1.5 * $(window).height()})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-brussel-sprouts", duration: 1.5 * windowHeight})
         .triggerHook(0)
         .setPin(".screen-brussel-sprouts", {pushFollowers: false})
         .setTween(brusselSprouts)
@@ -203,12 +204,12 @@
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-brussel-sprouts"})
-        .offset(0.9 * $(window).height())
+        .offset(0.9 * windowHeight)
         .setTween(generateTimeBarTweens(2))
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-brussel-sprouts"})
-        .offset(1.5 * $(window).height())
+        .offset(1.5 * windowHeight)
         .setTween(generateTimeBarTweens(2, true))
       );
 
@@ -226,7 +227,7 @@
         TweenMax.to(".pepper-text-position", 0.4, {top: '-100vh'})
       ], 0.6);
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-pepper", duration: 1.5 * $(window).height()})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-pepper", duration: 1.5 * windowHeight})
         .triggerHook(0)
         .setPin(".screen-pepper", {pushFollowers: false})
         .setTween(pepper)
@@ -237,18 +238,18 @@
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-pepper"})
-        .offset(0.9 * $(window).height())
+        .offset(0.9 * windowHeight)
         .setTween(generateTimeBarTweens(3))
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-pepper"})
-        .offset(1.5 * $(window).height())
+        .offset(1.5 * windowHeight)
         .setTween(generateTimeBarTweens(3, true))
       );
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-beetroot", duration: 1.5 * $(window).height()})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-beetroot", duration: 1.5 * windowHeight})
         .triggerHook(1)
-        .offset(1 *  $(window).height())
+        .offset(1 *  windowHeight)
         .setPin("#pepper-img-pin", {pushFollowers: false})
       );
 
@@ -270,7 +271,7 @@
         TweenMax.to(".beetroot-text-position", 0.4, {top: '-100vh'})
       ], 1);
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-beetroot", duration: 1.5 * $(window).height()})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-beetroot", duration: 1.5 * windowHeight})
         .triggerHook(0)
         .setPin(".screen-beetroot", {pushFollowers: false})
         .setTween(beetroot)
@@ -281,12 +282,12 @@
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-beetroot"})
-        .offset(0.9 * $(window).height())
+        .offset(0.9 * windowHeight)
         .setTween(generateTimeBarTweens(4))
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-beetroot"})
-        .offset(1.6 * $(window).height())
+        .offset(1.6 * windowHeight)
         .setTween(generateTimeBarTweens(4, true))
       );
 
@@ -305,7 +306,7 @@
         TweenMax.to(".peas-text-position", 0.4, {top: '-100vh'})
       ], 0.6);
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-peas", duration: 1.5 * $(window).height()})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-peas", duration: 1.5 * windowHeight})
         .triggerHook(0)
         .setPin(".screen-peas", {pushFollowers: false})
         .setTween(peas)
@@ -316,12 +317,12 @@
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-peas"})
-        .offset(0.9 * $(window).height())
+        .offset(0.9 * windowHeight)
         .setTween(generateTimeBarTweens(5))
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-peas"})
-        .offset(1.5 * $(window).height())
+        .offset(1.5 * windowHeight)
         .setTween(generateTimeBarTweens(5, true))
       );
 
@@ -340,7 +341,7 @@
         TweenMax.to(".onion-text-position", 0.4, {top: '-100vh'})
       ], 0.6);
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-onion", duration: 1.5 * $(window).height()})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-onion", duration: 1.5 * windowHeight})
         .triggerHook(0)
         .setPin(".screen-onion", {pushFollowers: false})
         .setTween(onion)
@@ -351,12 +352,12 @@
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-onion"})
-        .offset(0.9 * $(window).height())
+        .offset(0.9 * windowHeight)
         .setTween(generateTimeBarTweens(6))
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-onion"})
-        .offset(1.5 * $(window).height())
+        .offset(1.5 * windowHeight)
         .setTween(generateTimeBarTweens(6, true))
       );
 
@@ -376,7 +377,7 @@
         TweenMax.to(".carrot-text-position", 0.4, {top: '-100vh'})
       ], 0.6);
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-carrot", duration: 1.5 * $(window).height()})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-carrot", duration: 1.5 * windowHeight})
         .triggerHook(0)
         .setPin(".screen-carrot", {pushFollowers: false})
         .setTween(carrot)
@@ -387,12 +388,12 @@
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-carrot"})
-        .offset(0.9 * $(window).height())
+        .offset(0.9 * windowHeight)
         .setTween(generateTimeBarTweens(7))
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-carrot"})
-        .offset(1.5 * $(window).height())
+        .offset(1.5 * windowHeight)
         .setTween(generateTimeBarTweens(7, true))
       );
 
@@ -415,7 +416,7 @@
         TweenMax.to(".tomato-text-position", 0.4, {top: '-100vh'})
       ], 0.6);
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 1.5 * $(window).height()})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 1.5 * windowHeight})
         .triggerHook(0)
         .setPin(".screen-tomato", {pushFollowers: false})
         .setTween(tomato)
@@ -426,12 +427,12 @@
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato"})
-        .offset(0.9 * $(window).height())
+        .offset(0.9 * windowHeight)
         .setTween(generateTimeBarTweens(8))
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato"})
-        .offset(1.5 * $(window).height())
+        .offset(1.5 * windowHeight)
         .setTween(generateTimeBarTweens(8, true))
       );
 
@@ -450,7 +451,7 @@
         TweenMax.to(".sweet-potato-text-position", 0.4, {top: '-100vh'})
       ], 0.6);
 
-      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-sweet-potato", duration: 1.5 * $(window).height()})
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-sweet-potato", duration: 1.5 * windowHeight})
         .triggerHook(0)
         .setPin(".screen-sweet-potato", {pushFollowers: false})
         .setTween(sweetPotato)
@@ -461,12 +462,12 @@
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-sweet-potato"})
-        .offset(0.9 * $(window).height())
+        .offset(0.9 * windowHeight)
         .setTween(generateTimeBarTweens(9))
       );
 
       sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-sweet-potato"})
-        .offset(1.5 * $(window).height())
+        .offset(1.5 * windowHeight)
         .setTween(generateTimeBarTweens(9, true))
       );
 
