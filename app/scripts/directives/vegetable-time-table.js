@@ -38,23 +38,23 @@ angular.module('phenoApp')
       template: '\
         <table>\
           <tr>\
-            <td>sow</td>\
+            <td class="time-table-activity">sow</td>\
             <td>{{monthNameFromNumber(plant.TIMES.SOWING[0])}} - {{monthNameFromNumber(plant.TIMES.SOWING[1], true)}}</td>\
           </tr>\
           <tr ng-if="plant.TIMES.PLANTING">\
-            <td>planting</td>\
+            <td class="time-table-activity">planting</td>\
             <td>{{monthNameFromNumber(plant.TIMES.PLANTING[0])}} - {{monthNameFromNumber(plant.TIMES.PLANTING[1], true)}}</td>\
           </tr>\
           <tr>\
-            <td>harvest</td>\
+            <td class="time-table-activity">harvest</td>\
             <td>{{monthNameFromNumber(plant.TIMES.HARVESTING[0])}} - {{monthNameFromNumber(plant.TIMES.HARVESTING[1], true)}}</td>\
           </tr>\
           <tr ng-if="plant.TIMES.SOWING[2]">\
-            <td>2nd sow</td>\
+            <td class="time-table-activity">2nd sow</td>\
             <td>{{monthNameFromNumber(plant.TIMES.SOWING[2])}} - {{monthNameFromNumber(plant.TIMES.SOWING[3], true)}}</td>\
           </tr>\
           <tr ng-if="plant.TIMES.HARVESTING[2]">\
-            <td>2nd harvest</td>\
+            <td class="time-table-activity">2nd harvest</td>\
             <td>{{monthNameFromNumber(plant.TIMES.HARVESTING[2])}} - {{monthNameFromNumber(plant.TIMES.HARVESTING[3], true)}}</td>\
           </tr>\
         </table>'

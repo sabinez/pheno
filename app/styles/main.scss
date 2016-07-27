@@ -35,11 +35,13 @@ body {
   padding: 0;
   margin: 0;
   text-align: left;
-  line-height: 2;
+  line-height: 1.7;
 }
 
 h1 {
   font-family: 'voyagerthin', sans-serif;
+  font-size: 35px;
+  letter-spacing: 8px;
 }
 
 .title {
@@ -73,18 +75,18 @@ a {
 /* Responsive: Mobile */
 @media (max-width:640px) {
 
-  h1 {
-    font-size: 35px;
-    letter-spacing: 8px;
-  }
-  
   .header {
     height: 100vh;
   }
+
 }
 
 /* Responsive: Tablet */
 @media (min-width:641px) {
+
+  body{
+    line-height: 2;
+  }
 
   h1 {
     font-size: 20vh;
@@ -135,6 +137,7 @@ a {
       pointer-events: none;
     }
   }
+
 }
 
 /* Responsive: Desktop */

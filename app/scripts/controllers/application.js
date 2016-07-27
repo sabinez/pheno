@@ -96,7 +96,7 @@
         $scope.PLANTS = data.PLANTS;
         setTimeBarStyle(getMonthWidth());
         $timeout(function(){
-          if (media.isMobile === false) {
+          if (media.isMobile() === false) {
             initScrolling(scrollEvents, $scope.PLANTS);
           };
           setInterval(animatePeas, 20);
