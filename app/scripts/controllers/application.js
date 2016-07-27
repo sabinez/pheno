@@ -78,7 +78,6 @@
           } else {
             $scope.anchorStatuses[plantName] = true;
           };
-          console.log($scope.anchorStatuses[plantName], plantName);
         });
       };
 
