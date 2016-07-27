@@ -1,157 +1,161 @@
 @import "variables.scss";
 
-.screen-calendar {
-  height: 100vh;
-  z-index: 100;
-}
+/* Responsive: Tablet and up */
+@media (min-width:641px) {
 
-.calendar {
-  position: absolute;
-  bottom: $unit;
-  display: flex;
-  align-items: flex-end;
-  height: 11 * $unit;
-  width: 100%;
-}
-
-.heading-calendar{
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  top: 5vh;
-  left: 35vw;
-  .heading-calendar-background {
-    padding-top: 0.5em;
-    background-color: white;
-    height: 9vh;
-    width: 30vw;
-    z-index: 10;
+  .screen-calendar {
+    height: 100vh;
+    z-index: 100;
   }
-}
 
-.month-separators {
-  position: absolute;
-  top: 3 * $unit;
-  height: 11 * $unit;
-  min-height: 2 * $unit;
-  display: flex;
-  left: calc(50% - #{$start-point-month-seperators});
-  overflow: hidden;
-  .month-separator-line {
-    width: calc(#{$month-width} - 1px);
-    border-left: 1px solid $black;
+  .calendar {
+    position: absolute;
+    bottom: $unit;
+    display: flex;
+    align-items: flex-end;
+    height: 11 * $unit;
+    width: 100%;
   }
-  .month-separator-line:last-child {
-    border-right: 1px solid $black;
+
+  .heading-calendar{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 5vh;
+    left: 35vw;
+    .heading-calendar-background {
+      padding-top: 0.5em;
+      background-color: white;
+      height: 9vh;
+      width: 30vw;
+      z-index: 10;
+    }
   }
-}
 
-/* Fix pin spacer inserted by ScrollMagic */
-.screen-overlay-fix {
-  position: absolute;
-  left: 0 !important;
-  right: 0 !important;
-  top: 0 !important;
-}
+  .month-separators {
+    position: absolute;
+    top: 3 * $unit;
+    height: 11 * $unit;
+    min-height: 2 * $unit;
+    display: flex;
+    left: calc(50% - #{$start-point-month-seperators});
+    overflow: hidden;
+    .month-separator-line {
+      width: calc(#{$month-width} - 1px);
+      border-left: 1px solid $black;
+    }
+    .month-separator-line:last-child {
+      border-right: 1px solid $black;
+    }
+  }
 
-.screen-overlay {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  display: flex;
-  align-items: center;
-}
+  /* Fix pin spacer inserted by ScrollMagic */
+  .screen-overlay-fix {
+    position: absolute;
+    left: 0 !important;
+    right: 0 !important;
+    top: 0 !important;
+  }
 
-.plant-separators {
-  width: 100%;
-}
+  .screen-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+  }
 
-.plant-separator-line, .plant-separator-line-fixed {
-  height: calc(#{$unit} - 1px);
-  border-bottom: 1px solid $black;
-}
+  .plant-separators {
+    width: 100%;
+  }
 
-.calendar-content {
-  position: absolute;
-  width: $time-bars-width;
-  left: calc(50% - #{$start-point-month-seperators});
-  top: $unit;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  li {
+  .plant-separator-line, .plant-separator-line-fixed {
+    height: calc(#{$unit} - 1px);
+    border-bottom: 1px solid $black;
+  }
+
+  .calendar-content {
+    position: absolute;
+    width: $time-bars-width;
+    left: calc(50% - #{$start-point-month-seperators});
+    top: $unit;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+      height: $unit;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .plant-names-wrapper {
+    position: absolute;
+    width: $plant-name-width;
+    height: 11 * $unit;
+    left: calc(50% - #{$calendar-width/2});
+    top: $unit;
+  }
+
+  .plant-names {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+      height: calc(#{$unit});
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .calendar-plant-name {
+    width: calc(#{$plant-name-width} - 1rem);
+    text-align: left;
+  }
+
+  .calendar-months {
+    position: absolute;
+    left: calc(50% - #{$start-point-month-seperators});
     height: $unit;
+    width: $time-bars-width;
     display: flex;
     align-items: center;
+    text-align: center;
   }
-}
 
-.plant-names-wrapper {
-  position: absolute;
-  width: $plant-name-width;
-  height: 11 * $unit;
-  left: calc(50% - #{$calendar-width/2});
-  top: $unit;
-}
-
-.plant-names {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  li {
-    height: calc(#{$unit});
-    display: flex;
-    align-items: center;
+  .calendar-month {
+    width: $month-width;
   }
+
+  .calendar-time-bars {
+    width: $time-bars-width;
+  }
+
+  .calendar-time-bar {
+    height: 12px;
+    margin-bottom: 1px;
+    text-align: left;
+    font-size: 11px;
+    line-height: 1;
+    color: white;
+    background-color: $black;
+    overflow: hidden;
+  }
+
+  // .sowing {
+  //   background-color: $yellow;
+  // }
+
+  // .planting {
+  //   background-color: $green;
+  // }
+
+  // .harvesting {
+  //   background-color: $red;
+  // }
+
 }
-
-.calendar-plant-name {
-  width: calc(#{$plant-name-width} - 1rem);
-  text-align: left;
-}
-
-.calendar-months {
-  position: absolute;
-  left: calc(50% - #{$start-point-month-seperators});
-  height: $unit;
-  width: $time-bars-width;
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-
-.calendar-month {
-  width: $month-width;
-}
-
-.calendar-time-bars {
-  width: $time-bars-width;
-}
-
-.calendar-time-bar {
-  height: 12px;
-  margin-bottom: 1px;
-  text-align: left;
-  font-size: 11px;
-  line-height: 1;
-  color: white;
-  background-color: $black;
-  overflow: hidden;
-}
-
-// .sowing {
-//   background-color: #adadad;
-// }
-
-// .planting {
-//   background-color: #696969;
-// }
-
-// .harvesting {
-//   background-color: $black;
-// }
-
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

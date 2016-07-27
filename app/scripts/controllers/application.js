@@ -96,7 +96,9 @@
         $scope.PLANTS = data.PLANTS;
         setTimeBarStyle(getMonthWidth());
         $timeout(function(){
-          initScrolling(scrollEvents, $scope.PLANTS);
+          if (media.isMobile === false) {
+            initScrolling(scrollEvents, $scope.PLANTS);
+          };
           setInterval(animatePeas, 20);
         });
       });

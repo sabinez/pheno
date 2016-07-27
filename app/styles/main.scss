@@ -40,6 +40,14 @@ body {
 
 h1 {
   font-family: 'voyagerthin', sans-serif;
+}
+
+.title {
+  color: $green;
+}
+
+h2 {
+  font-family: 'voyagerthin', sans-serif;
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -62,56 +70,74 @@ a {
   -webkit-overflow-scrolling: touch;
 }
 
-.title {
-  font-family: 'voyagerthin', sans-serif;
-  text-decoration: none;
-  font-size: 20vh;
-  color: $green;
-  letter-spacing: 6vh;
-}
+/* Responsive: Mobile */
+@media (max-width:640px) {
 
-.screen {
-  position: relative;
-  &.header {
+  h1 {
+    font-size: 35px;
+    letter-spacing: 8px;
+  }
+  
+  .header {
     height: 100vh;
   }
 }
 
-.menu-button {
-  position: absolute;
-  left: 0;
-  top: 5 * $unit;
-  height: $unit;
-  width: $unit;
-  border-bottom: 1px solid $black;
-  border-right: 1px solid $black;
-  font-size: 29px;
-  text-align: center;
-  line-height: 1.5;
-}
+/* Responsive: Tablet */
+@media (min-width:641px) {
 
-.menu {
-  position: absolute;
-  left: 2 * $unit;
-  top: 5 * $unit;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  li {
-    height: calc(#{$unit});
-    display: flex;
-    align-items: center;
-    a:hover {
+  h1 {
+    font-size: 20vh;
+    letter-spacing: 6vh;
+  }
+
+  .screen {
+    position: relative;
+    &.header {
+      height: 100vh;
+    }
+  }
+
+  .menu-button {
+    position: absolute;
+    left: 0;
+    top: 5 * $unit;
+    height: $unit;
+    width: $unit;
+    border-bottom: 1px solid $black;
+    border-right: 1px solid $black;
+    font-size: 29px;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .menu {
+    position: absolute;
+    left: 2 * $unit;
+    top: 5 * $unit;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+      height: calc(#{$unit});
+      display: flex;
+      align-items: center;
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .active {
+    a {
       text-decoration: underline;
+      cursor: default;
+      pointer-events: none;
     }
   }
 }
 
+/* Responsive: Desktop */
+@media (min-width:1025px) {
 
-.active {
-  a {
-    text-decoration: underline;
-    cursor: default;
-    pointer-events: none;
-  }
 }

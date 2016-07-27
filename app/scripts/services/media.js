@@ -12,7 +12,7 @@
 
       var media = {
         isMobile : function(){
-          if (windowWidth <= 480) {
+          if (windowWidth < 640) {
             return true;
           } else {
             return false;
