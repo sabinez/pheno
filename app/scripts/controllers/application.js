@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('phenoApp')
-    .controller('ApplicationCtrl', function (plantData, $scope, initScrolling, $timeout, media) {
+    .controller('ApplicationCtrl', function (plantData, $scope, initScrolling, initScrollingMobile, $timeout, media) {
 
       var getMonthWidth = function() {
         return document.getElementById('calendar-month-section').offsetWidth / 12;
@@ -95,7 +95,9 @@
         $scope.PLANTS = data.PLANTS;
         setTimeBarStyle(getMonthWidth());
         $timeout(function(){
-          if (media.isMobile() === false) {
+          if (media.isMobile() === true) {
+            initScrollingMobile(scrollEvents, $scope.PLANTS);
+          }else{
             initScrolling(scrollEvents, $scope.PLANTS);
           };
           setInterval(animatePeas, 20);
