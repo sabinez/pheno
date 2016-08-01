@@ -372,10 +372,19 @@
           <vegetable-time-bars plant="PLANTS[8]"></vegetable-time-bars>
         </ul>
 
-        <div class="vegetable-img tomato-hg">
+        <div ng-show="media.isMobile()" class="vegetable-img tomato-img">
+          <div class="tomato-cutout">
+            <img src="images/tomato.png">
+          </div>
+          <div class="tomato-hg">
+            <img src="images/tomato-hg.png">
+          </div>
+        </div>
+
+        <div class="vegetable-img tomato-hg" ng-hide="media.isMobile()">
           <img src="images/tomato-hg.png">
         </div>
-        <div class="vegetable-img tomato-img">
+        <div class="vegetable-img tomato-img" ng-hide="media.isMobile()">
           <img src="images/tomato.png">
         </div>
 

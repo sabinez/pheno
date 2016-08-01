@@ -45,6 +45,21 @@ td {
   padding: 0 10px;
 }
 
+.tomato-img {
+  position: relative;
+}
+
+.tomato-hg {
+  position: relative;
+}
+
+.tomato-cutout {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  padding: 0 10px;
+}
+
 /* Responsive: Mobile */
 @media (max-width:640px) {
 
