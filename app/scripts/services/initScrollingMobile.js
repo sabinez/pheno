@@ -17,43 +17,13 @@
       );
 
 
-      // var tomato = new TimelineMax();
-      
-      // tomato.add([
-      //   TweenMax.to(".vegetable-heading-tomato", 0.35, {top: '5vh'}),
-      //   TweenMax.to(".tomato-hg", 0.35, {top: sixTimesUnit.toString()}),
-      //   TweenMax.to(".tomato-img", 0.35, {top: sixAndAHalfTimesUnit.toString()}),
-      //   TweenMax.to(".tomato-text-position", 0.35, {top: sevenTimesUnit.toString()})
-      // ], 0);
-      
-      // tomato.add( TweenMax.to(".tomato-img", 0.05, {top: sixTimesUnit.toString()}), 0.35 )
-      
-      // tomato.add([
-      //   TweenMax.to(".vegetable-heading-tomato", 0.4, {top: '-50vh'}),
-      //   TweenMax.to(".tomato-hg", 0.4, {top: '-50vh'}),
-      //   TweenMax.to(".tomato-img", 0.4, {top: '-50vh'}),
-      //   TweenMax.to(".tomato-text-position", 0.4, {top: '-100vh'})
-      // ], 0.6);
+      var tomato = TweenMax.to(".tomato-cutout", 1, {top: 0});
 
-      // sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato", duration: 1.5 * windowHeight})
-      //   .triggerHook(0)
-      //   .setPin(".screen-tomato", {pushFollowers: false})
-      //   .setTween(tomato)
-      //   .setClassToggle("#menu-tomato", "active")
-      //   .on("end", function(){
-      //     scrollEvents.updateAnchorStatus("tomato");
-      //   })
-      // );
-
-      // sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato"})
-      //   .offset(0.9 * windowHeight)
-      //   .setTween(generateTimeBarTweens(8))
-      // );
-
-      // sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-tomato"})
-      //   .offset(1.5 * windowHeight)
-      //   .setTween(generateTimeBarTweens(8, true))
-      // );
+      sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".tomato-img", duration: 30})
+        .triggerHook(0)
+        .setPin(".tomato-img", {pushFollowers: true})
+        .setTween(tomato)
+      );
 
 
       // var sweetPotato = new TimelineMax();
