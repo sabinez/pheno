@@ -26,41 +26,6 @@
       );
 
 
-      // var sweetPotato = new TimelineMax();
-      
-      // sweetPotato.add([
-      //   TweenMax.to(".vegetable-heading-sweet-potato", 0.4, {top: '5vh'}),
-      //   TweenMax.to(".sweet-potato-img", 0.4, {top: threeTimesUnit.toString()}),
-      //   TweenMax.to(".sweet-potato-text-position", 0.4, {top: elevenTimesUnit.toString()})
-      // ], 0);
-      
-      // sweetPotato.add([
-      //   TweenMax.to(".vegetable-heading-sweet-potato", 0.4, {top: '-50vh'}),
-      //   TweenMax.to(".sweet-potato-img", 0.4, {top: '-50vh'}),
-      //   TweenMax.to(".sweet-potato-text-position", 0.4, {top: '-100vh'})
-      // ], 0.6);
-
-      // sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-sweet-potato", duration: 1.5 * windowHeight})
-      //   .triggerHook(0)
-      //   .setPin(".screen-sweet-potato", {pushFollowers: false})
-      //   .setTween(sweetPotato)
-      //   .setClassToggle("#menu-sweet-potato", "active")
-      //   .on("end", function(){
-      //     scrollEvents.updateAnchorStatus("sweet-potato");
-      //   })
-      // );
-
-      // sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-sweet-potato"})
-      //   .offset(0.9 * windowHeight)
-      //   .setTween(generateTimeBarTweens(9))
-      // );
-
-      // sceneCollection.push( new ScrollMagic.Scene({triggerElement: ".screen-sweet-potato"})
-      //   .offset(1.5 * windowHeight)
-      //   .setTween(generateTimeBarTweens(9, true))
-      // );
-
-
       sceneCollection.forEach(function(scene){
         scene.addTo(scrollingController);
       });
