@@ -24,9 +24,6 @@ td {
 
 .vegetable-img {
   padding: 0 10px;
-  img {
-    width: 100%;
-  }
 }
 
 .vegetable-text-position {
@@ -34,7 +31,7 @@ td {
   margin-bottom: 50px;
 }
 
-.brussel-sprouts-img {
+.brussel-sprouts-hg {
   position: relative;
 }
 
@@ -42,7 +39,6 @@ td {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 0 10px;
 }
 
 .peas-img-box {
@@ -59,7 +55,7 @@ td {
   }
 }
 
-.tomato-img {
+.tomato-img-box {
   position: relative;
 }
 
@@ -69,18 +65,36 @@ td {
 
 .tomato-cutout {
   position: absolute;
-  top: 15px;
+  top: 25px;
   left: 0;
-  padding: 0 10px;
 }
 
 /* Responsive: Mobile */
-@media (max-width:640px) {
+@media (max-width:480px)
+and (orientation : portrait) {
+
+  .vegetable-img img {
+    width: 100%;
+  }
+
+}
+
+/* Responsive: Mobile landscape */
+@media (min-width:481px)
+and (orientation : landscape) {
+
+  .vegetable-img {
+    display: flex;
+    justify-content: center;
+      img {
+      max-height: 100vh;
+    }
+  }
 
 }
 
 /* Responsive: Tablet */
-@media (min-width:641px) {
+@media (min-width:741px) {
 
   .anchor-link-default {
     position: absolute;
