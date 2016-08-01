@@ -34,6 +34,17 @@ td {
   margin-bottom: 50px;
 }
 
+.vegetable-img.brussel-sprouts-img {
+  position: absolute;
+}
+
+.brussel-sprouts-cutout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 10px;
+}
+
 /* Responsive: Mobile */
 @media (max-width:640px) {
 

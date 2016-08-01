@@ -185,11 +185,20 @@
           <vegetable-time-bars plant="PLANTS[2]"></vegetable-time-bars>
         </ul>
 
-        <div class="vegetable-img brussel-sprouts-img">
+        <div ng-show="media.isMobile()" class="vegetable-img brussel-sprouts-img">
+          <div>
+            <img src="images/brussel-sprouts.png">
+          </div>
+          <div class="brussel-sprouts-cutout">
+            <img src="images/brussel-sprouts-cutout.png">
+          </div>
+        </div>
+
+        <div class="vegetable-img brussel-sprouts-img" ng-hide="media.isMobile()">
           <img src="images/brussel-sprouts.png">
         </div>
 
-        <div class="vegetable-img brussel-sprouts-img brussel-sprouts-cutout">
+        <div class="vegetable-img brussel-sprouts-img brussel-sprouts-cutout" ng-hide="media.isMobile()">
           <img id="target-brussel-sprouts-cutout" src="images/brussel-sprouts-cutout.png">
         </div>
 
@@ -216,7 +225,7 @@
           <vegetable-time-bars plant="PLANTS[3]"></vegetable-time-bars>
         </ul>
 
-        <div class="pepper-img-tweener">
+        <div class="vegetable-img pepper-img-tweener">
           <div id="pepper-img-pin" class="pepper-img">
             <img src="images/pepper.jpg">
           </div>
