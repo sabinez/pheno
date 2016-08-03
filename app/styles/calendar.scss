@@ -1,7 +1,7 @@
 @import "variables.scss";
 
 /* Responsive: Tablet and up */
-@media (min-width:641px) {
+@media (min-width:741px) {
 
   .screen-calendar {
     height: 100vh;
@@ -157,9 +157,13 @@
 
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .calendar-content {
-    max-width: $time-bars-width;
-  }
+/* Responsive: Tablet landscape */
+@media (min-width:961px) {
+  
+  
+}
+
+/* Responsive: Desktop */
+@media (min-width:1025px) {
+
 }
